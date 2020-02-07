@@ -1,0 +1,41 @@
+{% if pagination.pages %}
+  <ul class="list-without-bullet pagination flexbox">
+    <li class="pagination__item">
+      {% set icon_prev = '<svg class="pagination__icon pagination__icon--prev" width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Path</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-225.000000, -1314.000000)" fill="#3E3C38" fill-rule="nonzero">
+                                    <g transform="translate(225.000000, 1308.000000)">
+                                        <path d="M0,18.9728825 L0,7.02711747 C-7.35950976e-16,6.45701708 0.462157678,5.9948594 1.03225806,5.9948594 C1.25041807,5.9948594 1.46296918,6.06397758 1.63940304,6.19229312 L9.85211653,12.1651757 C10.3131773,12.5004926 10.4151128,13.1460842 10.0797959,13.607145 C10.0162793,13.6944802 9.93945179,13.7713078 9.85211653,13.8348243 L1.63940304,19.8077069 C1.17834229,20.1430238 0.532750632,20.0410883 0.197433719,19.5800275 C0.0691181796,19.4035936 -1.24899154e-15,19.1910425 0,18.9728825 Z" transform="translate(5.500000, 13.000000) scale(-1, 1) translate(-5.500000, -13.000000) "></path>
+                                    </g>
+                                </g>
+                            </g>
+                          </svg>' %}
+      {% set aria_disabled = pagination.prev ? '' : ' aria-disabled="true"' %}
+      <a href="{{pagination.prev ? pagination.prev.link : '#'}}" class="pagination__link{{ pagination.prev ? '' : ' pagination__link--disabled'}}"{{aria_disabled}}>
+        {{icon_prev}}
+        Prev
+      </a>
+    </li>
+    <li class="pagination__item">
+      {{pagination.current}} / {{pagination.total}}
+    </li>
+    <li class="pagination__item">
+      {% set icon_next = '<svg class="pagination__icon pagination__icon--next" width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Arrow Next</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-1204.000000, -1314.000000)" fill="#3E3C38" fill-rule="nonzero">
+                                    <g transform="translate(1153.000000, 1308.000000)">
+                                        <path d="M51,18.9728825 L51,7.02711747 C51,6.45701708 51.4621577,5.9948594 52.0322581,5.9948594 C52.2504181,5.9948594 52.4629692,6.06397758 52.639403,6.19229312 L60.8521165,12.1651757 C61.3131773,12.5004926 61.4151128,13.1460842 61.0797959,13.607145 C61.0162793,13.6944802 60.9394518,13.7713078 60.8521165,13.8348243 L52.639403,19.8077069 C52.1783423,20.1430238 51.5327506,20.0410883 51.1974337,19.5800275 C51.0691182,19.4035936 51,19.1910425 51,18.9728825 Z"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>' %}
+      {% set aria_disabled = pagination.next ? '' : ' aria-disabled="true"' %}
+      <a href="{{pagination.next ? pagination.next.link : '#'}}" class="pagination__link{{ pagination.next ? '' : ' pagination__link--disabled'}}"{{aria_disabled}}>
+        Next
+        {{icon_next}}
+      </a>
+    </li>
+  </ul>
+{% endif %}

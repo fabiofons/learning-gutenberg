@@ -1,0 +1,30 @@
+.sr-only {
+  @extend %sr-only;
+}
+.hidden {
+  @extend %hidden;
+}
+.flush {
+  @extend %flush;
+}
+.flush--right {
+  @extend %flush--right;
+}
+.small-only {
+  @extend %small-only;
+}
+.desk-only {
+  @extend %desk-only;
+}
+.flexbox {
+  @extend %flexbox;
+}
+.grid {
+  @extend %grid;
+}
+.relative {
+  @extend %relative;
+}
+.justify-content--right {
+  @extend %justify-content--right;
+}

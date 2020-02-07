@@ -1,0 +1,63 @@
+.blog-posts {
+  @include rem(-80, 'margin-top');
+  @include rem(80, 'padding-bottom');
+  @media #{$medium-up} {
+    @include rem(-170, 'margin-top');
+    @include rem(70, 'padding-bottom');
+  }
+  &__thumbnail-link {
+    @include rem(180, 'height');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+    display: block;
+    overflow: hidden;
+  }
+  &__list {
+    @include rem(83, 'margin-bottom');
+    @media #{$medium-up} {
+      @include rem(110, 'margin-bottom');
+    }
+  }
+  &__item {
+    background: $white;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(10,82,59,0.20);
+  }
+  &__title {
+    @include rem(19);
+    @include rem(-0.32, 'letter-spacing');
+    @include rem(22, 'line-height');
+    @include rem(27, 'margin-bottom');
+    font-family: $font-family-base;
+    margin-top: 0;
+    a {
+      color: $gray-base;
+    }
+  }
+  &__content {
+    @include rem(20, 'padding-top');
+    @include rem(15, 'padding-left');
+    @include rem(15, 'padding-right');
+    @include rem(15, 'padding-bottom');
+  }
+  &__excerpt {
+    @include rem(14);
+    @include rem(20, 'line-height');
+    @include rem(12, 'margin-bottom');
+    color: $gray-base;
+    letter-spacing: 0;
+  }
+  &__permalink {
+    @include rem(20, 'line-height');
+    color: $color-text-title;
+    letter-spacing: 0;
+    text-decoration: underline;
+  }
+  &__date {
+    @include rem(14);
+    @include rem(20, 'line-height');
+    color: $gray-base;
+    letter-spacing: 0;
+  }
+}

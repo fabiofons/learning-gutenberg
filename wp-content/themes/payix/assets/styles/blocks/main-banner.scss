@@ -1,0 +1,88 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.main-banner {
+  @include rem(78, 'padding-top');
+  @include rem(78, 'padding-bottom');
+  background-color: #C0FF89;
+  background-position: -9px 15px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+  @media #{$medium-up} {
+    @include rem(113, 'padding-top');
+    @include rem(210, 'padding-bottom');
+    background-image: url(../../images/home_bg_new.svg);
+    background-size: auto;
+    background-position: center;
+  }
+  &__content {
+    text-align: center;
+    font-family: $font-family-secondary;
+  }
+  &__title {
+    @include rem(36);
+    @include rem(40, 'line-height');
+    @include rem(-0.6, 'letter-spacing');
+    color: $color-text-title;
+    margin-top: 0;
+    position: relative;
+    &:after {
+      @include rem(46, 'width');
+      @include rem(46, 'height');
+      @include rem(-23, 'top');
+      @include rem(-23, 'right');
+      content: "";
+      background-image: url(../../images/circles.svg);
+      position: absolute;
+    }
+    @media #{$medium-up} {
+      @include rem(60);
+      @include rem(68, 'line-height');
+      @include rem(-1, 'letter-spacing');
+    }
+  }
+  &__wave-wrapper {
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    @media #{$small-max} {
+      @include rem(-90, 'bottom');
+    }
+    @media #{$big-up} {
+      @include rem(-130, 'bottom');
+    }
+  }
+  &__wave {
+    @include rem(2560, 'width');
+    display: block;
+    margin: auto;
+    position: relative;
+  }
+}
+
+.svg-animations {
+  @media #{$small-max} {
+    display: none;
+  }
+  &__item {
+    position: absolute;
+  }
+}

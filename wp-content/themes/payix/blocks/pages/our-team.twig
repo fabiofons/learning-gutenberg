@@ -1,0 +1,18 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="our-team">
+  <h2 class="our-team__title">{{page_block.title}}</h2>
+  <div class="container">
+    <div class="team-members flexbox">
+      {% for item in page_block.cards %}
+        <div class="team-members__item">
+          <div class="team-members__image-wrapper" style="background-image: url({{ m_image.retinize( item.picture, {get_url: true} )|replace({' ' : ''}) }});">
+            {{ m_image.retinize( item.picture, {class: 'hidden'} ) }}
+          </div>
+          <h3 class="team-members__title">{{item.full_name}}</h3>
+          <div class="team-members__position">{{item.position}}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{{get_block_styles('our-team')}}

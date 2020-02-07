@@ -1,0 +1,79 @@
+{% extends "layouts/base.twig" %}
+{% block header %}
+	{% include 'partials/header.twig' %}
+{% endblock %}
+{% block content %}
+	{% set page_block = { title: 'Search', title_columns: options.title_columns, animations: options.animations } %}
+	{% include 'blocks/pages/main-banner.twig' with { page_block: page_block } %}
+	<section class="blog-posts">
+		<div class="container">
+			<div class="flexgrid flexgrid--full flexgrid--center">
+				<div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-10">
+					<h3 class="sr-only">News List</h3>
+					<ul class="list-without-bullet blog-posts__list grid">
+						{% for post in posts %}
+							{% set post_link = post.external_link ? post.external_link :  post.link %}
+							{% set target_link = post.external_link ? ' target="_blank" rel="noopener noreferrer"' : '' %}
+							<li class="blog-posts__item">
+								<article class="blog-posts__article" id="article-{{post.id}}" itemprop="hasPart" aria-label="{{post.title}}" itemscope itemtype="http://schema.org/Article">
+									<header>
+										{% set image = post.thumbnail.src|resize(620) %}
+										<div itemprop='associatedMedia'>
+											<a href="{{post_link}}" itemprop="image" itemscope itemtype='http://schema.org/ImageObject' class="blog-posts__thumbnail-link" style="background-image: url({{image}});" {{target_link}}>
+												<span class="sr-only">Continue reading about
+													{{post.title}}</span>
+												<meta itemprop="url" content="{{image}}">
+												<img itemprop='contentURL' src='{{image}}' alt="{{post.title}} image" class="hidden">
+											</a>
+										</div>
+									</header>
+									<div class="blog-posts__content" itemprop="articleBody">
+										<h4 class="blog-posts__title" itemprop="headline">
+											<a href="{{post_link}}" itemprop="url" {{target_link}}>
+												{{post.title}}
+											</a>
+										</h4>
+										{% set excerpt = post.post_excerpt ? post.post_excerpt : post.post_content %}
+										<div class="blog-posts__excerpt" itemprop="description">{{truncate_words(excerpt, 20)}}</div>
+										<footer class="flexbox">
+											<a class="blog-posts__permalink" href="{{post_link}}" itemprop="url" {{target_link}}>
+												Continue reading
+												<svg width="6px" height="9px" viewbox="0 0 6 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+													<title>Path</title>
+													<defs>
+														<rect id="path-arrow-{{loop.index}}" x="0" y="0" width="310" height="400" rx="20"></rect>
+														<filter x="-2.3%" y="-1.2%" width="104.5%" height="103.5%" filterunits="objectBoundingBox" id="filter-{{loop.index}}">
+															<feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+															<feGaussianBlur stddeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+															<feColorMatrix values="0 0 0 0 0.0392156863   0 0 0 0 0.321568627   0 0 0 0 0.23142054  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+														</filter>
+													</defs>
+													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+														<g transform="translate(-149.000000, -371.000000)">
+															<g>
+																<use fill="black" fill-opacity="1" filter="url(#filter-{{loop.index}})" xlink:href="#path-arrow-{{loop.index}}"></use>
+																<use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-arrow-{{loop.index}}"></use>
+															</g>
+															<g transform="translate(15.000000, 363.000000)" fill="#83CD44" fill-rule="nonzero">
+																<path d="M134,15.8739003 L134,9.12609971 C134,8.81513586 134.252086,8.56304985 134.56305,8.56304985 C134.684877,8.56304985 134.803418,8.60256349 134.90088,8.67565982 L139.399413,12.0495601 C139.648185,12.2361384 139.698602,12.5890588 139.512023,12.8378299 C139.480012,12.8805123 139.442096,12.9184281 139.399413,12.9504399 L134.90088,16.3243402 C134.652109,16.5109185 134.299188,16.4605013 134.11261,16.2117302 C134.039514,16.1142684 134,15.9957275 134,15.8739003 Z"></path>
+															</g>
+														</g>
+													</g>
+												</svg>
+											</a>
+											<time class="blog-posts__date" itemprop="dateCreated" datetime="{{ post.post_date }}">
+												{{ post.post_date|date('M j, Y') }}
+											</time>
+										</footer>
+									</div>
+								</article>
+							</li>
+						{% endfor %}
+					</ul>
+					{% include 'partials/pagination.twig' %}
+				</div>
+			</div>
+		</div>
+	</section>
+	{{get_block_styles('blog')}}
+{% endblock %}

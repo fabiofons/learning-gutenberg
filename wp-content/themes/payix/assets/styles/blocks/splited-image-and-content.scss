@@ -1,0 +1,100 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.splited-image-and-content{
+  @include rem(38, 'padding-top');
+  @include rem(80, 'padding-bottom');
+  @media #{$medium-up} {
+    @include rem(80, 'padding-top');
+    @include rem(88, 'padding-bottom');
+  }
+  &__title {
+    @include rem(48);
+    @include rem(50, 'line-height');
+    @include rem(-0.8, 'letter-spacing');
+    @include rem(25, 'margin-top');
+    @include rem(30, 'margin-bottom');
+    color: $color-text-title;
+    font-family: $font-family-secondary;
+    &--right {
+      margin-top: 0;
+      @media #{$medium-up} {
+        @include rem(60, 'margin-bottom');
+        text-align: right;
+        &:after {
+          @include rem(1, 'height');
+          @include rem(26, 'top');
+          content: '';
+          background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjIiIHZpZXdCb3g9IjAgMCA4NTUgMiIgd2lkdGg9Ijg1NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iI2MwZmY4OSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIGQ9Im03MTAgMWgtNzA5Ii8+PHBhdGggZD0ibTg1NCAxaC05NiIvPjwvZz48L3N2Zz4=);
+          background-position: right center;
+          position: absolute;
+          right: 36%;
+          width: 100%;
+        }
+      }
+    }
+    @media #{$small-max} {
+      @include rem(30);
+      @include rem(35, 'line-height');
+      @include rem(-0.5, 'letter-spacing');
+      position: relative;
+      &:after {
+        @include rem(2, 'height');
+        @include rem(5, 'bottom');
+        content: '';
+        background-color: $brand-success;
+        position: absolute;
+        width: 100%;
+        transform: translateX(15px);
+      }
+    }
+  }
+  &__subtitle {
+    @include rem(19);
+    @include rem(30, 'line-height');
+    @include rem(-0.32, 'letter-spacing');
+    font-weight: bold;
+  }
+
+  &__description {
+    &--left {
+      @media #{$medium-up} {
+        @include rem(46, 'padding-right');
+      }
+    }
+    &--right {
+      @media #{$medium-up} {
+        text-align: right;
+        @include rem(70, 'padding-left');
+      }
+    }
+  }
+  &__image {
+    &--left {
+      display: block;
+      margin: auto;
+      @media #{$medium-up} {
+        @include rem(110, 'padding-top');
+      }
+    }
+  }
+  .odd {
+    @include rem(50, 'margin-bottom');
+    @media #{$medium-up} {
+      @include rem(208, 'margin-bottom');
+    }
+  }
+}

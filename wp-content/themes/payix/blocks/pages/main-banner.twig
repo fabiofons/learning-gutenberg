@@ -1,0 +1,50 @@
+<{{page_block.without_section ? 'div ' : 'section '}}class="main-banner">
+  {% if page_block.animations %}
+    <div class="svg-animations">
+      {% for item in page_block.animations %}
+        {% set style = ' style="' ~ 'height:' ~ item.height ~ 'px;width:' ~ item.width ~ 'px;left:' ~ (item.left == 0 ? 'auto' : item.left ~ '%') ~ ';right:' ~ (item.right == 0 ? 'auto' : item.right ~ '%')  ~ ';top:' ~ (item.top == 0 ? 'auto' : item.top ~ '%') ~ ';bottom:' ~ (item.bottom == 0 ? 'auto' : item.bottom ~ '%') ~ ';"' %}
+        <div class="svg-animations__item"{{style}}>
+          {% filter shortcodes %}
+            {{item.animation_shortcode}}
+          {% endfilter %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  <div class="main-banner__wave-wrapper">
+    <svg role="img" class="main-banner__wave" width="100%" height="150px" fill="none" aria-labelledby="main-banner-wave-title">
+      <title id="main-banner-wave-title">Main banner animation wave</title>
+      <path fill="white" d="M 0 32.8155 C 247.381 66.2677 378.243 49.3745 631.144 19.46 C 829.829 -2.93073 1124.83 24.6902 1370.32 34.6818 C 1919.95 62.6049 2063.14 38.2373 2560 32.8156 V 178.817 L 0 178.817 V 32.8155 Z">
+        <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="28s" values="
+          M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
+          M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z;
+          M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
+          M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
+          M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
+        ">
+        </animate>
+      </path>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="flexgrid flexgrid--center flexgrid--full">
+      <div class="flexgrid__item medium--col-{{ page_block.title_columns }}">
+        <div class="main-banner__content">
+          {% if page_block.title %}
+            <h2 class="main-banner__title">{{page_block.title}}</h2>
+          {% endif %}
+          {% set cta_link = page_block.cta_button.cta_link and page_block.cta_button.cta_type == 'internal' ?
+            page_block.cta_button.cta_link  : ( page_block.cta_button.cta_link_external and page_block.cta_button.cta_type == 'external' ?
+            page_block.cta_button.cta_link_external : '' ) %}
+          {% if cta_link %}
+            {% set target = page_block.cta_button.cta_target == '_blank' ? ' target="_blank" rel="noopener noreferrer"' : '' %}
+            <a href="{{cta_link}}" class="button main-banner__link"{{target}}>
+              {{page_block.cta_button.cta_label}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</{{page_block.without_section ? 'div' : 'section'}}>
+{{get_block_styles('main-banner')}}

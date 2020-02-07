@@ -1,0 +1,27 @@
+.wp-block-kili-blocks-kililayout2 {
+  background-color: #524d5b;
+  color: #eee;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.kili {
+  background-color: #524d5b;
+  color: #eee;
+  border-radius: 5px;
+  padding: 20px;
+
+  &__align-left {
+    text-align: left;
+  }
+  &__align-right {
+    text-align: right;
+  }
+  &__align-center {
+    text-align: center;
+  }
+}
+
+.content p.wp-block-kili-blocks-kililayout2 {
+  color: #eee;
+}

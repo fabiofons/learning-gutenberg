@@ -1,0 +1,23 @@
+.button {
+  @include rem(21);
+  @include rem(20, 'line-height');
+  @include rem(53, 'padding-left');
+  @include rem(53, 'padding-right');
+  @include rem(20, 'padding-bottom');
+  @include rem(20, 'padding-top');
+  align-items: center;
+  background-color: $white;
+  border-radius: 30px;
+  box-shadow: 0 5px 13px 0 rgba(10,82,59,0.46);
+  color: $color-text-title;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  transition: .3s all;
+  &:hover {
+    background: $color-text-title;
+    color: $white;
+  }
+}

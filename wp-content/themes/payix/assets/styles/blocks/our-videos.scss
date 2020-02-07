@@ -1,0 +1,71 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.our-videos {
+  @include rem(40, 'padding-top');
+  @include rem(70, 'padding-bottom');
+  background: url(../../images/video-bg-lines.svg) #F8FFF3;
+  background-repeat: no-repeat;
+  background-position: 0 20%;
+  @media #{$small-max} {
+    @include rem(20, 'padding-bottom');
+  }
+  &__title {
+    @include rem(48);
+    @include rem(-0.8, 'letter-spacing');
+    @include rem(50, 'line-height');
+    @include rem(84, 'margin-bottom');
+    color: $gray-base;
+    font-family: $font-family-secondary;
+    margin-top: 0;
+    text-align: center;
+  }
+  &__container {
+    @include rem(30, 'border-radius');
+    @include rem(522, 'max-width');
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    text-align: center;
+    iframe,
+    object,
+    embed {
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &__wrapper {
+    @media #{$small-max} {
+      @include rem(61, 'margin-bottom');
+    }
+  }
+  &__label {
+    @include rem(24);
+    @include rem(-0.4, 'letter-spacing');
+    @include rem(34, 'line-height');
+    color: $color-text-title;
+    font-family: $font-family-secondary;
+    text-align: center;
+    font-weight: 600;
+  }
+}

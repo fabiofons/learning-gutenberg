@@ -1,0 +1,126 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.card-grid-and-content {
+  @media #{$medium-up} {
+    @include rem(28, 'padding-top');
+    @include rem(69, 'padding-bottom');
+  }
+  &__title {
+    @include rem(30);
+    @include rem(35, 'line-height');
+    @include rem(-0.5, 'letter-spacing');
+    @include rem(50, 'margin-bottom');
+    color: $color-text-title;
+    font-family: $font-family-secondary;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+    @media #{$medium-up} {
+      @include rem(48);
+      @include rem(50, 'line-height');
+      @include rem(-0.8, 'letter-spacing');
+      &:before,
+      &:after {
+        @include rem(2, 'height');
+        content: "";
+        background-color: $brand-success;
+        position: absolute;
+        top: calc(50% - 2px);
+      }
+      &:before {
+        left: 0;
+        right: 76%;
+      }
+      &:after {
+        left: 76%;
+        right: 0;
+      }
+    }
+    @media #{$medium-max} {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    right: 0;
+  }
+}
+.grid-cards {
+  @include rem(50, 'margin-bottom');
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  justify-content: center;
+  width: 100%;
+  @media #{$medium-up} {
+    @include rem(60, 'margin-bottom');
+    @include rem(40, 'padding-left');
+    @include rem(40, 'padding-right');
+    justify-content: space-between;
+  }
+  &__item {
+    @include rem(30, 'border-radius');
+    @include rem(6, 'margin');
+    @include rem(12, 'padding-left');
+    @include rem(9, 'padding-top');
+    @include rem(12, 'padding-right');
+    @include rem(18, 'padding-bottom');
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(62,60,56,0.20);
+    box-sizing: border-box;
+    flex-basis: 46%;
+    text-align: center;
+    @media #{$small-up} {
+      @include rem(30, 'padding-left');
+      @include rem(10, 'padding-top');
+      @include rem(30, 'padding-right');
+      @include rem(20, 'padding-bottom');
+      flex-basis: initial;
+    }
+  }
+  &__image-wrapper {
+    @include rem(116, 'height');
+    @include rem(116, 'width');
+    @include rem(20, 'margin-bottom');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+    @media #{$small-up} {
+      @include rem(130, 'height');
+      @include rem(130, 'width');
+    }
+  }
+  &__title {
+    @include rem(17);
+    @include rem(27, 'line-height');
+    @include rem(-0.29, 'letter-spacing');
+    margin: 0;
+    color: $color-text-title;
+    font-family: $font-family-secondary;
+    @media #{$medium-up} {
+      @include rem(19);
+      @include rem(30, 'line-height');
+      @include rem(-0.32, 'letter-spacing');
+    }
+  }
+}

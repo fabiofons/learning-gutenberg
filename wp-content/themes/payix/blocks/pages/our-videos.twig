@@ -1,0 +1,23 @@
+<section class="our-videos">
+  <div class="container">
+    <h2 class="our-videos__title">
+      {{page_block.title}}
+    </h2>
+    <div class="flexgrid flexgrid--center">
+      {% for item in page_block.videos %}
+        <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-6">
+          <div class="our-videos__wrapper">
+            <div class="our-videos__container">
+{{item.video_embed|replace({'src=':'class="js-iframe-defer" data-src=', 'youtube.com/embed/':'youtube-nocookie.com/embed/', '?':'?rel=0&showinfo=0&modestbranding=1&', 'frameborder="0"':''})}}
+
+            </div>
+            <h3 class="our-videos__label">
+              {{item.video_title}}
+            </h3>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{{get_block_styles('our-videos')}}

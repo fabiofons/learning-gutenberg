@@ -1,0 +1,33 @@
+.content {
+  p {
+    @include rem(16);
+    @include rem(25, 'line-height');
+    color: $gray-base;
+    font-family: $font-family-base;
+    letter-spacing: 0;
+  }
+  ul li {
+    @include rem(24, 'margin-bottom');
+    list-style-type: none;
+    position: relative;
+    &:before {
+      @include rem(15, 'width');
+      @include rem(15, 'height');
+      @include rem(9, 'top');
+      @include rem(-28, 'left');
+      content: "";
+      background-image: url(../images/bullet.svg);
+      background-repeat: no-repeat;
+      position: absolute;
+    }
+  }
+  ul.list-without-bullet {
+    padding: 0;
+    li {
+      margin-bottom: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

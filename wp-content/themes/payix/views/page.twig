@@ -1,0 +1,21 @@
+{% extends "layouts/base.twig" %}
+{% block header %}
+    {% include 'partials/header.twig' %}
+{% endblock %}
+{% block content %}
+  {% if is_kili %}
+    {% do action('page_blocks') %}
+  {% else %}
+    <section class="page__container" aria-label="{{post.title}}">
+      <div class="container">
+        <div class="flexgrid flexgrid--center">
+          <div class="flexgrid__item medium--col-10">
+            <!-- <h2 class="page__title">{{post.title}}</h2> -->
+            <div class="page__content">{{post.content}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+  {{get_block_styles('site')}}
+{% endblock %}

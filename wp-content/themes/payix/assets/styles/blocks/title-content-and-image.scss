@@ -1,0 +1,61 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.title-content-and-image {
+  @include rem(69, 'padding-bottom');
+  background-image: url(../../images/intro-text-bg.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  @media #{$medium-up} {
+    @include rem(-30, 'margin-top');
+  }
+  &__title {
+    @include rem(30);
+    @include rem(30, 'line-height');
+    @include rem(-0.5, 'letter-spacing');
+    color: $color-text-title;
+    position: relative;
+    @media #{$medium-up} {
+      @include rem(48);
+      @include rem(50, 'line-height');
+      @include rem(-0.8, 'letter-spacing');
+    }
+    &:before {
+      @include rem(179, 'width');
+      @include rem(111, 'height');
+      @include rem(-161, 'left');
+      @include rem(-16, 'top');
+      content: "";
+      background-image: url(../../images/title-dashed-lines.svg);
+      display: block;
+      position: absolute;
+      @media #{$small-max} {
+        @include rem(-144, 'left');
+        @include rem(-20, 'top');
+      }
+    }
+  }
+  &__content {
+    @include rem(16);
+    @include rem(25, 'line-height');
+    @include rem(20, 'margin-top');
+    color: $gray-base;
+  }
+  &__image {
+    display: block;
+    margin: auto;
+  }
+}

@@ -1,0 +1,81 @@
+.wp-block-kili-blocks-kililayout2 {
+  background-color: #524d5b;
+  color: #eee;
+  border-radius: 5px;
+  padding: 20px; }
+
+.kili {
+  background-color: #524d5b;
+  color: #eee;
+  border-radius: 5px;
+  padding: 20px; }
+  .kili__align-left {
+    text-align: left; }
+  .kili__align-right {
+    text-align: right; }
+  .kili__align-center {
+    text-align: center; }
+
+.content p.wp-block-kili-blocks-kililayout2 {
+  color: #eee; }
+
+.wp-block-kili-blocks-team-members {
+  display: flex;
+  flex-wrap: wrap; }
+  .wp-block-kili-blocks-team-members.has-1-columns .wp-block-kili-blocks-team-member {
+    width: 97%; }
+  .wp-block-kili-blocks-team-members.has-2-columns .wp-block-kili-blocks-team-member {
+    width: 47%; }
+  .wp-block-kili-blocks-team-members.has-3-columns .wp-block-kili-blocks-team-member {
+    width: 30.33333%; }
+  .wp-block-kili-blocks-team-members.has-4-columns .wp-block-kili-blocks-team-member {
+    width: 22%; }
+  .wp-block-kili-blocks-team-members.has-5-columns .wp-block-kili-blocks-team-member {
+    width: 17%; }
+  .wp-block-kili-blocks-team-members.has-6-columns .wp-block-kili-blocks-team-member {
+    width: 13.66667%; }
+  .wp-block-kili-blocks-team-members.has-7-columns .wp-block-kili-blocks-team-member {
+    width: 11.28571%; }
+  .wp-block-kili-blocks-team-members.has-8-columns .wp-block-kili-blocks-team-member {
+    width: 9.5%; }
+  .wp-block-kili-blocks-team-members.has-9-columns .wp-block-kili-blocks-team-member {
+    width: 8.11111%; }
+  .wp-block-kili-blocks-team-members.has-10-columns .wp-block-kili-blocks-team-member {
+    width: 7%; }
+  .wp-block-kili-blocks-team-members.has-11-columns .wp-block-kili-blocks-team-member {
+    width: 6.09091%; }
+  .wp-block-kili-blocks-team-members.has-12-columns .wp-block-kili-blocks-team-member {
+    width: 5.33333%; }
+  .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #5d5d66;
+    text-align: center; }
+    .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__title {
+      color: #222;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0; }
+    .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__info {
+      color: #565656;
+      font-weight: 300;
+      margin: 5px; }
+    .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__social ul {
+      list-style: none;
+      line-height: 1;
+      margin-left: -5px;
+      margin-right: -5px; }
+      .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__social ul li {
+        display: inline-block;
+        line-height: 1;
+        margin-right: 5px; }
+        .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__social ul li a {
+          border-bottom: none; }
+        .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__social ul li.is-selected {
+          outline: 2px solid #f03; }
+        .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__social ul li svg {
+          vertical-align: middle;
+          color: #4e4e4e; }
+
+
+/*# sourceMappingURL=style.css.map*/

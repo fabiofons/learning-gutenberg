@@ -1,0 +1,35 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="card-grid-and-content">
+  <h2 class="card-grid-and-content__title">
+    {{page_block.title}}
+  </h2>
+  <div class="container">
+    <div class="grid-cards flexbox">
+      {% for item in page_block.cards %}
+        <div class="grid-cards__item">
+          {% if item.animation_shortcode %}
+            {{item.animation_shortcode|shortcodes}}
+          {% else %}
+            <div class="grid-cards__image-wrapper" style="background-image: url({{ m_image.retinize( item.icon, {get_url: true} )|replace({' ' : ''}) }});"></div>
+          {% endif %}
+          <h3 class="grid-cards__title">{{item.title}}</h3>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="flexgrid flexgrid--full flexgrid--center">
+      <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-10">
+        <div class="flexgrid flexgrid--full flexgrid--center">
+          <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-7">
+            <div class="card-grid-and-content__content">
+              {{page_block.content}}
+            </div>
+          </div>
+          <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-5 desk-only">
+            {{ m_image.retinize( page_block.content_image, {class: 'card-grid-and-content__image'} ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{get_block_styles('card-grid-and-content')}}

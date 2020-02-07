@@ -1,0 +1,161 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.contact-block {
+  @include rem(-80, 'margin-top');
+  @include rem(60, 'padding-bottom');
+  @media #{$medium-up} {
+    @include rem(-170, 'margin-top');
+    @include rem(140, 'padding-bottom');
+  }
+  &__form {
+    @include rem(30, 'border-radius');
+    @include rem(50, 'margin-bottom');
+    @include rem(51, 'padding-top');
+    @include rem(37, 'padding-bottom');
+    @include rem(16, 'padding-left');
+    @include rem(16, 'padding-right');
+    background: #FFFFFF;
+    box-shadow: 2px 4px 7px 0 rgba(0,52,61,0.15);
+    @media #{$medium-up} {
+      @include rem(100, 'margin-bottom');
+      @include rem(45, 'margin-left');
+      @include rem(45, 'margin-right');
+      @include rem(68, 'padding-top');
+      @include rem(58, 'padding-bottom');
+      @include rem(99, 'padding-left');
+      @include rem(99, 'padding-right');
+    }
+  }
+  &__card {
+    @include rem(30, 'border-radius');
+    @include rem(14, 'padding-top');
+    @include rem(22, 'padding-bottom');
+    @include rem(28, 'padding-left');
+    @include rem(28, 'padding-right');
+    align-items: stretch;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(62,60,56,0.20);
+    justify-content: flex-start;
+    @media #{$small-max} {
+      @include rem(20, 'margin-bottom');
+      @include rem(18, 'padding-left');
+      @include rem(18, 'padding-right');
+    }
+  }
+  &__card-image {
+    @include rem(30, 'margin-right');
+  }
+  &__card-title {
+    @include rem(19);
+    @include rem(22, 'line-height');
+    @include rem(-0.32, 'letter-spacing');
+    @include rem(10, 'margin-top');
+    margin-bottom: 0;
+  }
+  &__card-content {
+    @include rem(19);
+    @include rem(22, 'line-height');
+    @include rem(-0.32, 'letter-spacing');
+  }
+  &__form-field {
+    @include rem(14);
+    @include rem(30, 'line-height');
+    @include rem(0.12, 'letter-spacing');
+    @include rem(26, 'margin-bottom');
+    color: #124C56;
+    display: block;
+    @media #{$medium-up} {
+      @include rem(39, 'margin-bottom');
+      @include rem(36, 'padding-right');
+    }
+  }
+  &__form-field-submit {
+    @include rem(210, 'width');
+    @include rem(20, 'margin-right');
+    margin-left: auto;
+    @media #{$small-max} {
+      @include rem(52, 'margin-bottom');
+    }
+    .ajax-loader {
+      display: none !important  ;
+    }
+    @media #{$small-max} {
+      margin-right: auto;
+    }
+  }
+  &__form-info {
+    p {
+      @include rem(12);
+      @include rem(30, 'line-height');
+      @include rem(0.1, 'letter-spacing');
+      @include rem(34, 'margin-bottom');
+      color: #124C56;
+      @media #{$small-max} {
+        @include rem(30, 'margin-bottom');
+      }
+    }
+    a {
+      color: #83CD44;
+      text-decoration: underline;
+    }
+  }
+  .wpcf7-form-control-wrap {
+    display: block;
+    .wpcf7-not-valid-tip {
+      @include rem(13);
+      @include rem(30, 'line-height');
+      @include rem(0.09, 'letter-spacing');
+      color: $brand-danger;
+    }
+  }
+  .wpcf7-form-control {
+    border: none;
+    border-bottom: 1px solid #D3DFE1;
+    width: 100%;
+    &.wpcf7-submit {
+      @include rem(30, 'border-radius');
+      @include rem(22, 'padding-top');
+      @include rem(18, 'padding-bottom');
+      background-color: #83CD44;
+      border-bottom: none;
+      box-shadow: 0 5px 4px 0 rgba(10,82,59,0.43);
+      color:$white;
+      cursor: pointer;
+      display: block;
+      font-family: $font-family-secondary;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 20px;
+      text-align: center;
+      transition: .3s all;
+      &:hover {
+        background-color: #0A523B;
+      }
+    }
+    &.wpcf7-not-valid {
+      border-bottom-color: $brand-danger;
+    }
+  }
+  @media #{$small-max} {
+    .left {
+      @include rem(10, 'padding-right');
+    }
+    .right {
+      @include rem(10, 'padding-left');
+    }
+  }
+}

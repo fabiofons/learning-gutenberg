@@ -1,0 +1,28 @@
+.pagination {
+  &__item {
+    @include rem(18);
+    @include rem(24, 'line-height');
+    color: $gray-base;
+    letter-spacing: 0;
+  }
+  &__link {
+    @include rem(18);
+    @include rem(24, 'line-height');
+    letter-spacing: 0;
+    color: $gray-base;
+    &--disabled {
+      opacity: 0.4;
+    }
+  }
+  &__icon {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    &--prev {
+      @include rem(10, 'margin-right');
+    }
+    &--next {
+      @include rem(10, 'margin-left');
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "proxy": "https://payix.dev",
+  "criticalUrls": [
+    {"url": "https://payix.dev/", "dest": "home"},
+    {"url": "https://payix.dev/solutions/", "dest": "solutions"},
+    {"url": "https://payix.dev/about/", "dest": "about"},
+    {"url": "https://payix.dev/news/", "dest": "blog"},
+    {"url": "https://payix.dev/contact/", "dest": "contact"}
+  ]
+}

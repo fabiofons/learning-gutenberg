@@ -1,0 +1,24 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="contact-block">
+  <div class="container">
+    <div class="contact-block__form">
+      {% filter shortcodes %}
+        {{page_block.contact_form_short_code}}
+      {% endfilter %}
+    </div>
+    <div class="flexgrid">
+      {% for item in page_block.contact_cards %}
+        <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-4">
+          <div class="contact-block__card flexbox">
+            {{ m_image.retinize( item.icon, {class: 'contact-block__card-image'} ) }}
+            <div class="contact-block__card-body">
+              <h3 class="contact-block__card-title">{{item.title}}</h3>
+              <div class="contact-block__card-content">{{item.content}}</div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{{get_block_styles('contact')}}

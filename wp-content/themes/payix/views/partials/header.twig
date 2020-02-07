@@ -1,0 +1,40 @@
+{% import '_macros/_img.twig' as m_image %}
+<header class="header">
+  <div class="container">
+    <div class="flexgrid flexgrid--full medium--middle">
+      <div class="flexgrid__item xsmall--col-4 small--col-4 medium--col-4">
+        <h1 class="header__logo flush">
+          <span class="sr-only">{{site.title}}</span>
+          <a href="{{site.link}}" class="header__logo-link" title="Go to home page">
+            {{ m_image.retinize( options.logo_image, {alt: '', class: 'header__logo-img'} ) }}
+          </a>
+        </h1>
+      </div>
+      <div class="flexgrid__item xsmall--col-8 small--col-8 medium--col-8">
+        <div class="flexbox justify-content--right small-only">
+          <ul class="navigation__list navigation__list--mobile flush" role="menubar">
+            <li class="navigation__item button--contact" role="presentation">
+              <a href="/contact/" class="navigation__link" target="_self" title="Go to contact page" role="menuitem">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <div class="navigation-toogle js-navigation-toogle relative">
+            <span class="navigation-toogle__item"></span>
+            <span class="navigation-toogle__item"></span>
+            <span class="navigation-toogle__item"></span>
+            <span class="navigation-toogle__item"></span>
+            <span class="navigation-toogle__item"></span>
+            <span class="navigation-toogle__item"></span>
+          </div>
+        </div>
+        <div class="header__solid-overlay"></div>
+        <nav class="navigation" aria-label="Main navigation">
+          <h2 class="sr-only">Primary Navigation</h2>
+          {% include 'partials/navigation.twig' with { active_menu: menu.header.get_items, extra_items: options.navigation_buttons } %}
+          {% include "partials/social.twig" %}
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

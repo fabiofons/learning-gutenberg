@@ -1,0 +1,23 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="title-content-and-image">
+  <div class="container">
+    <div class="flexgrid flexgrid--full flexgrid--center">
+        <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-10">
+          <div class="flexgrid flexgrid--center">
+            <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-6">
+              <h2 class="title-content-and-image__title">
+                {{page_block.title}}
+              </h2>
+              <div class="title-content-and-image__content">
+                {{page_block.content}}
+              </div>
+            </div>
+            <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-6">
+              {{ page_block.animation_shortcode ? page_block.animation_shortcode|shortcodes : m_image.retinize( page_block.image, {class: 'title-content-and-image__image'} ) }}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{get_block_styles('title-content-and-image')}}

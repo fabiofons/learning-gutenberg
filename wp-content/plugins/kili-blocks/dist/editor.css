@@ -1,0 +1,45 @@
+.wp-block-kili-blocks-team-members {
+  display: block;
+  margin-left: 0;
+  margin-right: 0; }
+  .wp-block-kili-blocks-team-members.has-1-columns [data-type="kili-blocks/team-member"] {
+    width: 100%; }
+  .wp-block-kili-blocks-team-members.has-2-columns [data-type="kili-blocks/team-member"] {
+    width: 50%; }
+  .wp-block-kili-blocks-team-members.has-3-columns [data-type="kili-blocks/team-member"] {
+    width: 33.33333%; }
+  .wp-block-kili-blocks-team-members.has-4-columns [data-type="kili-blocks/team-member"] {
+    width: 25%; }
+  .wp-block-kili-blocks-team-members.has-5-columns [data-type="kili-blocks/team-member"] {
+    width: 20%; }
+  .wp-block-kili-blocks-team-members.has-6-columns [data-type="kili-blocks/team-member"] {
+    width: 16.66667%; }
+  .wp-block-kili-blocks-team-members.has-7-columns [data-type="kili-blocks/team-member"] {
+    width: 14.28571%; }
+  .wp-block-kili-blocks-team-members.has-8-columns [data-type="kili-blocks/team-member"] {
+    width: 12.5%; }
+  .wp-block-kili-blocks-team-members.has-9-columns [data-type="kili-blocks/team-member"] {
+    width: 11.11111%; }
+  .wp-block-kili-blocks-team-members.has-10-columns [data-type="kili-blocks/team-member"] {
+    width: 10%; }
+  .wp-block-kili-blocks-team-members.has-11-columns [data-type="kili-blocks/team-member"] {
+    width: 9.09091%; }
+  .wp-block-kili-blocks-team-members.has-12-columns [data-type="kili-blocks/team-member"] {
+    width: 8.33333%; }
+  .wp-block-kili-blocks-team-members > .editor-inner-blocks > .editor-block-list__layout {
+    display: flex;
+    flex-wrap: wrap; }
+    .wp-block-kili-blocks-team-members > .editor-inner-blocks > .editor-block-list__layout > [data-type="kili-blocks/team-member"] {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0; }
+    .wp-block-kili-blocks-team-members > .editor-inner-blocks > .editor-block-list__layout .block-list-appender {
+      width: 100%; }
+  .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member {
+    margin-left: 0;
+    width: auto !important; }
+    .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member.editor-styles-wrapper .wp-block-kili-blocks-team-member__info {
+      margin: 5px; }
+
+
+/*# sourceMappingURL=editor.css.map*/

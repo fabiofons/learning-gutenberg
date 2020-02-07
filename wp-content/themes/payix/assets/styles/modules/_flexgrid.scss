@@ -1,0 +1,82 @@
+.flexgrid {
+  @extend %flexgrid;
+}
+.flexgrid--full {
+  @extend %flexgrid--full;
+}
+.flexgrid__item {
+  @extend %flexgrid__item;
+}
+
+//Helpers
+.flexgrid--center {
+  @extend %flexgrid--center;
+}
+.flexgrid--reverse {
+  @extend %flexgrid--reverse;
+}
+.medium--start {
+  @extend %medium--start;
+}
+.medium--end {
+  @extend %medium--end;
+}
+.medium--middle {
+  @extend %medium--middle;
+}
+.medium--row-reverse {
+  @extend %medium--row-reverse;
+}
+
+//Columns
+.xsmall--col-4 {
+  @extend %xsmall--col-4;
+}
+.xsmall--col-6 {
+  @extend %xsmall--col-6;
+}
+.xsmall--col-8 {
+  @extend %xsmall--col-8;
+}
+.xsmall--col-12 {
+  @extend %xsmall--col-12;
+}
+.small--col-4 {
+  @extend %small--col-4;
+}
+.small--col-1 {
+  @extend %small--col-6;
+}
+.small--col-8 {
+  @extend %small--col-8;
+}
+.small--col-12 {
+  @extend %small--col-12;
+}
+.medium--col-3 {
+  @extend %medium--col-3;
+}
+.medium--col-4 {
+  @extend %medium--col-4;
+}
+.medium--col-5 {
+  @extend %medium--col-5;
+}
+.medium--col-6 {
+  @extend %medium--col-6;
+}
+.medium--col-7 {
+  @extend %medium--col-7;
+}
+.medium--col-8 {
+  @extend %medium--col-8;
+}
+.medium--col-9 {
+  @extend %medium--col-9;
+}
+.medium--col-10 {
+  @extend %medium--col-10;
+}
+.medium--col-11 {
+  @extend %medium--col-11;
+}

@@ -1,0 +1,105 @@
+.single {
+  &__container {
+    @include rem(-156, 'margin-top');
+    position: relative;
+    @media #{$medium-up} {
+      @include rem(-272, 'margin-top');
+      @include rem(1200, 'max-width');
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 $half-spacing-unit - 10;
+    }
+  }
+  &__info {
+    @include rem(28, 'padding-left');
+    @include rem(40, 'padding-right');
+    @media #{$medium-up} {
+      @include rem(50, 'padding-top');
+      @include rem(57, 'padding-left');
+      padding-right: 0;
+    }
+  }
+  &__title {
+    @include rem(30);
+    @include rem(35, 'line-height');
+    @include rem(-0.5, 'letter-spacing');
+    @include rem(10, 'margin-bottom');
+    color: $color-text-title;
+    font-family: $font-family-secondary;
+    margin-top: 0;
+    @media #{$medium-up} {
+      @include rem(48);
+      @include rem(50, 'line-height');
+      @include rem(-0.8, 'letter-spacing');
+      @include rem(40, 'margin-bottom');
+      margin-top: 0;
+    }
+  }
+  &__author {
+    @include rem(16);
+    @include rem(16, 'line-height');
+    @include rem(23, 'margin-right');
+    color: $gray-base;
+    letter-spacing: 0;
+    @media #{$small-max} {
+      padding: 0 $half-spacing-unit + 10;
+    }
+  }
+  &__date {
+    @include rem(12);
+    @include rem(12, 'line-height');
+    color: $gray-base;
+    letter-spacing: 0;
+    @media #{$small-max} {
+      padding: 0 $half-spacing-unit + 10;
+    }
+  }
+  &__meta {
+    @include rem(20, 'padding-top');
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__meta-top {
+    .single__author,
+    .single__date  {
+      @include rem(20, 'line-height');
+      display: block;
+      padding: 0;
+    }
+  }
+  &__image-wrapper {
+    @include rem(269, 'height');
+    @include rem(25, 'margin-bottom');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    @media #{$medium-up} {
+      margin: 0;
+    }
+  }
+  &__content {
+    @include rem(52, 'margin-bottom');
+    @media #{$medium-up} {
+      @include rem(10, 'border-radius');
+      @include rem(30, 'padding-right');
+      @include rem(53, 'padding-bottom');
+      @include rem(69, 'margin-left');
+      @include rem(69, 'margin-right');
+      @include rem(-98, 'margin-top');
+      @include rem(70, 'margin-bottom');
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(10,82,59,0.20);
+      overflow: hidden;
+    }
+  }
+  &__body {
+    @include rem(28, 'padding-left');
+    @include rem(28, 'padding-right');
+    @media #{$medium-up} {
+      @include rem(30, 'padding-left');
+      @include rem(30, 'padding-top');
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="tabs-content">
+  <div class="container">
+    <div class="js-tabs tabs">
+      {% set tab_list = "" %}
+      {% set tab_content = "" %}
+      {% for item in page_block.tabs %}
+        {% set tab_list = tab_list ~ "<li class='js-tablist__item tabs__item'>
+          <a class='js-tablist__link flexbox tabs__link' data-item=" ~ loop.index ~ " href='#" ~ item.title|lower|replace(' ', '-') ~ "'>"
+          ~ ( item.animation_shortcode ?  item.animation_shortcode|shortcodes : m_image.retinize( item.icon, {class: 'header__image'} ) )
+          ~ ( item.animation_shortcode ?  m_image.retinize( item.icon, {class: 'header__image small-only'} ) : '' )
+          ~ item.title ~
+          "</a>"
+          ~ item.svg_code ~
+        "</li>" %}
+        {% set tab_content = tab_content ~
+        "<div id='" ~ item.title|lower|replace(' ', '-') ~ "' class='js-tabcontent'>" ~
+          "<div class='flexgrid flexgrid--full flexgrid--center'>" ~
+            "<div class='flexgrid__item xsmall--col-12 small--col-12 medium--col-7'>"
+              ~ item.content ~
+            "</div>
+            <div class='flexgrid__item xsmall--col-12 small--col-12 medium--col-5 desk-only'>"
+              ~ ( item.animation_shortcode_content ?  item.animation_shortcode_content|shortcodes : m_image.retinize( item.content_image, {class: 'content__image'} ) ) ~
+            "</div>
+          </div>
+        </div>" %}
+      {% endfor %}
+      <ul class="list-without-bullet js-tablist tabs__list" data-hx="h2">
+        {{tab_list}}
+      </ul>
+      <div class="flexgrid flexgrid--full flexgrid--center">
+        <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-10">
+          <div class="js-tabs-content tabs-container">
+            {{tab_content}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{get_block_styles('tabs-content')}}

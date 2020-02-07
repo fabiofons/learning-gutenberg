@@ -1,0 +1,55 @@
+//settings and colors
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../core/functions";
+
+//mixins
+@import "../mixins/buttons";
+@import "../mixins/box-sizing";
+@import "../mixins/clearfix";
+@import "../mixins/em";
+@import "../mixins/rem";
+@import "../mixins/flexgrid";
+@import "../mixins/visibility";
+@import "../mixins/tab-focus";
+@import "../mixins/opacity";
+
+.highlighted-cta {
+  @include rem(50, 'padding-top');
+  @include rem(80, 'padding-bottom');
+  background-color: #C0FF89;
+  position: relative;
+  @media #{$small-max} {
+    overflow: hidden;
+  }
+  @media #{$medium-up} {
+    @include rem(60, 'padding-top');
+    @include rem(36, 'padding-bottom');
+  }
+  &__title {
+    @include rem(32);
+    @include rem(-0.53, 'letter-spacing');
+    @include rem(40, 'line-height');
+    @include rem(40, 'margin-bottom');
+    color: $color-text-title;
+    font-family: $font-family-secondary;
+    margin-top: 0;
+  }
+  &__link {
+    position: relative;
+    z-index: 1;
+    @media #{$small-max} {
+      display: block;
+      margin: auto;
+    }
+  }
+  &__image {
+    margin-left: auto;
+    @media #{$small-max} {
+      @include rem(-30, 'right');
+      @include rem(-140, 'bottom');
+      position: absolute;
+      z-index: 0;
+    }
+  }
+}

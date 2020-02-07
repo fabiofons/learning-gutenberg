@@ -1,0 +1,27 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="splited-image-and-content">
+  <div class="container">
+    {% for item in page_block.contents %}
+      <div class="flexgrid flexgrid--full{{ loop.length > 1 ? cycle([' odd ', ' even '], loop.index0) : ' ' }}medium--{{ item.image_position == 'left' ? 'start' : 'end' }}{{ item.image_position == 'left' ? ' relative' : '' }}">
+        <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-11">
+          <div class="flexgrid flexgrid--full{{ item.image_position == 'left' ? ' flexgrid--reverse' : '' }}">
+            <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-7">
+              <h2 class="splited-image-and-content__title{{ item.image_position == 'left' ? ' splited-image-and-content__title--right' : ' splited-image-and-content__title--left' }}">{{item.title}}</h2>
+              {% if item.sub_title %}
+                <div class="splited-image-and-content__subtitle">{{item.sub_title}}</div>
+              {% endif %}
+              <div class="splited-image-and-content__description{{ item.image_position == 'left' ? ' splited-image-and-content__description--right' : ' splited-image-and-content__description--left' }}">
+                {{item.content}}
+              </div>
+            </div>
+            <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-5 desk-only">
+              {% set image_class =  item.image_position == 'left' ? 'splited-image-and-content__image splited-image-and-content__image--left' : 'splited-image-and-content__image splited-image-and-content__image--right' %}
+              {{ m_image.retinize( item.image, {class: image_class} ) }}
+            </div>
+        </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{{get_block_styles('splited-image-and-content')}}

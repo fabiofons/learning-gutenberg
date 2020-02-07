@@ -1,0 +1,152 @@
+.footer {
+  @include rem(39, 'padding-top');
+  @include rem(48, 'padding-bottom');
+  background-color: #000000;
+  position: relative;
+  &__top {
+    @include rem(17, 'padding-bottom');
+  }
+  &__logo {
+    @media #{$small-max} {
+      @include rem(50, 'margin-bottom');
+    }
+  }
+  .navigation__list {
+    @media #{$small-max} {
+      position: relative;
+    }
+  }
+  .navigation__item {
+    @include rem(50, 'margin-right');
+    @media #{$medium-max} {
+      @include rem(20, 'margin-right');
+    }
+    @media #{$small-max} {
+      @include rem(30, 'margin-bottom');
+      margin-right: 0;
+      display: block;
+      text-align: left;
+    }
+    &.active {
+      .navigation__link {
+        color: $white;
+        &:hover,
+        &:visited {
+          color: $white;
+        }
+      }
+    }
+  }
+  .navigation {
+    @media #{$medium-up} {
+      text-align: right;
+    }
+  }
+  .navigation__link {
+    color: $white;
+    font-weight: 400;
+    @media #{$small-max} {
+      display: inline-block;
+    }
+    &:after {
+      background: $white;
+      margin: inherit;
+      @media #{$medium-up} {
+        margin: 0 auto;
+      }
+    }
+    &:hover,
+    &:visited {
+      color: $white;
+    }
+  }
+  .navigation__item.button--contact {
+    @include rem(18, 'margin-right');
+    @media #{$small-max} {
+      @include rem(110, 'width');
+      margin-right: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      z-index: 1;
+    }
+    .navigation__link {
+      @include rem(16);
+      @include rem(20, 'line-height');
+      color: $color-text-title;
+      background-color: $white;
+      font-weight: 600;
+      padding: to-rem(10) to-rem(18);
+      &:visited {
+        background-color: $white;
+        border: 2px solid $white;
+        color: $color-text-title;
+      }
+      &:hover {
+        background-color: $color-text-title;
+        border: 2px solid $color-text-title;
+        color: $white;
+      }
+    }
+    &.active {
+      color: $color-text-title;
+      &:visited {
+        background-color: $white;
+        border: 2px solid $white;
+        color: $color-text-title;
+      }
+    }
+  }
+  .button--login {
+    margin-right: 0;
+    @media #{$small-max} {
+      text-align: center;
+      max-width: 190px;
+    }
+    .navigation__link {
+      @include rem(16);
+      @include rem(20, 'line-height');
+      border-color: $white;
+      font-weight: 600;
+      padding: to-rem(8) to-rem(26);
+      &:visited {
+        border-color: $white;
+        color: $white;
+      }
+      &:hover {
+        background-color: $color-text-title;
+        border-color: $color-text-title;
+        color: $white;
+      }
+    }
+  }
+  &__copyright {
+    @include rem(12);
+    color: $white;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 20px;
+    @media #{$medium-up} {
+      text-align: right;
+    }
+  }
+  &__swipe-to-top {
+    @include rem(40, 'right');
+    @include rem(11, 'top');
+    cursor: pointer;
+    position: absolute;
+  }
+}
+.social {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+   @media #{$small-max} {
+    text-align: center;
+  }
+  &__item {
+    @include rem(18, 'margin-right');
+    display: inline-block;
+  }
+}

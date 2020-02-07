@@ -1,0 +1,30 @@
+{% import '_macros/_img.twig' as m_image %}
+<section class="highlighted-cta">
+  <div class="container">
+    <div class="flexgrid flexgrid--full flexgrid--center">
+      <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-10">
+        <div class="flexgrid flexgrid--full flexgrid--center medium--middle">
+          <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-9">
+            {% if page_block.title %}
+              <h2 class="highlighted-cta__title">{{page_block.title}}</h2>
+            {% endif %}
+            {% set cta_link = page_block.cta_link and page_block.cta_type == 'internal' ?
+              page_block.cta_link  : ( page_block.cta_link_external and page_block.cta_type == 'external' ?
+              page_block.cta_link_external : '' ) %}
+              {% set target = page_block.cta_target == '_blank' ? ' target="_blank" rel="noopener noreferrer"' : '' %}
+            {% if cta_link %}
+              <a href="{{cta_link}}" class="button highlighted-cta__link"{{target}}>
+                {{page_block.cta_label}}
+              </a>
+            {% endif %}
+          </div>
+          <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-3">
+            {{page_block.animation_shortcode|shortcodes}}
+            {{ m_image.retinize( page_block.icon, {class: 'highlighted-cta__image small-only'} ) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{get_block_styles('highlighted-cta')}}

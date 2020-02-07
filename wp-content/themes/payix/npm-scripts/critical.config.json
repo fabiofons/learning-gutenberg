@@ -1,0 +1,26 @@
+{
+  "home": {
+    "url": "https://payix.dev/",
+    "dest": "home"
+  },
+  "solutions": {
+    "url": "https://payix.dev/solutions/",
+    "dest": "solutions"
+  },
+  "about": {
+    "url": "https://payix.dev/about/",
+    "dest": "about"
+  },
+  "blog": {
+    "url": "https://payix.dev/news/",
+    "dest": "blog"
+  },
+  "contact": {
+    "url": "https://payix.dev/contact/",
+    "dest": "contact"
+  },
+  "single": {
+    "url": "https://payix.dev/internet-advertising-trends-you-wont-be-disappointed/",
+    "dest": "single"
+  }
+}

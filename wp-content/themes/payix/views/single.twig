@@ -1,0 +1,57 @@
+{% import '_macros/_img.twig' as m_image %}
+{% extends "layouts/base.twig" %}
+{% block header %}
+    {% include 'partials/header.twig' %}
+{% endblock %}
+{% block content %}
+{% set page_block = { title: '', title_columns: options.title_columns, animations: options.animations, without_section: true } %}
+  {% include 'blocks/pages/main-banner.twig' with { page_block: page_block } %}
+  <div class="single__container">
+    <article class="single__article" aria-label="{{post.title}}" itemscope itemtype="http://schema.org/Article">
+      <div class="single__content" itemprop="articleBody">
+        <div class="single__header">
+          <div class="flexgrid flexgrid--full">
+            <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-5">
+              <div class="single__image-wrapper" style="background-image: url({{post.thumbnail.src}})">
+                {{ m_image.retinize( post.thumbnail.id, {class: 'hidden'} ) }}
+              </div>
+            </div>
+            <div class="flexgrid__item xsmall--col-12 small--col-12 medium--col-7">
+              <div class="single__info">
+                <h2 class="single__title" itemprop="headline">
+                  {{post.title}}
+                </h2>
+                <div class="single__meta-top small-only">
+                  {% if post.post_article_author %}
+                    <div class="single__author">
+                      {{post.post_article_author}}
+                    </div>
+                  {% endif %}
+                  <time class="single__date" itemprop="dateCreated" datetime="{{ post.post_date }}">
+                    {{ post.post_date|date('M j, Y') }}
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="single__body">
+          {{post.content}}
+        </div>
+        <div class="desk-only">
+          <div class="single__meta">
+            {% if post.post_article_author %}
+              <div class="single__author">
+                {{post.post_article_author}}
+              </div>
+            {% endif %}
+            <time class="single__date" itemprop="dateCreated" datetime="{{ post.post_date }}">
+              {{ post.post_date|date('M j, Y') }}
+            </time>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  {{get_block_styles('single')}}
+{% endblock %}

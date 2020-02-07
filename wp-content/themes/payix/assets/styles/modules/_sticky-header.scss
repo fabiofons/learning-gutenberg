@@ -1,0 +1,20 @@
+.wrapfixed {
+  position: fixed;
+  left: 0;
+  margin-top: 0;
+  z-index: 99990;
+  transition: 0.3s;
+  opacity: 1;
+  &.down,
+  &.up {
+    box-shadow: 0 2px 4px 0 rgba(0,52,61,.12);
+    .header {
+      background-color: $white;
+      @media #{$small-max} {
+        &.show-menu {
+          background-color: #F6FFED;
+        }
+      }
+    }
+  }
+}
