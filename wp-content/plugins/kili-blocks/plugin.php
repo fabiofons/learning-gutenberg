@@ -13,6 +13,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+function kili_blocks_category($categories, $post){
+  return array_merge(
+    $categories, 
+    array(
+      array(
+        'slug' => 'kili-blocks', 
+        'title'=> __('Kili Category', 'kili-core'), 
+        'icon'=>'wordpress'
+      )
+    )
+  );
+}
+
+add_filter('block_categories', 'kili_blocks_category', 10, 2);
+
 function kili_blocks_register_block_type($block, $options=array()){
   register_block_type('kili-blocks/' . $block, 
     array_merge(
@@ -51,6 +66,9 @@ function kili_blocks_register() {
   kili_blocks_register_block_type('kililayout2');
   kili_blocks_register_block_type('team-member');
   kili_blocks_register_block_type('team-members');
+  kili_blocks_register_block_type('row-layout');
+  kili_blocks_register_block_type('section');
 }
 
 add_action('init', 'kili_blocks_register');
+

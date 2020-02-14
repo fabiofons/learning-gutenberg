@@ -19,6 +19,10 @@
 .content p.wp-block-kili-blocks-kililayout2 {
   color: #eee; }
 
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
 .wp-block-kili-blocks-team-members {
   display: flex;
   flex-wrap: wrap; }
@@ -76,6 +80,30 @@
         .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__social ul li svg {
           vertical-align: middle;
           color: #4e4e4e; }
+    .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__linkForm {
+      width: 70%;
+      border: 1px solid #eaeaea;
+      padding: 10px;
+      margin-top: 10px; }
+    .wp-block-kili-blocks-team-members .wp-block-kili-blocks-team-member__removeLink {
+      color: #d23535;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer; }
+
+.entry-content {
+  margin: 0; }
+
+.wp-block-kili-blocks-row-layout {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column; }
+  .wp-block-kili-blocks-row-layout .wp-block-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+    .wp-block-kili-blocks-row-layout .wp-block-columns .wp-block-column {
+      padding: 10px; }
 
 
 /*# sourceMappingURL=style.css.map*/

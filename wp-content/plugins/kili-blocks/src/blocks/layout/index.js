@@ -5,7 +5,7 @@ const { createElement } = wp.element;
 registerBlockType("kili-blocks/kililayout", {
   title: __("Kili Layout", "kili-core"),
   description: __("Our block for Kili", "kili-core"),
-  category: "layout",
+  category: "kili-blocks",
   icon: "tagcloud",
   keywords: [__("kili", "kili-core")],
   edit: () => {

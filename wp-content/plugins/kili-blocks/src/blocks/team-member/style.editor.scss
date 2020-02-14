@@ -5,18 +5,17 @@
 
   @for $i from 1 through 12 {
     &.has-#{$i}-columns {
-
-      [data-type="kili-blocks/team-member"] {
-        width: (100%/$i);
+      [data-type="core/columns"] {
+        width: (100% / $i);
       }
     }
   }
 
-  >.editor-inner-blocks>.editor-block-list__layout {
+  > .editor-inner-blocks > .editor-block-list__layout {
     display: flex;
     flex-wrap: wrap;
 
-    >[data-type="kili-blocks/team-member"] {
+    > [data-type="kili-blocks/team-member"] {
       max-width: none;
       margin-left: 0;
       margin-right: 0;

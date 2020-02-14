@@ -7,7 +7,7 @@ const { RichText, BlockControls, AlignmentToolbar } = wp.blockEditor;
 registerBlockType("kili-blocks/kililayout2", {
   title: __("Kili Layout 2", "kili-core"),
   description: __("Our block for Kili 2", "kili-core"),
-  category: "layout",
+  category: "kili-blocks",
   icon: (
     <svg
       xmlns="http://www.w3.org/2000/svg"

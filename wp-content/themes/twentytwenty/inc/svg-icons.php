@@ -48,13 +48,13 @@ if ( ! function_exists( 'twentytwenty_get_theme_svg' ) ) {
 				),
 				'path'    => array(
 					'fill'      => true,
-					'fill-rule' => true,
+					'fillRule' => true,
 					'd'         => true,
 					'transform' => true,
 				),
 				'polygon' => array(
 					'fill'      => true,
-					'fill-rule' => true,
+					'fillRule' => true,
 					'points'    => true,
 					'transform' => true,
 					'focusable' => true,

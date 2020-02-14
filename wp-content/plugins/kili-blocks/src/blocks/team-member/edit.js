@@ -10,17 +10,19 @@ import {
   TextareaControl,
   SelectControl,
   Dashicon,
-  Tooltip
+  Tooltip,
+  TextControl
 } from "@wordpress/components";
 import { withSelect } from "@wordpress/data";
-const {
+import {
   RichText,
   MediaPlaceholder,
   BlockControls,
   MediaUpload,
   MediaUploadCheck,
-  InspectorControls
-} = wp.blockEditor;
+  InspectorControls,
+  URLInput
+} from "@wordpress/block-editor";
 
 class TeamMemberEdit extends Component {
   constructor(props) {
@@ -102,6 +104,27 @@ class TeamMemberEdit extends Component {
       setAttributes({ social: [...social, { icon: "wordpress", link: "" }] });
       this.setState({
         selectedLink: social.length
+      });
+    };
+    const updateSocialItem = (type, value) => {
+      const { social } = attributes;
+      const { selectedLink } = this.state;
+      let new_social = [...social];
+      new_social[selectedLink][type] = value;
+      setAttributes({ social: new_social });
+    };
+    const removeLink = e => {
+      e.preventDefault();
+      const { social } = attributes;
+      const { selectedLink } = this.state;
+      setAttributes({
+        social: [
+          ...social.slice(0, selectedLink),
+          ...social.slice(selectedLink + 1)
+        ]
+      });
+      this.setState({
+        selectedLink: null
       });
     };
     return (
@@ -194,7 +217,7 @@ class TeamMemberEdit extends Component {
             allowedFormats={[]}
           />
           <div className="wp-block-kili-blocks-team-member__social">
-            <ul>
+            {/* <ul>
               {social.map((s, i) => {
                 return (
                   <li
@@ -220,8 +243,28 @@ class TeamMemberEdit extends Component {
                   </Tooltip>
                 </li>
               )}
-            </ul>
+            </ul> */}
           </div>
+          {this.state.selectedLink !== null && (
+            <div className="wp-block-kili-blocks-team-member__linkForm">
+              <TextControl
+                label={__("Icon", "kili-core")}
+                value={social[this.state.selectedLink].icon}
+                onChange={icon => updateSocialItem("icon", icon)}
+              />
+              <URLInput
+                label={__("URL", "kili-core")}
+                value={social[this.state.selectedLink].link}
+                onChange={url => updateSocialItem("link", url)}
+              />
+              <a
+                className="wp-block-kili-blocks-team-member__removeLink"
+                onClick={removeLink}
+              >
+                {__("Remove Link", "kili-core")}
+              </a>
+            </div>
+          )}
         </div>
       </>
     );

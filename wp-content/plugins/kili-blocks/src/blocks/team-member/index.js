@@ -4,6 +4,7 @@ import { __ } from "@wordpress/i18n";
 const { RichText } = wp.blockEditor;
 import "./parent";
 import edit from "./edit";
+import { Dashicon } from "@wordpress/components";
 
 const attributes = {
   title: {
@@ -37,14 +38,27 @@ const attributes = {
     default: [
       { link: "https://facebook.com", icon: "facebook" },
       { link: "https://twitter.com", icon: "twitter" }
-    ]
+    ],
+    source: "query",
+    selector: ".wp-block-kili-blocks-team-member__social ul li",
+    query: {
+      icon: {
+        source: "attribute",
+        attribute: "data-icon"
+      },
+      link: {
+        source: "attribute",
+        selector: "a",
+        attribute: "href"
+      }
+    }
   }
 };
 
 registerBlockType("kili-blocks/team-member", {
   title: __("Team Member", "kili-core"),
   description: __("Our block for Team member", "kili-core"),
-  category: "layout",
+  category: "kili-blocks",
   icon: "admin-users",
   parent: ["kili-blocks/team-members"],
   supports: {
@@ -55,7 +69,7 @@ registerBlockType("kili-blocks/team-member", {
   keywords: [__("Team", "kili-core"), __("Member", "kili-core")],
   edit,
   save: ({ attributes }) => {
-    const { title, info, url, alt, id } = attributes;
+    const { title, info, url, alt, id, social } = attributes;
     return (
       <div>
         {url && (
@@ -74,6 +88,25 @@ registerBlockType("kili-blocks/team-member", {
             value={info}
             tagName={"p"}
           />
+        )}
+        {social.length > 0 && (
+          <div className="wp-block-kili-blocks-team-member__social">
+            <ul>
+              {social.map((item, index) => {
+                return (
+                  <li key={index} data-icon={item.icon}>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Dashicon icon={item.icon} size={16} />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         )}
       </div>
     );
