@@ -26,6 +26,7 @@
     "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-html-id": "^0.1.5",
     "react-sortable-hoc": "^1.11.0"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "@babel/preset-react": "^7.0.0",
     "@wordpress/browserslist-config": "^2.3.0",
     "@wordpress/components": "^9.0.0",
+    "@wordpress/compose": "^3.11.0",
     "@wordpress/editor": "^9.10.0",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",

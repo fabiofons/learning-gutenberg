@@ -12,29 +12,20 @@ registerBlockType("kili-blocks/row-layout", {
   keywords: [__("Layout", "kili-core")],
   attributes,
   edit,
-  // deprecated: [
-  //   {
-  //     attributes: {
-  //       ...attributes,
-  //       UUID: {
-  //         type: "string",
-  //         default: generateID()
-  //       }
-  //     }
-  //   }
-  // ],
   save(props) {
     const { attributes } = props;
-    const { UUID, containerSet, bgStyle } = attributes;
-
+    const { UUID, containerSet, bgStyle, fullWidth } = attributes;
+    console.log("bgStyle", bgStyle);
     return (
       <section
         className={`wp-block-kili-blocks-row-layout${UUID} ${
-          containerSet ? "container " : ""
+          !fullWidth ? "container" : ""
         }`}
       >
-        <InnerBlocks.Content />
-        {bgStyle ? <style>{bgStyle}</style> : ""}
+        <div className={containerSet ? "container" : ""}>
+          <InnerBlocks.Content />
+          {bgStyle ? <style>{bgStyle}</style> : ""}
+        </div>
       </section>
     );
   }

@@ -217,7 +217,7 @@ class TeamMemberEdit extends Component {
             allowedFormats={[]}
           />
           <div className="wp-block-kili-blocks-team-member__social">
-            {/* <ul>
+            <ul>
               {social.map((s, i) => {
                 return (
                   <li
@@ -243,7 +243,7 @@ class TeamMemberEdit extends Component {
                   </Tooltip>
                 </li>
               )}
-            </ul> */}
+            </ul>
           </div>
           {this.state.selectedLink !== null && (
             <div className="wp-block-kili-blocks-team-member__linkForm">

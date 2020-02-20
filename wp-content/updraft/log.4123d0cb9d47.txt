@@ -1,0 +1,847 @@
+0000.007 (0) Opened log file at time: Wed, 19 Feb 2020 21:51:20 +0000 on https://gutenbergtest.dev
+0000.010 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.21 WP: 5.3.2 PHP: 7.3.13 (fpm-fcgi, Linux b7dbeb47c18c 4.19.76-linuxkit #1 SMP Thu Oct 17 19:31:58 UTC 2019 x86_64) MySQL: 10.3.21-MariaDB-1:10.3.21+maria~bionic WPLANG: en_US Server: nginx/1.17.7 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 4.3M | 2M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.013 (0) Free space on disk containing Updraft's temporary directory: 192336.7 MB
+0000.037 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.045 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.047 (0) Set semaphore last lock (fd) time to 2020-02-19 21:51:20
+0000.049 (0) Semaphore lock (fd) complete
+0000.055 (0) Backup run: resumption=0, nonce=4123d0cb9d47, file_nonce=4123d0cb9d47 begun at=1582149080 (0s ago), job type=backup
+0000.057 (0) Scheduling a resumption (1) after 300 seconds (1582149380) in case this run gets aborted
+0000.070 (0) Checking if we have a zip executable available
+0000.072 (0) Creation of backups of directories: beginning
+0000.081 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0056.599 (0) Total entities for the zip file: 4623 directories, 25023 files (0 skipped as non-modified), 139.1 MB
+0056.661 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0059.764 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 100 files added (on-disk size: 970.8 KB)
+0059.995 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 200 files added (on-disk size: 970.8 KB)
+0060.274 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 300 files added (on-disk size: 970.8 KB)
+0060.602 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 400 files added (on-disk size: 970.8 KB)
+0060.880 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 500 files added (on-disk size: 970.8 KB)
+0060.886 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.7 MB, 25023 files batched, 501 (502) added so far); re-opening (prior size: 970.8 KB)
+0064.725 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 600 files added (on-disk size: 2907.7 KB)
+0065.203 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 700 files added (on-disk size: 2907.7 KB)
+0065.729 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 800 files added (on-disk size: 2907.7 KB)
+0066.215 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 900 files added (on-disk size: 2907.7 KB)
+0066.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.3 MB, 486 (988) files added so far); re-opening (prior size: 2907.7 KB)
+0069.420 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1000 files added (on-disk size: 3126.3 KB)
+0069.914 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1100 files added (on-disk size: 3126.3 KB)
+0070.440 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1200 files added (on-disk size: 3126.3 KB)
+0070.959 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1300 files added (on-disk size: 3126.3 KB)
+0071.480 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1400 files added (on-disk size: 3126.3 KB)
+0071.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 441 (1429) files added so far); re-opening (prior size: 3126.3 KB)
+0074.655 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1500 files added (on-disk size: 3380.3 KB)
+0075.257 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1600 files added (on-disk size: 3380.3 KB)
+0075.841 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1700 files added (on-disk size: 3380.3 KB)
+0076.396 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1800 files added (on-disk size: 3380.3 KB)
+0076.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.9 MB, 418 (1847) files added so far); re-opening (prior size: 3380.3 KB)
+0080.138 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 1900 files added (on-disk size: 4248 KB)
+0080.760 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2000 files added (on-disk size: 4248 KB)
+0081.345 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2100 files added (on-disk size: 4248 KB)
+0081.931 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2200 files added (on-disk size: 4248 KB)
+0082.527 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2300 files added (on-disk size: 4248 KB)
+0082.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.8 MB, 480 (2327) files added so far); re-opening (prior size: 4248 KB)
+0086.510 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2400 files added (on-disk size: 4890.5 KB)
+0087.127 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2500 files added (on-disk size: 4890.5 KB)
+0087.731 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2600 files added (on-disk size: 4890.5 KB)
+0088.302 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2700 files added (on-disk size: 4890.5 KB)
+0088.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.7 MB, 429 (2756) files added so far); re-opening (prior size: 4890.5 KB)
+0092.086 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2800 files added (on-disk size: 5476.5 KB)
+0092.780 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 2900 files added (on-disk size: 5476.5 KB)
+0093.424 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3000 files added (on-disk size: 5476.5 KB)
+0094.034 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3100 files added (on-disk size: 5476.5 KB)
+0094.631 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3200 files added (on-disk size: 5476.5 KB)
+0094.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.8 MB, 450 (3206) files added so far); re-opening (prior size: 5476.5 KB)
+0098.660 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3300 files added (on-disk size: 6259.4 KB)
+0099.230 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3400 files added (on-disk size: 6259.4 KB)
+0099.973 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3500 files added (on-disk size: 6259.4 KB)
+0100.538 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3600 files added (on-disk size: 6259.4 KB)
+0100.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.5 MB, 418 (3624) files added so far); re-opening (prior size: 6259.4 KB)
+0104.910 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3700 files added (on-disk size: 7239.8 KB)
+0105.480 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3800 files added (on-disk size: 7239.8 KB)
+0106.098 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 3900 files added (on-disk size: 7239.8 KB)
+0106.673 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.2 MB, 361 (3985) files added so far); re-opening (prior size: 7239.8 KB)
+0110.259 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4000 files added (on-disk size: 7705.6 KB)
+0110.858 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4100 files added (on-disk size: 7705.6 KB)
+0111.467 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4200 files added (on-disk size: 7705.6 KB)
+0112.214 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4300 files added (on-disk size: 7705.6 KB)
+0112.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.8 MB, 369 (4354) files added so far); re-opening (prior size: 7705.6 KB)
+0116.440 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4400 files added (on-disk size: 8319.1 KB)
+0117.096 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4500 files added (on-disk size: 8319.1 KB)
+0117.774 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4600 files added (on-disk size: 8319.1 KB)
+0118.485 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4700 files added (on-disk size: 8319.1 KB)
+0118.670 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.8 MB, 373 (4727) files added so far); re-opening (prior size: 8319.1 KB)
+0122.725 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4800 files added (on-disk size: 8572.5 KB)
+0123.383 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 4900 files added (on-disk size: 8572.5 KB)
+0124.059 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5000 files added (on-disk size: 8572.5 KB)
+0124.550 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5100 files added (on-disk size: 8572.5 KB)
+0124.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.4 MB, 395 (5122) files added so far); re-opening (prior size: 8572.5 KB)
+0128.979 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5200 files added (on-disk size: 9493 KB)
+0129.594 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5300 files added (on-disk size: 9493 KB)
+0130.148 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5400 files added (on-disk size: 9493 KB)
+0130.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.9 MB, 370 (5492) files added so far); re-opening (prior size: 9493 KB)
+0134.814 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5500 files added (on-disk size: 10435.6 KB)
+0135.513 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5600 files added (on-disk size: 10435.6 KB)
+0136.000 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5700 files added (on-disk size: 10435.6 KB)
+0136.289 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5800 files added (on-disk size: 10435.6 KB)
+0136.595 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 5900 files added (on-disk size: 10435.6 KB)
+0136.839 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.7 MB, 25023 files batched, 501 (5993) added so far); re-opening (prior size: 10435.6 KB)
+0139.281 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6000 files added (on-disk size: 10760.9 KB)
+0140.000 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6100 files added (on-disk size: 10760.9 KB)
+0140.649 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6200 files added (on-disk size: 10760.9 KB)
+0141.230 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6300 files added (on-disk size: 10760.9 KB)
+0141.672 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.4 MB, 391 (6384) files added so far); re-opening (prior size: 10760.9 KB)
+0145.604 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6400 files added (on-disk size: 11552.9 KB)
+0146.143 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6500 files added (on-disk size: 11552.9 KB)
+0146.663 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6600 files added (on-disk size: 11552.9 KB)
+0147.228 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6700 files added (on-disk size: 11552.9 KB)
+0147.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.5 MB, 397 (6781) files added so far); re-opening (prior size: 11552.9 KB)
+0151.668 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6800 files added (on-disk size: 12148 KB)
+0152.188 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 6900 files added (on-disk size: 12148 KB)
+0152.723 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7000 files added (on-disk size: 12148 KB)
+0153.195 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7100 files added (on-disk size: 12148 KB)
+0153.657 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7200 files added (on-disk size: 12148 KB)
+0153.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.9 MB, 421 (7202) files added so far); re-opening (prior size: 12148 KB)
+0157.525 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7300 files added (on-disk size: 12486.8 KB)
+0157.960 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7400 files added (on-disk size: 12486.8 KB)
+0158.386 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7500 files added (on-disk size: 12486.8 KB)
+0158.822 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7600 files added (on-disk size: 12486.8 KB)
+0159.227 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7700 files added (on-disk size: 12486.8 KB)
+0159.241 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.3 MB, 25023 files batched, 501 (7703) added so far); re-opening (prior size: 12486.8 KB)
+0163.257 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7800 files added (on-disk size: 12701.2 KB)
+0163.685 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 7900 files added (on-disk size: 12701.2 KB)
+0164.128 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8000 files added (on-disk size: 12701.2 KB)
+0164.562 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8100 files added (on-disk size: 12701.2 KB)
+0165.010 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8200 files added (on-disk size: 12701.2 KB)
+0165.030 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.3 MB, 25023 files batched, 501 (8204) added so far); re-opening (prior size: 12701.2 KB)
+0169.654 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8300 files added (on-disk size: 13526.6 KB)
+0170.258 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8400 files added (on-disk size: 13526.6 KB)
+0170.724 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8500 files added (on-disk size: 13526.6 KB)
+0171.154 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8600 files added (on-disk size: 13526.6 KB)
+0171.591 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8700 files added (on-disk size: 13526.6 KB)
+0171.613 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.6 MB, 25023 files batched, 501 (8705) added so far); re-opening (prior size: 13526.6 KB)
+0176.310 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8800 files added (on-disk size: 14895.2 KB)
+0176.746 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 8900 files added (on-disk size: 14895.2 KB)
+0177.183 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9000 files added (on-disk size: 14895.2 KB)
+0177.661 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9100 files added (on-disk size: 14895.2 KB)
+0178.091 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9200 files added (on-disk size: 14895.2 KB)
+0178.117 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.1 MB, 25023 files batched, 501 (9206) added so far); re-opening (prior size: 14895.2 KB)
+0182.644 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9300 files added (on-disk size: 15581.7 KB)
+0183.096 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9400 files added (on-disk size: 15581.7 KB)
+0183.588 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9500 files added (on-disk size: 15581.7 KB)
+0184.067 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9600 files added (on-disk size: 15581.7 KB)
+0184.524 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9700 files added (on-disk size: 15581.7 KB)
+0184.559 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.4 MB, 25023 files batched, 501 (9707) added so far); re-opening (prior size: 15581.7 KB)
+0191.761 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9800 files added (on-disk size: 16069.1 KB)
+0192.486 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 9900 files added (on-disk size: 16069.1 KB)
+0193.076 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10000 files added (on-disk size: 16069.1 KB)
+0193.565 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10100 files added (on-disk size: 16069.1 KB)
+0193.670 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.5 MB, 416 (10123) files added so far); re-opening (prior size: 16069.1 KB)
+0199.055 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10200 files added (on-disk size: 16816.7 KB)
+0199.765 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10300 files added (on-disk size: 16816.7 KB)
+0200.630 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10400 files added (on-disk size: 16816.7 KB)
+0200.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.7 MB, 285 (10408) files added so far); re-opening (prior size: 16816.7 KB)
+0204.865 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10500 files added (on-disk size: 17070.7 KB)
+0205.152 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10600 files added (on-disk size: 17070.7 KB)
+0205.451 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10700 files added (on-disk size: 17070.7 KB)
+0205.761 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10800 files added (on-disk size: 17070.7 KB)
+0206.084 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 10900 files added (on-disk size: 17070.7 KB)
+0206.122 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3 MB, 25023 files batched, 501 (10909) added so far); re-opening (prior size: 17070.7 KB)
+0210.008 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11000 files added (on-disk size: 17945.7 KB)
+0210.326 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11100 files added (on-disk size: 17945.7 KB)
+0210.619 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11200 files added (on-disk size: 17945.7 KB)
+0210.925 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11300 files added (on-disk size: 17945.7 KB)
+0211.226 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11400 files added (on-disk size: 17945.7 KB)
+0211.256 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.6 MB, 25023 files batched, 501 (11410) added so far); re-opening (prior size: 17945.7 KB)
+0221.292 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11500 files added (on-disk size: 20131.7 KB)
+0222.417 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11600 files added (on-disk size: 20131.7 KB)
+0222.686 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.2 MB, 209 (11619) files added so far); re-opening (prior size: 20131.7 KB)
+0229.687 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11700 files added (on-disk size: 20476 KB)
+0230.139 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11800 files added (on-disk size: 20476 KB)
+0230.611 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 11900 files added (on-disk size: 20476 KB)
+0231.080 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12000 files added (on-disk size: 20476 KB)
+0231.555 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12100 files added (on-disk size: 20476 KB)
+0231.642 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.7 MB, 25023 files batched, 501 (12120) added so far); re-opening (prior size: 20476 KB)
+0236.772 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12200 files added (on-disk size: 21065 KB)
+0237.190 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12300 files added (on-disk size: 21065 KB)
+0237.468 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12400 files added (on-disk size: 21065 KB)
+0237.756 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12500 files added (on-disk size: 21065 KB)
+0238.051 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12600 files added (on-disk size: 21065 KB)
+0238.110 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.9 MB, 25023 files batched, 501 (12621) added so far); re-opening (prior size: 21065 KB)
+0242.893 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12700 files added (on-disk size: 21759.3 KB)
+0243.352 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12800 files added (on-disk size: 21759.3 KB)
+0243.838 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 12900 files added (on-disk size: 21759.3 KB)
+0244.311 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13000 files added (on-disk size: 21759.3 KB)
+0244.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.1 MB, 456 (13077) files added so far); re-opening (prior size: 21759.3 KB)
+0249.739 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13100 files added (on-disk size: 21914.8 KB)
+0250.138 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13200 files added (on-disk size: 21914.8 KB)
+0250.436 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13300 files added (on-disk size: 21914.8 KB)
+0250.718 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13400 files added (on-disk size: 21914.8 KB)
+0251.013 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13500 files added (on-disk size: 21914.8 KB)
+0251.238 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.2 MB, 25023 files batched, 501 (13578) added so far); re-opening (prior size: 21914.8 KB)
+0257.516 (0) The scheduled resumption is within 45 seconds - will reschedule
+0257.519 (0) Rescheduling resumption 1: moving to 345 seconds from now (1582149682)
+0257.522 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0257.860 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13600 files added (on-disk size: 23132.5 KB)
+0259.462 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13700 files added (on-disk size: 23132.5 KB)
+0259.684 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.5 MB, 134 (13712) files added so far); re-opening (prior size: 23132.5 KB)
+0268.069 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13800 files added (on-disk size: 23305.8 KB)
+0269.204 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 13900 files added (on-disk size: 23305.8 KB)
+0269.675 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.5 MB, 226 (13938) files added so far); re-opening (prior size: 23305.8 KB)
+0276.944 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14000 files added (on-disk size: 23544.6 KB)
+0278.246 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14100 files added (on-disk size: 23544.6 KB)
+0278.673 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.5 MB, 200 (14138) files added so far); re-opening (prior size: 23544.6 KB)
+0286.476 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14200 files added (on-disk size: 24435.9 KB)
+0287.139 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14300 files added (on-disk size: 24435.9 KB)
+0287.690 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14400 files added (on-disk size: 24435.9 KB)
+0288.277 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14500 files added (on-disk size: 24435.9 KB)
+0288.675 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3 MB, 423 (14561) files added so far); re-opening (prior size: 24435.9 KB)
+0295.837 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14600 files added (on-disk size: 25209.6 KB)
+0296.311 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14700 files added (on-disk size: 25209.6 KB)
+0296.817 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14800 files added (on-disk size: 25209.6 KB)
+0297.292 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 14900 files added (on-disk size: 25209.6 KB)
+0297.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.8 MB, 418 (14979) files added so far); re-opening (prior size: 25209.6 KB)
+0307.470 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15000 files added (on-disk size: 25591.6 KB)
+0309.110 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15100 files added (on-disk size: 25591.6 KB)
+0309.680 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.1 MB, 138 (15117) files added so far); re-opening (prior size: 25591.6 KB)
+0317.324 (0) The time we have been running (317.3) is approaching the resumption interval (345) - increasing resumption interval to 348
+0318.578 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15200 files added (on-disk size: 25679.5 KB)
+0319.683 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.1 MB, 138 (15255) files added so far); re-opening (prior size: 25679.5 KB)
+0325.152 (0) The time we have been running (325.1) is approaching the resumption interval (348) - increasing resumption interval to 356
+0325.440 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15300 files added (on-disk size: 25768.3 KB)
+0325.904 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15400 files added (on-disk size: 25768.3 KB)
+0326.349 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15500 files added (on-disk size: 25768.3 KB)
+0326.843 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15600 files added (on-disk size: 25768.3 KB)
+0327.299 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15700 files added (on-disk size: 25768.3 KB)
+0327.568 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.2 MB, 25023 files batched, 501 (15756) added so far); re-opening (prior size: 25768.3 KB)
+0334.383 (0) The time we have been running (334.4) is approaching the resumption interval (356) - increasing resumption interval to 365
+0334.641 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15800 files added (on-disk size: 26556.1 KB)
+0335.310 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 15900 files added (on-disk size: 26556.1 KB)
+0335.638 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16000 files added (on-disk size: 26556.1 KB)
+0336.173 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16100 files added (on-disk size: 26556.1 KB)
+0336.479 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16200 files added (on-disk size: 26556.1 KB)
+0336.665 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1 MB, 25023 files batched, 501 (16257) added so far); re-opening (prior size: 26556.1 KB)
+0340.922 (0) The time we have been running (340.9) is approaching the resumption interval (365) - increasing resumption interval to 371
+0341.095 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16300 files added (on-disk size: 26987.7 KB)
+0341.390 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16400 files added (on-disk size: 26987.7 KB)
+0341.698 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16500 files added (on-disk size: 26987.7 KB)
+0342.031 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16600 files added (on-disk size: 26987.7 KB)
+0342.338 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16700 files added (on-disk size: 26987.7 KB)
+0342.580 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.4 MB, 25023 files batched, 501 (16758) added so far); re-opening (prior size: 26987.7 KB)
+0347.403 (0) The time we have been running (347.4) is approaching the resumption interval (371) - increasing resumption interval to 378
+0347.608 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16800 files added (on-disk size: 27631.6 KB)
+0347.961 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 16900 files added (on-disk size: 27631.6 KB)
+0348.294 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17000 files added (on-disk size: 27631.6 KB)
+0348.740 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17100 files added (on-disk size: 27631.6 KB)
+0349.262 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17200 files added (on-disk size: 27631.6 KB)
+0349.517 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.5 MB, 25023 files batched, 501 (17259) added so far); re-opening (prior size: 27631.6 KB)
+0354.173 (0) The time we have been running (354.2) is approaching the resumption interval (378) - increasing resumption interval to 385
+0354.358 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17300 files added (on-disk size: 28538.3 KB)
+0354.662 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17400 files added (on-disk size: 28538.3 KB)
+0354.970 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17500 files added (on-disk size: 28538.3 KB)
+0355.410 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17600 files added (on-disk size: 28538.3 KB)
+0355.775 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17700 files added (on-disk size: 28538.3 KB)
+0356.015 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.7 MB, 25023 files batched, 501 (17760) added so far); re-opening (prior size: 28538.3 KB)
+0360.566 (0) The time we have been running (360.6) is approaching the resumption interval (385) - increasing resumption interval to 391
+0360.797 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17800 files added (on-disk size: 29262 KB)
+0361.116 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 17900 files added (on-disk size: 29262 KB)
+0361.401 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18000 files added (on-disk size: 29262 KB)
+0361.720 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18100 files added (on-disk size: 29262 KB)
+0362.041 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18200 files added (on-disk size: 29262 KB)
+0362.243 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.5 MB, 25023 files batched, 501 (18261) added so far); re-opening (prior size: 29262 KB)
+0366.777 (0) The time we have been running (366.8) is approaching the resumption interval (391) - increasing resumption interval to 397
+0366.962 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18300 files added (on-disk size: 29921.9 KB)
+0367.291 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18400 files added (on-disk size: 29921.9 KB)
+0367.644 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18500 files added (on-disk size: 29921.9 KB)
+0367.961 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18600 files added (on-disk size: 29921.9 KB)
+0368.282 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18700 files added (on-disk size: 29921.9 KB)
+0368.484 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.5 MB, 25023 files batched, 501 (18762) added so far); re-opening (prior size: 29921.9 KB)
+0373.326 (0) The time we have been running (373.3) is approaching the resumption interval (397) - increasing resumption interval to 404
+0373.507 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18800 files added (on-disk size: 30832.9 KB)
+0373.873 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 18900 files added (on-disk size: 30832.9 KB)
+0374.202 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19000 files added (on-disk size: 30832.9 KB)
+0374.550 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19100 files added (on-disk size: 30832.9 KB)
+0374.850 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19200 files added (on-disk size: 30832.9 KB)
+0375.049 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.2 MB, 25023 files batched, 501 (19263) added so far); re-opening (prior size: 30832.9 KB)
+0380.323 (0) The time we have been running (380.3) is approaching the resumption interval (404) - increasing resumption interval to 411
+0380.500 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19300 files added (on-disk size: 31363.5 KB)
+0380.857 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19400 files added (on-disk size: 31363.5 KB)
+0381.195 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19500 files added (on-disk size: 31363.5 KB)
+0381.555 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19600 files added (on-disk size: 31363.5 KB)
+0381.910 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19700 files added (on-disk size: 31363.5 KB)
+0382.125 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.2 MB, 25023 files batched, 501 (19764) added so far); re-opening (prior size: 31363.5 KB)
+0387.005 (0) The time we have been running (387) is approaching the resumption interval (411) - increasing resumption interval to 417
+0387.188 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19800 files added (on-disk size: 32226.2 KB)
+0387.524 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 19900 files added (on-disk size: 32226.2 KB)
+0387.870 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20000 files added (on-disk size: 32226.2 KB)
+0388.224 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20100 files added (on-disk size: 32226.2 KB)
+0388.570 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20200 files added (on-disk size: 32226.2 KB)
+0388.817 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.3 MB, 25023 files batched, 501 (20265) added so far); re-opening (prior size: 32226.2 KB)
+0393.718 (0) The time we have been running (393.7) is approaching the resumption interval (417) - increasing resumption interval to 424
+0393.896 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20300 files added (on-disk size: 33070.1 KB)
+0394.234 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20400 files added (on-disk size: 33070.1 KB)
+0394.574 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20500 files added (on-disk size: 33070.1 KB)
+0394.880 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20600 files added (on-disk size: 33070.1 KB)
+0395.197 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20700 files added (on-disk size: 33070.1 KB)
+0395.388 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.9 MB, 25023 files batched, 501 (20766) added so far); re-opening (prior size: 33070.1 KB)
+0401.135 (0) The time we have been running (401.1) is approaching the resumption interval (424) - increasing resumption interval to 432
+0401.496 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20800 files added (on-disk size: 33795.6 KB)
+0402.384 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 20900 files added (on-disk size: 33795.6 KB)
+0403.162 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21000 files added (on-disk size: 33795.6 KB)
+0403.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.1 MB, 290 (21056) files added so far); re-opening (prior size: 33795.6 KB)
+0412.275 (0) The time we have been running (412.3) is approaching the resumption interval (432) - increasing resumption interval to 443
+0412.683 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21100 files added (on-disk size: 34204.9 KB)
+0413.707 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21200 files added (on-disk size: 34204.9 KB)
+0414.674 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.6 MB, 217 (21273) files added so far); re-opening (prior size: 34204.9 KB)
+0422.807 (0) The time we have been running (422.8) is approaching the resumption interval (443) - increasing resumption interval to 453
+0423.129 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21300 files added (on-disk size: 34474.8 KB)
+0424.114 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21400 files added (on-disk size: 34474.8 KB)
+0424.977 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21500 files added (on-disk size: 34474.8 KB)
+0425.682 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 305 (21578) files added so far); re-opening (prior size: 34474.8 KB)
+0433.957 (0) The time we have been running (433.9) is approaching the resumption interval (453) - increasing resumption interval to 464
+0434.140 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21600 files added (on-disk size: 34903.4 KB)
+0434.749 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21700 files added (on-disk size: 34903.4 KB)
+0435.323 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21800 files added (on-disk size: 34903.4 KB)
+0435.965 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 21900 files added (on-disk size: 34903.4 KB)
+0436.673 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.9 MB, 417 (21995) files added so far); re-opening (prior size: 34903.4 KB)
+0444.634 (0) The time we have been running (444.6) is approaching the resumption interval (464) - increasing resumption interval to 475
+0444.729 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22000 files added (on-disk size: 35614.2 KB)
+0445.299 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22100 files added (on-disk size: 35614.2 KB)
+0445.885 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22200 files added (on-disk size: 35614.2 KB)
+0446.465 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22300 files added (on-disk size: 35614.2 KB)
+0446.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.8 MB, 345 (22340) files added so far); re-opening (prior size: 35614.2 KB)
+0454.031 (0) The time we have been running (454) is approaching the resumption interval (475) - increasing resumption interval to 485
+0454.402 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22400 files added (on-disk size: 35966.3 KB)
+0454.899 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22500 files added (on-disk size: 35966.3 KB)
+0455.415 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22600 files added (on-disk size: 35966.3 KB)
+0455.735 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22700 files added (on-disk size: 35966.3 KB)
+0456.055 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22800 files added (on-disk size: 35966.3 KB)
+0456.256 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.5 MB, 25023 files batched, 501 (22841) added so far); re-opening (prior size: 35966.3 KB)
+0462.120 (0) The time we have been running (462.1) is approaching the resumption interval (485) - increasing resumption interval to 493
+0462.625 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 22900 files added (on-disk size: 37056.5 KB)
+0463.302 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23000 files added (on-disk size: 37056.5 KB)
+0464.047 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23100 files added (on-disk size: 37056.5 KB)
+0464.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 352 (23193) files added so far); re-opening (prior size: 37056.5 KB)
+0473.726 (0) The time we have been running (473.7) is approaching the resumption interval (493) - increasing resumption interval to 504
+0474.010 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23200 files added (on-disk size: 37265.4 KB)
+0474.776 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23300 files added (on-disk size: 37265.4 KB)
+0475.529 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23400 files added (on-disk size: 37265.4 KB)
+0476.128 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23500 files added (on-disk size: 37265.4 KB)
+0476.670 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.8 MB, 403 (23596) files added so far); re-opening (prior size: 37265.4 KB)
+0485.181 (0) The time we have been running (485.2) is approaching the resumption interval (504) - increasing resumption interval to 516
+0485.272 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23600 files added (on-disk size: 38414.9 KB)
+0485.933 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23700 files added (on-disk size: 38414.9 KB)
+0486.552 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23800 files added (on-disk size: 38414.9 KB)
+0487.220 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 23900 files added (on-disk size: 38414.9 KB)
+0487.672 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (8.8 MB, 371 (23967) files added so far); re-opening (prior size: 38414.9 KB)
+0497.693 (0) The time we have been running (497.7) is approaching the resumption interval (516) - increasing resumption interval to 528
+0497.968 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24000 files added (on-disk size: 41150.6 KB)
+0498.592 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24100 files added (on-disk size: 41150.6 KB)
+0499.572 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24200 files added (on-disk size: 41150.6 KB)
+0500.537 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24300 files added (on-disk size: 41150.6 KB)
+0500.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (15.4 MB, 350 (24317) files added so far); re-opening (prior size: 41150.6 KB)
+0512.011 (0) The time we have been running (512) is approaching the resumption interval (528) - increasing resumption interval to 543
+0512.606 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24400 files added (on-disk size: 45237.5 KB)
+0513.297 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24500 files added (on-disk size: 45237.5 KB)
+0513.961 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24600 files added (on-disk size: 45237.5 KB)
+0514.628 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24700 files added (on-disk size: 45237.5 KB)
+0514.675 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.2 MB, 388 (24705) files added so far); re-opening (prior size: 45237.5 KB)
+0523.687 (0) The time we have been running (523.7) is approaching the resumption interval (543) - increasing resumption interval to 554
+0524.310 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24800 files added (on-disk size: 45679.7 KB)
+0524.933 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 24900 files added (on-disk size: 45679.7 KB)
+0525.562 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip.tmp: 25000 files added (on-disk size: 45679.7 KB)
+0538.154 (0) The time we have been running (538.1) is approaching the resumption interval (554) - increasing resumption interval to 569
+0538.923 (0) Created plugins zip (0) - 46180.6 KB in 538.8 s (85.7 KB/s) (sha1: c0ba0a8d55f6d66f46937df2477cae665706849d, sha256: 498b2a1b572274b13fd66d32ea761b612a788935ecbfd5736bca60287795d562)
+0538.969 (0) Beginning creation of dump of themes (split every: 400 MB)
+0620.794 (1) Opened log file at time: Wed, 19 Feb 2020 22:01:41 +0000 on https://gutenbergtest.dev
+0620.799 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.21 WP: 5.3.2 PHP: 7.3.13 (fpm-fcgi, Linux b7dbeb47c18c 4.19.76-linuxkit #1 SMP Thu Oct 17 19:31:58 UTC 2019 x86_64) MySQL: 10.3.21-MariaDB-1:10.3.21+maria~bionic WPLANG: en_US Server: nginx/1.17.7 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 3.8M | 2M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0620.803 (1) Free space on disk containing Updraft's temporary directory: 192285.6 MB
+0620.806 (1) Backup run: resumption=1, nonce=4123d0cb9d47, file_nonce=4123d0cb9d47 begun at=1582149080 (621s ago), job type=backup, previous check-in=538.1s
+0620.810 (1) Scheduling a resumption (2) after 569 seconds (1582150270) in case this run gets aborted
+0620.820 (1) Checking if we have a zip executable available
+0620.822 (1) Creation of backups of directories: had begun; will resume
+0620.837 (1) Beginning creation of dump of plugins (split every: 400 MB)
+0620.842 (1) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip: this file has already been created (age: 83 s)
+0620.875 (1) Beginning creation of dump of themes (split every: 400 MB)
+0625.111 (0) Total entities for the zip file: 4177 directories, 24347 files (0 skipped as non-modified), 694.6 MB
+0625.215 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0630.493 (0) The time we have been running (630.5) is approaching the resumption interval (569) - increasing resumption interval to 661
+0631.406 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 100 files added (on-disk size: 791 KB)
+0632.177 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 200 files added (on-disk size: 791 KB)
+0632.672 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.8 MB, 257 (258) files added so far); re-opening (prior size: 791 KB)
+0634.839 (0) The time we have been running (634.8) is approaching the resumption interval (661) - increasing resumption interval to 665
+0635.231 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 300 files added (on-disk size: 2008.3 KB)
+0636.045 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 400 files added (on-disk size: 2008.3 KB)
+0636.855 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 500 files added (on-disk size: 2008.3 KB)
+0637.604 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 600 files added (on-disk size: 2008.3 KB)
+0637.667 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2 MB, 351 (609) files added so far); re-opening (prior size: 2008.3 KB)
+0640.092 (0) The time we have been running (640.1) is approaching the resumption interval (665) - increasing resumption interval to 671
+0640.804 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 700 files added (on-disk size: 2627.5 KB)
+0641.560 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 800 files added (on-disk size: 2627.5 KB)
+0642.335 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 900 files added (on-disk size: 2627.5 KB)
+0642.670 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.6 MB, 328 (937) files added so far); re-opening (prior size: 2627.5 KB)
+0645.272 (0) The time we have been running (645.3) is approaching the resumption interval (671) - increasing resumption interval to 676
+0645.793 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1000 files added (on-disk size: 2874.6 KB)
+0646.642 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1100 files added (on-disk size: 2874.6 KB)
+0647.602 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1200 files added (on-disk size: 2874.6 KB)
+0647.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 269 (1206) files added so far); re-opening (prior size: 2874.6 KB)
+0650.188 (0) The time we have been running (650.2) is approaching the resumption interval (676) - increasing resumption interval to 681
+0651.072 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1300 files added (on-disk size: 2947.1 KB)
+0651.872 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1400 files added (on-disk size: 2947.1 KB)
+0652.619 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1500 files added (on-disk size: 2947.1 KB)
+0652.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.3 MB, 301 (1507) files added so far); re-opening (prior size: 2947.1 KB)
+0655.054 (0) The time we have been running (655) is approaching the resumption interval (681) - increasing resumption interval to 686
+0655.724 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1600 files added (on-disk size: 3124.9 KB)
+0656.429 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1700 files added (on-disk size: 3124.9 KB)
+0657.232 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1800 files added (on-disk size: 3124.9 KB)
+0657.673 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.1 MB, 353 (1860) files added so far); re-opening (prior size: 3124.9 KB)
+0660.677 (0) The time we have been running (660.7) is approaching the resumption interval (686) - increasing resumption interval to 691
+0661.270 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 1900 files added (on-disk size: 3502.6 KB)
+0661.878 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2000 files added (on-disk size: 3502.6 KB)
+0662.352 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2100 files added (on-disk size: 3502.6 KB)
+0662.764 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2200 files added (on-disk size: 3502.6 KB)
+0663.385 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2300 files added (on-disk size: 3502.6 KB)
+0663.667 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.9 MB, 491 (2351) files added so far); re-opening (prior size: 3502.6 KB)
+0667.655 (0) The time we have been running (667.6) is approaching the resumption interval (691) - increasing resumption interval to 698
+0668.034 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2400 files added (on-disk size: 4197.1 KB)
+0668.830 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2500 files added (on-disk size: 4197.1 KB)
+0669.641 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2600 files added (on-disk size: 4197.1 KB)
+0669.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 252 (2603) files added so far); re-opening (prior size: 4197.1 KB)
+0672.339 (0) The time we have been running (672.3) is approaching the resumption interval (698) - increasing resumption interval to 703
+0673.133 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2700 files added (on-disk size: 4585.6 KB)
+0673.684 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2800 files added (on-disk size: 4585.6 KB)
+0674.184 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 2900 files added (on-disk size: 4585.6 KB)
+0674.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.8 MB, 392 (2995) files added so far); re-opening (prior size: 4585.6 KB)
+0679.027 (0) The time we have been running (679) is approaching the resumption interval (703) - increasing resumption interval to 710
+0679.107 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3000 files added (on-disk size: 5140.6 KB)
+0680.374 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3100 files added (on-disk size: 5140.6 KB)
+0681.391 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3200 files added (on-disk size: 5140.6 KB)
+0681.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2 MB, 249 (3244) files added so far); re-opening (prior size: 5140.6 KB)
+0685.841 (0) The time we have been running (685.8) is approaching the resumption interval (710) - increasing resumption interval to 716
+0686.777 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3300 files added (on-disk size: 5818.7 KB)
+0688.053 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3400 files added (on-disk size: 5818.7 KB)
+0688.676 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 208 (3452) files added so far); re-opening (prior size: 5818.7 KB)
+0691.382 (0) The time we have been running (691.4) is approaching the resumption interval (716) - increasing resumption interval to 722
+0692.258 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3500 files added (on-disk size: 6204.1 KB)
+0693.691 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 143 (3595) files added so far); re-opening (prior size: 6204.1 KB)
+0696.711 (0) The time we have been running (696.7) is approaching the resumption interval (722) - increasing resumption interval to 727
+0696.803 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3600 files added (on-disk size: 6383.5 KB)
+0697.780 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3700 files added (on-disk size: 6383.5 KB)
+0698.708 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3800 files added (on-disk size: 6383.5 KB)
+0699.367 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 3900 files added (on-disk size: 6383.5 KB)
+0699.674 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.6 MB, 339 (3934) files added so far); re-opening (prior size: 6383.5 KB)
+0702.757 (1) Terminate: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp exists with activity within the last 30 seconds (time_mod=1582149779, time_now=1582149783, diff=4, size=6383.5KB). This likely means that another UpdraftPlus run is at work; so we will exit.
+0702.761 (1) Rescheduling resumption 2: moving to 689 seconds from now (1582150472)
+0702.763 (1) To decrease the likelihood of overlaps, increasing resumption interval to: 569 + 120 = 689
+0703.555 (0) The time we have been running (703.5) is approaching the resumption interval (727) - increasing resumption interval to 734
+0705.272 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.7 MB, 24347 files batched, 58 (3992) added so far); re-opening (prior size: 7148.7 KB)
+0712.258 (0) The time we have been running (712.2) is approaching the resumption interval (734) - increasing resumption interval to 743
+0712.263 (0) A useful amount of data was added after this amount of zip processing: 9.6 s (normalised: 9.3 s, rate: 2741.2 KB/s)
+0712.265 (0) Performance is good - will increase the amount of data we attempt to batch (time=9.5960359573364, normalised_time=9.3389955519599, max_time=712.25777482986, data points known=1, old_max_bytes=26214400, new_max_bytes=209715200)
+0712.686 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4000 files added (on-disk size: 17702.1 KB)
+0714.737 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (19.4 MB, 35 (4027) files added so far); re-opening (prior size: 17702.1 KB)
+0720.812 (0) The time we have been running (720.8) is approaching the resumption interval (743) - increasing resumption interval to 751
+0721.865 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4100 files added (on-disk size: 25109 KB)
+0722.783 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4200 files added (on-disk size: 25109 KB)
+0723.717 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (148 MB, 244 (4271) files added so far); re-opening (prior size: 25109 KB)
+0760.035 (0) The time we have been running (760) is approaching the resumption interval (751) - increasing resumption interval to 791
+0760.870 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4300 files added (on-disk size: 86926 KB)
+0762.251 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4400 files added (on-disk size: 86926 KB)
+0762.676 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.8 MB, 163 (4434) files added so far); re-opening (prior size: 86926 KB)
+0768.112 (0) The time we have been running (768.1) is approaching the resumption interval (791) - increasing resumption interval to 799
+0768.454 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4500 files added (on-disk size: 87182.4 KB)
+0768.813 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4600 files added (on-disk size: 87182.4 KB)
+0769.195 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4700 files added (on-disk size: 87182.4 KB)
+0769.638 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4800 files added (on-disk size: 87182.4 KB)
+0770.134 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 4900 files added (on-disk size: 87182.4 KB)
+0770.313 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2 MB, 24347 files batched, 501 (4935) added so far); re-opening (prior size: 87182.4 KB)
+0777.165 (0) The time we have been running (777.2) is approaching the resumption interval (799) - increasing resumption interval to 808
+0777.506 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5000 files added (on-disk size: 87919.6 KB)
+0777.960 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5100 files added (on-disk size: 87919.6 KB)
+0778.383 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5200 files added (on-disk size: 87919.6 KB)
+0778.847 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5300 files added (on-disk size: 87919.6 KB)
+0779.259 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5400 files added (on-disk size: 87919.6 KB)
+0779.386 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.1 MB, 24347 files batched, 501 (5436) added so far); re-opening (prior size: 87919.6 KB)
+0785.998 (0) The time we have been running (786) is approaching the resumption interval (808) - increasing resumption interval to 816
+0786.265 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5500 files added (on-disk size: 89377 KB)
+0786.637 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5600 files added (on-disk size: 89377 KB)
+0786.955 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5700 files added (on-disk size: 89377 KB)
+0787.292 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5800 files added (on-disk size: 89377 KB)
+0787.643 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 5900 files added (on-disk size: 89377 KB)
+0787.771 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.8 MB, 24347 files batched, 501 (5937) added so far); re-opening (prior size: 89377 KB)
+0796.565 (0) The time we have been running (796.6) is approaching the resumption interval (816) - increasing resumption interval to 827
+0797.376 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6000 files added (on-disk size: 92184.7 KB)
+0798.605 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6100 files added (on-disk size: 92184.7 KB)
+0798.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.2 MB, 180 (6117) files added so far); re-opening (prior size: 92184.7 KB)
+0804.632 (0) The time we have been running (804.6) is approaching the resumption interval (827) - increasing resumption interval to 835
+0804.945 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6200 files added (on-disk size: 92605.5 KB)
+0805.278 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6300 files added (on-disk size: 92605.5 KB)
+0805.649 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6400 files added (on-disk size: 92605.5 KB)
+0806.008 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6500 files added (on-disk size: 92605.5 KB)
+0806.396 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6600 files added (on-disk size: 92605.5 KB)
+0806.461 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.7 MB, 24347 files batched, 501 (6618) added so far); re-opening (prior size: 92605.5 KB)
+0812.505 (0) The time we have been running (812.5) is approaching the resumption interval (835) - increasing resumption interval to 843
+0812.842 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6700 files added (on-disk size: 93211.9 KB)
+0813.228 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6800 files added (on-disk size: 93211.9 KB)
+0813.577 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 6900 files added (on-disk size: 93211.9 KB)
+0814.039 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7000 files added (on-disk size: 93211.9 KB)
+0814.511 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7100 files added (on-disk size: 93211.9 KB)
+0814.578 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.6 MB, 24347 files batched, 501 (7119) added so far); re-opening (prior size: 93211.9 KB)
+0820.782 (0) The time we have been running (820.8) is approaching the resumption interval (843) - increasing resumption interval to 851
+0821.172 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7200 files added (on-disk size: 93774.7 KB)
+0821.581 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7300 files added (on-disk size: 93774.7 KB)
+0821.967 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7400 files added (on-disk size: 93774.7 KB)
+0822.356 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7500 files added (on-disk size: 93774.7 KB)
+0822.735 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7600 files added (on-disk size: 93774.7 KB)
+0822.804 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.1 MB, 24347 files batched, 501 (7620) added so far); re-opening (prior size: 93774.7 KB)
+0829.138 (0) The time we have been running (829.1) is approaching the resumption interval (851) - increasing resumption interval to 860
+0829.743 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7700 files added (on-disk size: 94234.2 KB)
+0830.474 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7800 files added (on-disk size: 94234.2 KB)
+0831.223 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 7900 files added (on-disk size: 94234.2 KB)
+0831.674 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.3 MB, 331 (7951) files added so far); re-opening (prior size: 94234.2 KB)
+0840.985 (0) The time we have been running (841) is approaching the resumption interval (860) - increasing resumption interval to 871
+0841.387 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8000 files added (on-disk size: 94728.5 KB)
+0842.061 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8100 files added (on-disk size: 94728.5 KB)
+0842.861 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8200 files added (on-disk size: 94728.5 KB)
+0843.575 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8300 files added (on-disk size: 94728.5 KB)
+0843.674 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.9 MB, 362 (8313) files added so far); re-opening (prior size: 94728.5 KB)
+0851.885 (0) The time we have been running (851.9) is approaching the resumption interval (871) - increasing resumption interval to 882
+0852.450 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8400 files added (on-disk size: 95336.7 KB)
+0853.024 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8500 files added (on-disk size: 95336.7 KB)
+0853.596 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8600 files added (on-disk size: 95336.7 KB)
+0854.143 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8700 files added (on-disk size: 95336.7 KB)
+0854.632 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8800 files added (on-disk size: 95336.7 KB)
+0854.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.2 MB, 494 (8807) files added so far); re-opening (prior size: 95336.7 KB)
+0861.458 (0) The time we have been running (861.4) is approaching the resumption interval (882) - increasing resumption interval to 892
+0861.841 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 8900 files added (on-disk size: 95505.3 KB)
+0862.177 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9000 files added (on-disk size: 95505.3 KB)
+0862.506 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9100 files added (on-disk size: 95505.3 KB)
+0862.857 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9200 files added (on-disk size: 95505.3 KB)
+0863.246 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9300 files added (on-disk size: 95505.3 KB)
+0863.280 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.3 MB, 24347 files batched, 501 (9308) added so far); re-opening (prior size: 95505.3 KB)
+0869.513 (0) The time we have been running (869.5) is approaching the resumption interval (892) - increasing resumption interval to 900
+0869.873 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9400 files added (on-disk size: 95707.7 KB)
+0870.207 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9500 files added (on-disk size: 95707.7 KB)
+0870.536 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9600 files added (on-disk size: 95707.7 KB)
+0870.912 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9700 files added (on-disk size: 95707.7 KB)
+0871.244 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9800 files added (on-disk size: 95707.7 KB)
+0871.280 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 24347 files batched, 501 (9809) added so far); re-opening (prior size: 95707.7 KB)
+0877.654 (0) The time we have been running (877.6) is approaching the resumption interval (900) - increasing resumption interval to 908
+0878.043 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 9900 files added (on-disk size: 96347.3 KB)
+0878.419 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10000 files added (on-disk size: 96347.3 KB)
+0878.776 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10100 files added (on-disk size: 96347.3 KB)
+0879.090 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10200 files added (on-disk size: 96347.3 KB)
+0879.422 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10300 files added (on-disk size: 96347.3 KB)
+0879.458 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.5 MB, 24347 files batched, 501 (10310) added so far); re-opening (prior size: 96347.3 KB)
+0885.838 (0) The time we have been running (885.8) is approaching the resumption interval (908) - increasing resumption interval to 916
+0886.199 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10400 files added (on-disk size: 97189.5 KB)
+0886.566 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10500 files added (on-disk size: 97189.5 KB)
+0886.931 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10600 files added (on-disk size: 97189.5 KB)
+0887.283 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10700 files added (on-disk size: 97189.5 KB)
+0887.644 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10800 files added (on-disk size: 97189.5 KB)
+0887.685 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.6 MB, 24347 files batched, 501 (10811) added so far); re-opening (prior size: 97189.5 KB)
+0894.992 (0) The time we have been running (895) is approaching the resumption interval (916) - increasing resumption interval to 925
+0895.342 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 10900 files added (on-disk size: 97762.3 KB)
+0895.693 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11000 files added (on-disk size: 97762.3 KB)
+0896.005 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11100 files added (on-disk size: 97762.3 KB)
+0896.446 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11200 files added (on-disk size: 97762.3 KB)
+0896.890 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11300 files added (on-disk size: 97762.3 KB)
+0896.938 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.8 MB, 24347 files batched, 501 (11312) added so far); re-opening (prior size: 97762.3 KB)
+0903.641 (0) The time we have been running (903.6) is approaching the resumption interval (925) - increasing resumption interval to 934
+0904.006 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11400 files added (on-disk size: 98745.7 KB)
+0904.331 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11500 files added (on-disk size: 98745.7 KB)
+0904.709 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11600 files added (on-disk size: 98745.7 KB)
+0905.088 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11700 files added (on-disk size: 98745.7 KB)
+0905.592 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11800 files added (on-disk size: 98745.7 KB)
+0905.648 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.2 MB, 24347 files batched, 501 (11813) added so far); re-opening (prior size: 98745.7 KB)
+0915.317 (0) The time we have been running (915.3) is approaching the resumption interval (934) - increasing resumption interval to 946
+0916.122 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 11900 files added (on-disk size: 100187.5 KB)
+0917.178 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12000 files added (on-disk size: 100187.5 KB)
+0917.548 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12100 files added (on-disk size: 100187.5 KB)
+0917.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.9 MB, 313 (12126) files added so far); re-opening (prior size: 100187.5 KB)
+0924.440 (0) The time we have been running (924.4) is approaching the resumption interval (946) - increasing resumption interval to 955
+0925.082 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12200 files added (on-disk size: 100701.4 KB)
+0925.974 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12300 files added (on-disk size: 100701.4 KB)
+0926.672 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.9 MB, 261 (12387) files added so far); re-opening (prior size: 100701.4 KB)
+0937.536 (0) The time we have been running (937.5) is approaching the resumption interval (955) - increasing resumption interval to 968
+0937.638 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12400 files added (on-disk size: 101495.8 KB)
+0937.987 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12500 files added (on-disk size: 101495.8 KB)
+0938.309 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12600 files added (on-disk size: 101495.8 KB)
+0938.645 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12700 files added (on-disk size: 101495.8 KB)
+0938.986 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12800 files added (on-disk size: 101495.8 KB)
+0939.281 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.7 MB, 24347 files batched, 501 (12888) added so far); re-opening (prior size: 101495.8 KB)
+0947.893 (0) The time we have been running (947.9) is approaching the resumption interval (968) - increasing resumption interval to 978
+0948.000 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 12900 files added (on-disk size: 102367.6 KB)
+0948.531 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13000 files added (on-disk size: 102367.6 KB)
+0948.997 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13100 files added (on-disk size: 102367.6 KB)
+0949.422 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13200 files added (on-disk size: 102367.6 KB)
+0949.772 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13300 files added (on-disk size: 102367.6 KB)
+0950.084 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.6 MB, 24347 files batched, 501 (13389) added so far); re-opening (prior size: 102367.6 KB)
+0957.669 (0) The time we have been running (957.7) is approaching the resumption interval (978) - increasing resumption interval to 988
+0957.773 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13400 files added (on-disk size: 104010.9 KB)
+0958.115 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13500 files added (on-disk size: 104010.9 KB)
+0958.487 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13600 files added (on-disk size: 104010.9 KB)
+0958.871 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13700 files added (on-disk size: 104010.9 KB)
+0959.226 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13800 files added (on-disk size: 104010.9 KB)
+0959.637 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (5.4 MB, 24347 files batched, 501 (13890) added so far); re-opening (prior size: 104010.9 KB)
+0972.201 (0) The time we have been running (972.2) is approaching the resumption interval (988) - increasing resumption interval to 1003
+0972.375 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 13900 files added (on-disk size: 105610.2 KB)
+0973.762 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14000 files added (on-disk size: 105610.2 KB)
+0974.672 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.8 MB, 163 (14053) files added so far); re-opening (prior size: 105610.2 KB)
+0983.577 (0) The time we have been running (983.6) is approaching the resumption interval (1003) - increasing resumption interval to 1014
+0984.083 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14100 files added (on-disk size: 106162.3 KB)
+0985.029 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14200 files added (on-disk size: 106162.3 KB)
+0985.691 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 206 (14259) files added so far); re-opening (prior size: 106162.3 KB)
+0996.353 (0) The time we have been running (996.3) is approaching the resumption interval (1014) - increasing resumption interval to 1027
+0996.659 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14300 files added (on-disk size: 106495 KB)
+0997.179 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14400 files added (on-disk size: 106495 KB)
+0997.895 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14500 files added (on-disk size: 106495 KB)
+0998.670 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.2 MB, 340 (14599) files added so far); re-opening (prior size: 106495 KB)
+1008.786 (0) The time we have been running (1008.8) is approaching the resumption interval (1027) - increasing resumption interval to 1039
+1008.862 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14600 files added (on-disk size: 106933.9 KB)
+1009.701 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14700 files added (on-disk size: 106933.9 KB)
+1010.525 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14800 files added (on-disk size: 106933.9 KB)
+1011.198 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 14900 files added (on-disk size: 106933.9 KB)
+1011.674 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 368 (14967) files added so far); re-opening (prior size: 106933.9 KB)
+1024.118 (0) The time we have been running (1024.1) is approaching the resumption interval (1039) - increasing resumption interval to 1055
+1024.489 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15000 files added (on-disk size: 107354.1 KB)
+1025.500 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15100 files added (on-disk size: 107354.1 KB)
+1026.369 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15200 files added (on-disk size: 107354.1 KB)
+1026.674 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.7 MB, 268 (15235) files added so far); re-opening (prior size: 107354.1 KB)
+1038.431 (0) The time we have been running (1038.4) is approaching the resumption interval (1055) - increasing resumption interval to 1069
+1039.033 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15300 files added (on-disk size: 107643.7 KB)
+1039.564 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15400 files added (on-disk size: 107643.7 KB)
+1039.941 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15500 files added (on-disk size: 107643.7 KB)
+1040.305 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15600 files added (on-disk size: 107643.7 KB)
+1040.671 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 454 (15689) files added so far); re-opening (prior size: 107643.7 KB)
+1048.865 (0) The time we have been running (1048.9) is approaching the resumption interval (1069) - increasing resumption interval to 1079
+1048.972 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15700 files added (on-disk size: 107886.9 KB)
+1049.320 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15800 files added (on-disk size: 107886.9 KB)
+1049.659 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 15900 files added (on-disk size: 107886.9 KB)
+1050.029 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16000 files added (on-disk size: 107886.9 KB)
+1050.355 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16100 files added (on-disk size: 107886.9 KB)
+1050.596 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.5 MB, 24347 files batched, 501 (16190) added so far); re-opening (prior size: 107886.9 KB)
+1057.073 (0) The time we have been running (1057.1) is approaching the resumption interval (1079) - increasing resumption interval to 1088
+1057.168 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16200 files added (on-disk size: 108172.1 KB)
+1057.453 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16300 files added (on-disk size: 108172.1 KB)
+1057.703 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16400 files added (on-disk size: 108172.1 KB)
+1057.967 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16500 files added (on-disk size: 108172.1 KB)
+1058.237 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16600 files added (on-disk size: 108172.1 KB)
+1058.495 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.7 MB, 24347 files batched, 501 (16691) added so far); re-opening (prior size: 108172.1 KB)
+1065.030 (0) The time we have been running (1065) is approaching the resumption interval (1088) - increasing resumption interval to 1096
+1065.120 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16700 files added (on-disk size: 108512.6 KB)
+1065.409 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16800 files added (on-disk size: 108512.6 KB)
+1065.710 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 16900 files added (on-disk size: 108512.6 KB)
+1065.985 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17000 files added (on-disk size: 108512.6 KB)
+1066.264 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17100 files added (on-disk size: 108512.6 KB)
+1066.517 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.5 MB, 24347 files batched, 501 (17192) added so far); re-opening (prior size: 108512.6 KB)
+1078.099 (0) The time we have been running (1078.1) is approaching the resumption interval (1096) - increasing resumption interval to 1109
+1078.194 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17200 files added (on-disk size: 108792.5 KB)
+1078.637 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17300 files added (on-disk size: 108792.5 KB)
+1079.037 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17400 files added (on-disk size: 108792.5 KB)
+1079.561 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17500 files added (on-disk size: 108792.5 KB)
+1080.177 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17600 files added (on-disk size: 108792.5 KB)
+1080.608 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.1 MB, 24347 files batched, 501 (17693) added so far); re-opening (prior size: 108792.5 KB)
+1090.223 (0) The time we have been running (1090.2) is approaching the resumption interval (1109) - increasing resumption interval to 1121
+1090.338 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17700 files added (on-disk size: 109270.2 KB)
+1090.968 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17800 files added (on-disk size: 109270.2 KB)
+1091.462 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 17900 files added (on-disk size: 109270.2 KB)
+1092.007 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18000 files added (on-disk size: 109270.2 KB)
+1092.302 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18100 files added (on-disk size: 109270.2 KB)
+1092.589 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.4 MB, 24347 files batched, 501 (18194) added so far); re-opening (prior size: 109270.2 KB)
+1106.006 (0) The time we have been running (1106) is approaching the resumption interval (1121) - increasing resumption interval to 1136
+1106.109 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18200 files added (on-disk size: 110133.6 KB)
+1106.389 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18300 files added (on-disk size: 110133.6 KB)
+1106.651 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18400 files added (on-disk size: 110133.6 KB)
+1106.936 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18500 files added (on-disk size: 110133.6 KB)
+1107.224 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18600 files added (on-disk size: 110133.6 KB)
+1107.509 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.7 MB, 24347 files batched, 501 (18695) added so far); re-opening (prior size: 110133.6 KB)
+1121.045 (0) The time we have been running (1121) is approaching the resumption interval (1136) - increasing resumption interval to 1152
+1121.146 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18700 files added (on-disk size: 111003.3 KB)
+1121.916 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18800 files added (on-disk size: 111003.3 KB)
+1122.604 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 18900 files added (on-disk size: 111003.3 KB)
+1123.305 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19000 files added (on-disk size: 111003.3 KB)
+1123.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.2 MB, 363 (19058) files added so far); re-opening (prior size: 111003.3 KB)
+1135.133 (0) The time we have been running (1135.1) is approaching the resumption interval (1152) - increasing resumption interval to 1166
+1135.368 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19100 files added (on-disk size: 111667.7 KB)
+1135.743 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19200 files added (on-disk size: 111667.7 KB)
+1136.027 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19300 files added (on-disk size: 111667.7 KB)
+1136.385 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19400 files added (on-disk size: 111667.7 KB)
+1136.719 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19500 files added (on-disk size: 111667.7 KB)
+1136.927 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.7 MB, 24347 files batched, 501 (19559) added so far); re-opening (prior size: 111667.7 KB)
+1146.690 (0) The time we have been running (1146.7) is approaching the resumption interval (1166) - increasing resumption interval to 1177
+1146.890 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19600 files added (on-disk size: 112888.9 KB)
+1147.172 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19700 files added (on-disk size: 112888.9 KB)
+1147.453 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19800 files added (on-disk size: 112888.9 KB)
+1147.729 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 19900 files added (on-disk size: 112888.9 KB)
+1148.037 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20000 files added (on-disk size: 112888.9 KB)
+1148.226 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.1 MB, 24347 files batched, 501 (20060) added so far); re-opening (prior size: 112888.9 KB)
+1160.281 (0) The time we have been running (1160.3) is approaching the resumption interval (1177) - increasing resumption interval to 1191
+1160.584 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20100 files added (on-disk size: 113874.3 KB)
+1161.304 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20200 files added (on-disk size: 113874.3 KB)
+1161.665 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20300 files added (on-disk size: 113874.3 KB)
+1162.066 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20400 files added (on-disk size: 113874.3 KB)
+1162.487 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20500 files added (on-disk size: 113874.3 KB)
+1162.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.6 MB, 467 (20527) files added so far); re-opening (prior size: 113874.3 KB)
+1172.341 (0) The time we have been running (1172.3) is approaching the resumption interval (1191) - increasing resumption interval to 1203
+1172.938 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20600 files added (on-disk size: 114696.7 KB)
+1173.639 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20700 files added (on-disk size: 114696.7 KB)
+1174.409 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20800 files added (on-disk size: 114696.7 KB)
+1174.669 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.9 MB, 310 (20837) files added so far); re-opening (prior size: 114696.7 KB)
+1184.075 (0) The time we have been running (1184.1) is approaching the resumption interval (1203) - increasing resumption interval to 1215
+1184.394 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 20900 files added (on-disk size: 115048.6 KB)
+1184.722 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21000 files added (on-disk size: 115048.6 KB)
+1185.052 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21100 files added (on-disk size: 115048.6 KB)
+1185.677 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21200 files added (on-disk size: 115048.6 KB)
+1186.685 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 451 (21288) files added so far); re-opening (prior size: 115048.6 KB)
+1197.107 (0) The time we have been running (1197.1) is approaching the resumption interval (1215) - increasing resumption interval to 1228
+1197.217 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21300 files added (on-disk size: 115331.2 KB)
+1197.501 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21400 files added (on-disk size: 115331.2 KB)
+1197.774 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21500 files added (on-disk size: 115331.2 KB)
+1198.072 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21600 files added (on-disk size: 115331.2 KB)
+1198.382 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21700 files added (on-disk size: 115331.2 KB)
+1198.704 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.6 MB, 24347 files batched, 501 (21789) added so far); re-opening (prior size: 115331.2 KB)
+1214.001 (0) The time we have been running (1214) is approaching the resumption interval (1228) - increasing resumption interval to 1244
+1214.156 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21800 files added (on-disk size: 117111.2 KB)
+1215.094 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 21900 files added (on-disk size: 117111.2 KB)
+1216.117 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22000 files added (on-disk size: 117111.2 KB)
+1216.562 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22100 files added (on-disk size: 117111.2 KB)
+1216.667 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.7 MB, 343 (22132) files added so far); re-opening (prior size: 117111.2 KB)
+1226.097 (0) The time we have been running (1226.1) is approaching the resumption interval (1244) - increasing resumption interval to 1257
+1226.799 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22200 files added (on-disk size: 117922.9 KB)
+1227.624 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22300 files added (on-disk size: 117922.9 KB)
+1228.668 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 265 (22397) files added so far); re-opening (prior size: 117922.9 KB)
+1241.764 (0) The time we have been running (1241.8) is approaching the resumption interval (1257) - increasing resumption interval to 1272
+1241.867 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22400 files added (on-disk size: 118284.5 KB)
+1242.238 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22500 files added (on-disk size: 118284.5 KB)
+1242.904 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22600 files added (on-disk size: 118284.5 KB)
+1243.231 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22700 files added (on-disk size: 118284.5 KB)
+1243.552 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22800 files added (on-disk size: 118284.5 KB)
+1243.905 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.7 MB, 24347 files batched, 501 (22898) added so far); re-opening (prior size: 118284.5 KB)
+1254.199 (0) The time we have been running (1254.2) is approaching the resumption interval (1272) - increasing resumption interval to 1285
+1254.336 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 22900 files added (on-disk size: 118607.6 KB)
+1254.723 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23000 files added (on-disk size: 118607.6 KB)
+1255.321 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23100 files added (on-disk size: 118607.6 KB)
+1255.820 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23200 files added (on-disk size: 118607.6 KB)
+1256.161 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23300 files added (on-disk size: 118607.6 KB)
+1256.672 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.6 MB, 473 (23371) files added so far); re-opening (prior size: 118607.6 KB)
+1269.665 (0) The time we have been running (1269.7) is approaching the resumption interval (1285) - increasing resumption interval to 1300
+1269.839 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23400 files added (on-disk size: 119321.9 KB)
+1270.150 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23500 files added (on-disk size: 119321.9 KB)
+1270.448 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23600 files added (on-disk size: 119321.9 KB)
+1270.741 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23700 files added (on-disk size: 119321.9 KB)
+1271.046 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23800 files added (on-disk size: 119321.9 KB)
+1271.259 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.1 MB, 24347 files batched, 501 (23872) added so far); re-opening (prior size: 119321.9 KB)
+1279.635 (0) The time we have been running (1279.6) is approaching the resumption interval (1300) - increasing resumption interval to 1310
+1279.985 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 23900 files added (on-disk size: 120065.5 KB)
+1280.364 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 24000 files added (on-disk size: 120065.5 KB)
+1280.681 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 24100 files added (on-disk size: 120065.5 KB)
+1280.976 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 24200 files added (on-disk size: 120065.5 KB)
+1281.304 (0) Zip: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip.tmp: 24300 files added (on-disk size: 120065.5 KB)
+1290.606 (0) The time we have been running (1290.6) is approaching the resumption interval (1310) - increasing resumption interval to 1321
+1292.613 (0) Created themes zip (0) - 122261.4 KB in 753.6 s (162.2 KB/s) (sha1: 178b42524ec8041ffbecfe590b270f7ed3d35c27, sha256: be4f6c28369430ce7b404fa08cb4933f7fbb7bc51b88213b38039648c079242a)
+1292.654 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+1292.655 (0) Looking for candidates to backup in: /var/www/html/sites/gutenbergtest/htdocs/wp-content/uploads
+1292.659 (0) finding files: 2020: adding to list (1)
+1292.661 (0) Beginning creation of dump of uploads (split every: 400 MB)
+1292.781 (0) Total entities for the zip file: 3 directories, 20 files (0 skipped as non-modified), 1.3 MB
+1293.139 (0) The time we have been running (1293.1) is approaching the resumption interval (1321) - increasing resumption interval to 1324
+1293.198 (0) Created uploads zip (0) - 1307 KB in 0.5 s (2593.2 KB/s) (sha1: 7ce9103157a040f94acb4deaabea84df95a335f1, sha256: b70bc01ef91c46945a8250bcbb42d9734480b8225a39538b74ce7ad59758d50e)
+1293.239 (0) Beginning backup of other directories found in the content directory (index: 0)
+1293.241 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+1293.243 (0) Looking for candidates to backup in: /var/www/html/sites/gutenbergtest/htdocs/wp-content
+1293.249 (0) finding files: upgrade: skipping: excluded by options
+1293.251 (0) finding files: .DS_Store: adding to list (1)
+1293.253 (0) finding files: index.php: adding to list (2)
+1293.254 (0) finding files: plugins: skipping: this is the plugins directory
+1293.257 (0) finding files: uploads: skipping: this is the uploads directory
+1293.259 (0) finding files: updraft: skipping: this is the updraft directory
+1293.261 (0) finding files: themes: skipping: this is the themes directory
+1293.309 (0) Total entities for the zip file: 0 directories, 2 files (0 skipped as non-modified), 0 MB
+1293.356 (0) Created others zip (0) - 0.7 KB in 0.1 s (11 KB/s) (sha1: 98ab2856dc0c66963c1a3b416c38846c0c5b6998, sha256: 287ea0a122880db3f46985e1f51de338b3ef71856fc655fc1775b939f603f8a2)
+1293.393 (0) Saving backup status to database (elements: 8)
+1293.399 (0) Beginning creation of database dump (WordPress DB)
+1293.412 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+1293.498 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+1293.526 (0) Binary mysqldump: error (code: 5)
+1293.559 (0) Table wp_options: Total expected rows (approximate): 179
+1293.618 (0) Table wp_options: Total rows added: 178 in 0.06 seconds
+1293.627 (0) Table wp_options: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_options.table.gz - 177.8 KB)
+1293.638 (0) Table wp_users: Total expected rows (approximate): 0
+1293.642 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+1293.648 (0) Table wp_users: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_users.table.gz - 0.5 KB)
+1293.660 (0) Table wp_usermeta: Total expected rows (approximate): 18
+1293.664 (0) Table wp_usermeta: Total rows added: 21 in 0.00 seconds
+1293.669 (0) Table wp_usermeta: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_usermeta.table.gz - 1 KB)
+1293.678 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+1293.682 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+1293.687 (0) Table wp_commentmeta: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_commentmeta.table.gz - 0.4 KB)
+1293.697 (0) Table wp_comments: Total expected rows (approximate): 0
+1293.701 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+1293.705 (0) Table wp_comments: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_comments.table.gz - 0.7 KB)
+1293.723 (0) Table wp_links: Total expected rows (approximate): 0
+1293.727 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+1293.734 (0) Table wp_links: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_links.table.gz - 0.4 KB)
+1293.745 (0) Table wp_postmeta: Total expected rows (approximate): 21
+1293.749 (0) Table wp_postmeta: Total rows added: 21 in 0.00 seconds
+1293.755 (0) Table wp_postmeta: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_postmeta.table.gz - 1.4 KB)
+1293.766 (0) Table wp_posts: Total expected rows (approximate): 270
+1293.787 (0) Table wp_posts: Total rows added: 299 in 0.02 seconds
+1293.792 (0) Table wp_posts: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_posts.table.gz - 39 KB)
+1293.799 (0) Table wp_term_relationships: Total expected rows (approximate): 0
+1293.802 (0) Table wp_term_relationships: Total rows added: 2 in 0.00 seconds
+1293.805 (0) Table wp_term_relationships: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_term_relationships.table.gz - 0.4 KB)
+1293.813 (0) Table wp_term_taxonomy: Total expected rows (approximate): 0
+1293.816 (0) Table wp_term_taxonomy: Total rows added: 1 in 0.00 seconds
+1293.820 (0) Table wp_term_taxonomy: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+1293.828 (0) Table wp_termmeta: Total expected rows (approximate): 0
+1293.831 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+1293.835 (0) Table wp_termmeta: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_termmeta.table.gz - 0.4 KB)
+1293.841 (0) Table wp_terms: Total expected rows (approximate): 0
+1293.845 (0) Table wp_terms: Total rows added: 1 in 0.00 seconds
+1293.848 (0) Table wp_terms: finishing file (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_terms.table.gz - 0.4 KB)
+1293.857 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_options.table.gz (1/12): adding to final database dump
+1293.902 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_users.table.gz (2/12): adding to final database dump
+1293.910 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_usermeta.table.gz (3/12): adding to final database dump
+1293.915 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_commentmeta.table.gz (4/12): adding to final database dump
+1293.923 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_comments.table.gz (5/12): adding to final database dump
+1293.934 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_links.table.gz (6/12): adding to final database dump
+1293.947 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_postmeta.table.gz (7/12): adding to final database dump
+1293.954 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_posts.table.gz (8/12): adding to final database dump
+1293.972 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_term_relationships.table.gz (9/12): adding to final database dump
+1293.978 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_term_taxonomy.table.gz (10/12): adding to final database dump
+1293.984 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_termmeta.table.gz (11/12): adding to final database dump
+1293.990 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db-table-wp_terms.table.gz (12/12): adding to final database dump
+1293.999 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db.gz: finished writing out complete database file (192 KB)
+1294.039 (0) Total database tables backed up: 12 (backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db.gz, size: 225245, sha1: 40f8a13d4fbb6ccd50c066ab5c29b9d0ed91d312, sha256: 9681a3dd35f06a112655fc5197712fb8cb22a9d4b96a0be52357b21be6492787)
+1294.048 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+1294.052 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+1294.054 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+1294.056 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-others.zip: others: This file has not yet been successfully uploaded: will queue
+1294.059 (0) backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db.gz: db: This file has not yet been successfully uploaded: will queue
+1294.060 (0) Saving backup history. Total backup size: 166 MB
+1294.064 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+1294.070 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+1294.072 (0) No remote despatch: user chose no remote backup service
+1294.073 (0) Recording as successfully uploaded: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-plugins.zip
+1294.076 (0) Recording as successfully uploaded: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-themes.zip
+1294.080 (0) Recording as successfully uploaded: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-uploads.zip
+1294.083 (0) Recording as successfully uploaded: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-others.zip
+1294.090 (0) Recording as successfully uploaded: backup_2020-02-19-2151_gutenbergtest_4123d0cb9d47-db.gz
+1294.096 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+1294.100 (0) Number of backup sets in history: 1; groups (db): 1
+1294.103 (0) Examining (for databases) backup set with group_id=0, nonce=4123d0cb9d47, datestamp=1582149080 (Feb 19 2020 21:51:20)
+1294.105 (0) This backup set is the backup set just made, so will not be deleted.
+1294.106 (0) Number of backup sets in history: 1; groups (files): 1
+1294.108 (0) Examining (for files) backup set with nonce=4123d0cb9d47, datestamp=1582149080 (Feb 19 2020 21:51:20)
+1294.109 (0) This backup set is the backup set just made, so will not be deleted.
+1294.112 (0) This backup set is the backup set just made, so will not be deleted.
+1294.113 (0) This backup set is the backup set just made, so will not be deleted.
+1294.115 (0) This backup set is the backup set just made, so will not be deleted.
+1294.119 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+1294.121 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+1294.129 (0) Resume backup (4123d0cb9d47, 0): finish run
+1294.132 (0) Decremented the semaphore (fd) by 1
+1294.135 (0) Semaphore (fd) unlocked
+1294.137 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+1294.140 (0) No email will/can be sent - the user has not configured an email address.
+1294.145 (0) The backup apparently succeeded and is now complete

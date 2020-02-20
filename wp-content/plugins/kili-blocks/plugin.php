@@ -66,7 +66,9 @@ function kili_blocks_register() {
   kili_blocks_register_block_type('kililayout2');
   kili_blocks_register_block_type('team-member');
   kili_blocks_register_block_type('team-members');
-  kili_blocks_register_block_type('row-layout');
+  // kili_blocks_register_block_type('row-layout');
+  kili_blocks_register_block_type('k-section');
+  kili_blocks_register_block_type('row-section');
   kili_blocks_register_block_type('section');
 }
 

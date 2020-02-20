@@ -47228,6 +47228,78 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-html-id/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/react-html-id/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* Copyright (c) 2018 Hampus Joakim Nilsson
+ * Licensed via the MIT license.
+ **/
+
+// Unique counter per COMPONENT that uniqueness is added to
+var _globallyUniqueIdCounter = 0
+
+function resetUniqueIds() {
+    _globallyUniqueIdCounter = 0
+}
+
+function injectUniqueness(component) {
+
+    var instanceId;
+    if (arguments.length > 1) {
+        instanceId = arguments[1];
+        if (typeof instanceId !== 'string') {
+            console.log('Warning: Expected string as second argument passed to `injectUniqueness`')
+            instanceId = '' + instanceId
+        }
+    }
+
+    // Store all state in the closure for the member functions
+    var _render = component.render
+    var _htmlIds = {}
+    var _uniqueIdCounter = 0
+    var _uniqueInstance = instanceId || ++_globallyUniqueIdCounter
+
+    // Inject the following functions into the component
+    component.render = function () {
+        _uniqueIdCounter = 0
+        return _render.apply(component)
+    }
+
+    component.nextUniqueId = function () {
+        ++_uniqueIdCounter
+        return 'id-' + _uniqueInstance + '-' + _uniqueIdCounter
+    }
+
+    component.lastUniqueId = function () {
+        return 'id-' + _uniqueInstance + '-' + _uniqueIdCounter
+    }
+
+    component.getUniqueId = function (identifier) {
+        if (typeof identifier !== 'string') {
+            console.log('Warning: Expected string identifer passed to `getUniqueId`')
+            identifier = '' + identifier
+        }
+
+        if (!_htmlIds[identifier]) {
+            _htmlIds[identifier] = 'id-' + _uniqueInstance + '-' + identifier
+        }
+
+        return _htmlIds[identifier]
+    }
+}
+
+module.exports = {
+    resetUniqueIds: resetUniqueIds,
+    enableUniqueIds: injectUniqueness,
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -51197,14 +51269,20 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function generateID() {
-  return "--" + Math.random().toString(36).substr(2, 9);
-}
-
 /* harmony default export */ __webpack_exports__["default"] = ({
+  fullWidth: {
+    type: "boolean",
+    default: true
+  },
   columns: {
     type: "number",
     default: 1
+  },
+  heightSection: {
+    type: "number",
+    source: "html",
+    selector: "section",
+    default: 200
   },
   viewportSize: {
     type: "string",
@@ -51212,46 +51290,68 @@ function generateID() {
   },
   containerSet: {
     type: "boolean",
+    source: "html",
+    selector: "section",
     default: true
   },
   bgColor: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: ""
   },
   bgImg: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: ""
   },
   bgImgID: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: ""
   },
   bgImgSize: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: "cover"
   },
   bgImgPosition: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: "center center"
   },
   bgImgAttachment: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: "scroll"
   },
   bgImgRepeat: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: "no-repeat"
   },
   backgroundInline: {
     type: "bool",
+    source: "html",
+    selector: "section",
     default: false
   },
   UUID: {
     type: "string",
-    default: generateID()
+    source: "html",
+    selector: "section",
+    default: ""
   },
   bgStyle: {
     type: "string",
+    source: "html",
+    selector: "section",
     default: ""
   }
 });
@@ -51274,324 +51374,428 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_html_id__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-html-id */ "./node_modules/react-html-id/index.js");
+/* harmony import */ var react_html_id__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_html_id__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/row-layout/edit.js";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
-var createStyletag = function createStyletag(values) {
-  var attributes = values.attributes;
-  var bgImg = attributes.bgImg,
-      bgImgID = attributes.bgImgID,
-      bgImgSize = attributes.bgImgSize,
-      bgImgPosition = attributes.bgImgPosition,
-      bgImgRepeat = attributes.bgImgRepeat,
-      UUID = attributes.UUID;
-  var styles = "";
-  var bgStyles = "wp-block-kili-blocks-row-layout".concat(UUID);
 
-  if (bgImg) {
-    styles += ".".concat(bgStyles, " {background-image: url(\"").concat(bgImg, "\");");
 
-    if (bgImgSize) {
-      styles += " background-size: ".concat(bgImgSize, ";");
-    }
 
-    if (bgImgPosition) {
-      styles += " background-position: ".concat(bgImgPosition, ";");
-    }
+var RowLayoutEdit =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(RowLayoutEdit, _Component);
 
-    if (bgImgRepeat) {
-      styles += " background-repeat: ".concat(bgImgRepeat, ";");
-    }
+  function RowLayoutEdit(props) {
+    var _this;
+
+    _classCallCheck(this, RowLayoutEdit);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(RowLayoutEdit).call(this, props));
+    react_html_id__WEBPACK_IMPORTED_MODULE_4___default.a.enableUniqueIds(_assertThisInitialized(_this));
+    return _this;
   }
 
-  styles = styles ? "".concat(styles, "}") : "{}";
-  return styles;
-};
+  _createClass(RowLayoutEdit, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
 
-var RowLayoutEdit = function RowLayoutEdit(props) {
-  console.warn(props);
-  var attributes = props.attributes,
-      setAttributes = props.setAttributes;
-  var containerSet = attributes.containerSet,
-      bgColor = attributes.bgColor,
-      bgImg = attributes.bgImg,
-      bgImgID = attributes.bgImgID,
-      bgImgSize = attributes.bgImgSize,
-      bgImgPosition = attributes.bgImgPosition,
-      bgImgRepeat = attributes.bgImgRepeat,
-      backgroundInline = attributes.backgroundInline,
-      bgImgAttachment = attributes.bgImgAttachment,
-      UUID = attributes.UUID;
+      var _this$props = this.props,
+          attributes = _this$props.attributes,
+          setAttributes = _this$props.setAttributes;
+      console.log("attributes", attributes);
+      var fullWidth = attributes.fullWidth,
+          heightSection = attributes.heightSection,
+          containerSet = attributes.containerSet,
+          bgColor = attributes.bgColor,
+          bgImg = attributes.bgImg,
+          bgImgID = attributes.bgImgID,
+          bgImgSize = attributes.bgImgSize,
+          bgImgPosition = attributes.bgImgPosition,
+          bgImgRepeat = attributes.bgImgRepeat,
+          backgroundInline = attributes.backgroundInline,
+          bgImgAttachment = attributes.bgImgAttachment,
+          UUID = attributes.UUID;
 
-  var onSelectImage = function onSelectImage(img) {
-    setAttributes({
-      bgImgID: img.id,
-      bgImg: img.url
-    });
-  };
-
-  var onRemoveImage = function onRemoveImage() {
-    setAttributes({
-      bgImgID: null,
-      bgImg: null
-    });
-  };
-
-  setAttributes({
-    bgStyle: createStyletag(props)
-  });
-  return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InspectorControls"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
-    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Local Settings", "kili-core"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["ToggleControl"], {
-    label: "Container Class",
-    onChange: function onChange(value) {
-      return setAttributes({
-        containerSet: value
-      });
-    },
-    checked: containerSet,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 85
-    },
-    __self: this
-  })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
-    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Backgroung Settings", "kili-core"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["PanelColorSettings"], {
-    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background color", "kili-core"),
-    colorSettings: [{
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Choose color", "kili-core"),
-      value: {
-        bgColor: bgColor
-      },
-      onChange: function onChange(bgColor) {
-        return setAttributes({
-          bgColor: bgColor
+      var onSelectImage = function onSelectImage(img) {
+        setAttributes({
+          bgImgID: img.id,
+          bgImg: img.url,
+          UUID: _this2.nextUniqueId(),
+          bgStyle: createStyletag()
         });
-      }
-    }],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUploadCheck"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 108
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUpload"], {
-    value: bgImgID,
-    onSelect: onSelectImage,
-    allowedTypes: ["image"],
-    render: function render(_ref) {
-      var open = _ref.open;
-      return wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["IconButton"], {
-        className: "components-icon-button components-toolbar__control",
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Edit Image", "kili-code"),
-        onClick: open,
-        icon: "format-image",
+      };
+
+      var onRemoveImage = function onRemoveImage() {
+        setAttributes({
+          bgImgID: null,
+          bgImg: null,
+          bgStyle: ""
+        });
+      };
+
+      var createStyletag = function createStyletag() {
+        var styles = "";
+        var bgStyles = ".wp-block-kili-blocks-row-layout".concat(UUID, "{");
+
+        if (bgImg) {
+          styles += "background-image: url(\"".concat(bgImg, "\");");
+
+          if (bgImgSize) {
+            styles += " background-size: ".concat(bgImgSize, ";");
+          }
+
+          if (bgColor) {
+            styles += " background-color: ".concat(bgColor, ";");
+          }
+
+          if (bgImgPosition) {
+            styles += " background-position: ".concat(bgImgPosition, ";");
+          }
+
+          if (bgImgRepeat) {
+            styles += " background-repeat: ".concat(bgImgRepeat, ";");
+          }
+
+          if (bgImgAttachment) {
+            styles += " background-attachment: ".concat(bgImgAttachment, ";");
+          }
+        } // este style se revisará para ver si es necesario.
+
+
+        if (heightSection) {
+          styles += "min-height: ".concat(heightSection, "px;");
+        }
+
+        if (bgColor) {
+          styles += "background-color: ".concat(bgColor, ";");
+        }
+
+        styles = styles ? "".concat(bgStyles).concat(styles, "}") : "{}";
+        return styles;
+      };
+
+      var onChangeHeight = function onChangeHeight(height) {
+        setAttributes({
+          heightSection: height,
+          UUID: _this2.nextUniqueId(),
+          bgStyle: createStyletag()
+        });
+      };
+
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InspectorControls"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 107
         },
         __self: this
-      });
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 109
-    },
-    __self: this
-  })), bgImg && wp.element.createElement(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 126
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Tooltip"], {
-    text: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Remove Image", "kili-core"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 127
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
-    className: "components-button components-icon-button kt-remove-img kt-cta-upload-btn",
-    onClick: onRemoveImage,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 128
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Dashicon"], {
-    icon: "no-alt",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 134
-    },
-    __self: this
-  }))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Tooltip"], {
-    text: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Some Lazyloads only support this type of background images.", "kili-core"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 137
-    },
-    __self: this
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["ToggleControl"], {
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Force Background Image inline?", "kili-core"),
-    checked: undefined !== backgroundInline ? backgroundInline : false,
-    onChange: function onChange(value) {
-      return setAttributes({
-        backgroundInline: value
-      });
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 143
-    },
-    __self: this
-  })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Size", "kili-core"),
-    value: bgImgSize,
-    options: [{
-      value: "cover",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Cover", "kili-core")
-    }, {
-      value: "contain",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Contain", "kili-core")
-    }, {
-      value: "auto",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Auto", "kili-core")
-    }],
-    onChange: function onChange(value) {
-      return setAttributes({
-        bgImgSize: value
-      });
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 151
-    },
-    __self: this
-  }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Position"),
-    value: bgImgPosition,
-    options: [{
-      value: "center top",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Center Top", "kili-core")
-    }, {
-      value: "center center",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Center Center", "kili-core")
-    }, {
-      value: "center bottom",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Center Bottom", "kili-core")
-    }, {
-      value: "left top",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Left Top", "kili-core")
-    }, {
-      value: "left center",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Left Center", "kili-core")
-    }, {
-      value: "left bottom",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Left Bottom", "kili-core")
-    }, {
-      value: "right top",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Right Top", "kili-core")
-    }, {
-      value: "right center",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Right Center", "kili-core")
-    }, {
-      value: "right bottom",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Right Bottom", "kili-core")
-    }],
-    onChange: function onChange(value) {
-      return setAttributes({
-        bgImgPosition: value
-      });
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 161
-    },
-    __self: this
-  }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Repeat", "kili-core"),
-    value: bgImgRepeat,
-    options: [{
-      value: "no-repeat",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("No Repeat", "kili-core")
-    }, {
-      value: "repeat",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Repeat", "kili-core")
-    }, {
-      value: "repeat-x",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Repeat-x", "kili-core")
-    }, {
-      value: "repeat-y",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Repeat-y", "kili-core")
-    }],
-    onChange: function onChange(value) {
-      return setAttributes({
-        bgImgRepeat: value
-      });
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 204
-    },
-    __self: this
-  }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
-    label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Attachment", "kili-core"),
-    value: bgImgAttachment,
-    options: [{
-      value: "scroll",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Scroll", "kili-core")
-    }, {
-      value: "fixed",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Fixed", "kili-core")
-    }, {
-      value: "parallax",
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Parallax", "kili-core")
-    }],
-    onChange: function onChange(value) {
-      return setAttributes({
-        bgImgAttachment: value
-      });
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 221
-    },
-    __self: this
-  })))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 235
-    },
-    __self: this
-  }));
-};
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Row Settings", "kili-core"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["ToggleControl"], {
+        label: "Background Full-Width",
+        onChange: function onChange(value) {
+          return setAttributes({
+            fullWidth: value,
+            bgStyle: createStyletag()
+          });
+        },
+        checked: fullWidth,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 112
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["ToggleControl"], {
+        label: "Content inside Container?",
+        onChange: function onChange(value) {
+          return setAttributes({
+            containerSet: value,
+            bgStyle: createStyletag()
+          });
+        },
+        checked: containerSet,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["RangeControl"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Section Height (px)", "kili-core"),
+        value: heightSection,
+        onChange: function onChange(value) {
+          return onChangeHeight(value);
+        },
+        min: 200,
+        max: 800,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Backgroung Settings", "kili-core"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image", "kili-core"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 150
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUploadCheck"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["MediaUpload"], {
+        value: bgImgID,
+        onSelect: onSelectImage,
+        allowedTypes: ["image"],
+        render: function render(_ref) {
+          var open = _ref.open;
+          return wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["IconButton"], {
+            className: "components-icon-button components-toolbar__control",
+            label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("".concat(bgImgID ? "Edit Image" : "Add Image"), "kili-core"),
+            onClick: open,
+            icon: "format-image",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 162
+            },
+            __self: this
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156
+        },
+        __self: this
+      })), bgImg && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Tooltip"], {
+        text: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Remove Image", "kili-core"),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 177
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        className: "components-button components-icon-button kt-remove-img kt-cta-upload-btn",
+        onClick: onRemoveImage,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 178
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Dashicon"], {
+        icon: "no-alt",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 184
+        },
+        __self: this
+      }))))), bgImg && wp.element.createElement("img", {
+        src: bgImg,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 190
+        },
+        __self: this
+      }), bgImg && wp.element.createElement(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 208
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Size", "kili-core"),
+        value: bgImgSize,
+        options: [{
+          value: "cover",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Cover", "kili-core")
+        }, {
+          value: "contain",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Contain", "kili-core")
+        }, {
+          value: "auto",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Auto", "kili-core")
+        }],
+        onChange: function onChange(value) {
+          return setAttributes({
+            bgImgSize: value,
+            bgStyle: createStyletag()
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 209
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Position"),
+        value: bgImgPosition,
+        options: [{
+          value: "center top",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Center Top", "kili-core")
+        }, {
+          value: "center center",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Center Center", "kili-core")
+        }, {
+          value: "center bottom",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Center Bottom", "kili-core")
+        }, {
+          value: "left top",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Left Top", "kili-core")
+        }, {
+          value: "left center",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Left Center", "kili-core")
+        }, {
+          value: "left bottom",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Left Bottom", "kili-core")
+        }, {
+          value: "right top",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Right Top", "kili-core")
+        }, {
+          value: "right center",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Right Center", "kili-core")
+        }, {
+          value: "right bottom",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Right Bottom", "kili-core")
+        }],
+        onChange: function onChange(value) {
+          return setAttributes({
+            bgImgPosition: value,
+            bgStyle: createStyletag()
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 224
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Repeat", "kili-core"),
+        value: bgImgRepeat,
+        options: [{
+          value: "no-repeat",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("No Repeat", "kili-core")
+        }, {
+          value: "repeat",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Repeat", "kili-core")
+        }, {
+          value: "repeat-x",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Repeat-x", "kili-core")
+        }, {
+          value: "repeat-y",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Repeat-y", "kili-core")
+        }],
+        onChange: function onChange(value) {
+          return setAttributes({
+            bgImgRepeat: value,
+            bgStyle: createStyletag()
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 272
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background Image Attachment", "kili-core"),
+        value: bgImgAttachment,
+        options: [{
+          value: "scroll",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Scroll", "kili-core")
+        }, {
+          value: "fixed",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Fixed", "kili-core")
+        }, {
+          value: "parallax",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Parallax", "kili-core")
+        }],
+        onChange: function onChange(value) {
+          return setAttributes({
+            bgImgAttachment: value,
+            bgStyle: createStyletag()
+          });
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 294
+        },
+        __self: this
+      }))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["PanelColorSettings"], {
+        initialOpen: false,
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Background color", "kili-core"),
+        colorSettings: [{
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Choose color", "kili-core"),
+          value: {
+            bgColor: bgColor
+          },
+          onChange: function onChange(bgColor) {
+            return setAttributes({
+              bgColor: bgColor,
+              bgStyle: createStyletag(),
+              UUID: _this2.nextUniqueId()
+            });
+          }
+        }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 312
+        },
+        __self: this
+      }))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 330
+        },
+        __self: this
+      }));
+    }
+  }]);
+
+  return RowLayoutEdit;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (RowLayoutEdit);
 
@@ -51613,7 +51817,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/row-layout/edit.js");
-/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./attributes */ "./src/blocks/row-layout/attributes.js");
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./attributes */ "./src/blocks/row-layout/attributes.js");
 var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/row-layout/index.js";
 
 
@@ -51626,53 +51830,51 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
   icon: "layout",
   category: "kili-blocks",
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Layout", "kili-core")],
-  attributes: _attributes__WEBPACK_IMPORTED_MODULE_5__["default"],
+  attributes: _attributes__WEBPACK_IMPORTED_MODULE_4__["default"],
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  // deprecated: [
-  //   {
-  //     attributes: {
-  //       ...attributes,
-  //       UUID: {
-  //         type: "string",
-  //         default: generateID()
-  //       }
-  //     }
-  //   }
-  // ],
   save: function save(props) {
     var attributes = props.attributes;
     var UUID = attributes.UUID,
         containerSet = attributes.containerSet,
-        bgStyle = attributes.bgStyle;
+        bgStyle = attributes.bgStyle,
+        fullWidth = attributes.fullWidth;
+    console.log("bgStyle", bgStyle);
     return wp.element.createElement("section", {
-      className: "wp-block-kili-blocks-row-layout".concat(UUID, " ").concat(containerSet ? "container " : ""),
+      className: "wp-block-kili-blocks-row-layout".concat(UUID, " ").concat(!fullWidth ? "container" : ""),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 20
+      },
+      __self: this
+    }, wp.element.createElement("div", {
+      className: containerSet ? "container" : "",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 26
       },
       __self: this
     }), bgStyle ? wp.element.createElement("style", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 27
       },
       __self: this
-    }, bgStyle) : "");
+    }, bgStyle) : ""));
   }
 });
 
 /***/ }),
 
-/***/ "./src/blocks/section/attributes.js":
-/*!******************************************!*\
-  !*** ./src/blocks/section/attributes.js ***!
-  \******************************************/
+/***/ "./src/blocks/row-rf/attributes.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/row-rf/attributes.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -51759,10 +51961,10 @@ var getUUID = function getUUID() {
 
 /***/ }),
 
-/***/ "./src/blocks/section/editor.scss":
-/*!****************************************!*\
-  !*** ./src/blocks/section/editor.scss ***!
-  \****************************************/
+/***/ "./src/blocks/row-rf/editor.scss":
+/*!***************************************!*\
+  !*** ./src/blocks/row-rf/editor.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51770,21 +51972,21 @@ var getUUID = function getUUID() {
 
 /***/ }),
 
-/***/ "./src/blocks/section/index.js":
-/*!*************************************!*\
-  !*** ./src/blocks/section/index.js ***!
-  \*************************************/
+/***/ "./src/blocks/row-rf/index.js":
+/*!************************************!*\
+  !*** ./src/blocks/row-rf/index.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/section/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/row-rf/editor.scss");
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./attributes */ "./src/blocks/section/attributes.js");
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./attributes */ "./src/blocks/row-rf/attributes.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/section/index.js";
+var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/row-rf/index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -52307,6 +52509,383 @@ registerBlockType("kili-blocks/section", {
 
 /***/ }),
 
+/***/ "./src/blocks/section/edit.js":
+/*!************************************!*\
+  !*** ./src/blocks/section/edit.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/section/edit.js";
+
+
+
+
+
+var Columns = function Columns(_ref) {
+  var size = _ref.size;
+  var num = size;
+  var arr = [];
+
+  for (var i = num; i > 0; i--) {
+    arr.push("columns ".concat(i));
+  }
+
+  return wp.element.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, arr.map(function (c) {
+    return wp.element.createElement("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, c);
+  }));
+};
+
+var MySelectControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["withState"])({
+  size: 2
+})(function (_ref2) {
+  var size = _ref2.size,
+      setState = _ref2.setState;
+  return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
+    label: "Number of Columns: ",
+    value: size,
+    options: [{
+      label: "1 Column",
+      value: 1
+    }, {
+      label: "2 Columns",
+      value: 2
+    }, {
+      label: "3 Columns",
+      value: 3
+    }, {
+      label: "4 Columns",
+      value: 4
+    }, {
+      label: "5 Columns",
+      value: 5
+    }, {
+      label: "6 Columns",
+      value: 6
+    }, {
+      label: "12 Columns",
+      value: 12
+    }],
+    onChange: function onChange(size) {
+      setState({
+        size: size
+      });
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }), wp.element.createElement(Columns, {
+    size: size,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }));
+});
+
+var RowSectionEdit = function RowSectionEdit(props) {
+  var attributes = props.attributes,
+      setAttributes = props.setAttributes;
+  console.log("attribute edit", attributes);
+  return wp.element.createElement(MySelectControl, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RowSectionEdit);
+
+/***/ }),
+
+/***/ "./src/blocks/section/index.js":
+/*!*************************************!*\
+  !*** ./src/blocks/section/index.js ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/section/edit.js");
+/* harmony import */ var _parent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parent */ "./src/blocks/section/parent.js");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/section/index.js";
+
+
+
+
+
+var attributes = {
+  columns: {
+    type: "number",
+    default: 1
+  }
+};
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kili-blocks/row-section", {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Row Section", "kili-bloks"),
+  parent: ["kili-blocks/k-section"],
+  category: "kili-blocks",
+  supports: {
+    html: false,
+    reusable: false
+  },
+  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Row", "kili-blocks"), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Kili", "kili-blocks")],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  save: function save(_ref) {
+    var attributes = _ref.attributes;
+    console.log(attributes);
+    return wp.element.createElement("div", {
+      className: "content_inside_row_section",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__["InnerBlocks"].Content, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }));
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/section/parent.js":
+/*!**************************************!*\
+  !*** ./src/blocks/section/parent.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/section/parent.js";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/**
+ * WordPress dependencies
+ */
+
+ // import { column as icon } from "@wordpress/icons";
+
+
+
+/**
+ * Internal dependencies
+ */
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kili-blocks/k-section", {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Kili Section", "kili-blocks"),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Add section where you can create diferents sections for the main page", "kili-blocks"),
+  category: "kili-blocks",
+  icon: "excerpt-view",
+  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Section", "kili-blocks")],
+  supports: _defineProperty({
+    html: false,
+    align: true
+  }, "align", ["full", "wide"]),
+  attributes: {
+    id: {
+      type: "string",
+      default: ""
+    },
+    url: {
+      type: "string",
+      default: ""
+    },
+    alt: {
+      type: "string",
+      default: ""
+    }
+  },
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+    var id = attributes.id,
+        url = attributes.url,
+        alt = attributes.alt;
+
+    var onSelectImage = function onSelectImage(_ref2) {
+      var id = _ref2.id,
+          url = _ref2.url,
+          alt = _ref2.alt;
+      setAttributes({
+        id: id,
+        url: url,
+        alt: alt
+      });
+    };
+
+    var onRemoveImage = function onRemoveImage() {
+      setAttributes({
+        id: null,
+        url: null,
+        alt: null
+      });
+    };
+
+    return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
+      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Background Settings", "kili-blocks"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelRow"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUploadCheck"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUpload"], {
+      value: id,
+      onSelect: function onSelect(img) {
+        return onSelectImage(img);
+      },
+      allowedTypes: ["image"],
+      render: function render(_ref3) {
+        var open = _ref3.open;
+        return wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["IconButton"], {
+          className: "button--add_edit",
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("".concat(url ? "Edit Image" : "Add Image"), "kili-core"),
+          onClick: open,
+          icon: "format-image",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78
+          },
+          __self: this
+        });
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    })), id && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Tooltip"], {
+      text: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Remove Image", "kili-core"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+      className: "button--close",
+      onClick: function onClick() {
+        return onRemoveImage();
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 94
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Dashicon"], {
+      icon: "no-alt",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 98
+      },
+      __self: this
+    }))))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelRow"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104
+      },
+      __self: this
+    }, url && wp.element.createElement("img", {
+      src: url,
+      alt: alt,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104
+      },
+      __self: this
+    })))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: this
+    }));
+  },
+  save: function save(_ref4) {
+    var attributes = _ref4.attributes,
+        className = _ref4.className;
+    console.log("kili-section-save", attributes, className);
+    return wp.element.createElement("section", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 115
+      },
+      __self: this
+    }));
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/team-member/edit.js":
 /*!****************************************!*\
   !*** ./src/blocks/team-member/edit.js ***!
@@ -52704,7 +53283,66 @@ function (_Component) {
           lineNumber: 219
         },
         __self: this
-      }), this.state.selectedLink !== null && wp.element.createElement("div", {
+      }, wp.element.createElement("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 220
+        },
+        __self: this
+      }, social.map(function (s, i) {
+        return wp.element.createElement("li", {
+          key: i,
+          onClick: function onClick() {
+            return _this2.setState({
+              selectedLink: i
+            });
+          },
+          className: _this2.state.selectedLink === i ? "is-selected" : null,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 223
+          },
+          __self: this
+        }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Dashicon"], {
+          icon: s.icon,
+          size: 16,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 230
+          },
+          __self: this
+        }));
+      }), isSelected && wp.element.createElement("li", {
+        className: "wp-block-kili-blocks-team-member__addIconLI",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 235
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Tooltip"], {
+        text: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Add Item", "kili-core"),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 236
+        },
+        __self: this
+      }, wp.element.createElement("button", {
+        className: "wp-block-kili-blocks-team-member__addIcon",
+        onClick: addNewLink,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 237
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Dashicon"], {
+        icon: "plus",
+        size: 14,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 241
+        },
+        __self: this
+      })))))), this.state.selectedLink !== null && wp.element.createElement("div", {
         className: "wp-block-kili-blocks-team-member__linkForm",
         __source: {
           fileName: _jsxFileName,
@@ -53073,7 +53711,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_layout2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/layout2 */ "./src/blocks/layout2/index.js");
 /* harmony import */ var _blocks_team_member__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/team-member */ "./src/blocks/team-member/index.js");
 /* harmony import */ var _blocks_row_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/row-layout */ "./src/blocks/row-layout/index.js");
-/* harmony import */ var _blocks_section__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/section */ "./src/blocks/section/index.js");
+/* harmony import */ var _blocks_row_rf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/row-rf */ "./src/blocks/row-rf/index.js");
+/* harmony import */ var _blocks_section__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/section */ "./src/blocks/section/index.js");
+
 
 
 
@@ -53123,6 +53763,17 @@ module.exports = wp["blocks"];
 /***/ (function(module, exports) {
 
 module.exports = wp["components"];
+
+/***/ }),
+
+/***/ "@wordpress/compose":
+/*!*********************************!*\
+  !*** external ["wp","compose"] ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = wp["compose"];
 
 /***/ }),
 

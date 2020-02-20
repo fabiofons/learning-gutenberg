@@ -95,7 +95,6 @@
   margin: 0; }
 
 .wp-block-kili-blocks-row-layout {
-  min-height: 400px;
   display: flex;
   flex-direction: column; }
   .wp-block-kili-blocks-row-layout .wp-block-columns {
