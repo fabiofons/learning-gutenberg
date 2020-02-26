@@ -3,11 +3,16 @@ import { __ } from "@wordpress/i18n";
 import edit from "./edit";
 import "./parent";
 import { InnerBlocks } from "@wordpress/block-editor";
+import "./style.editor.scss";
 
 const attributes = {
   columns: {
     type: "number",
     default: 1
+  },
+  isCreated: {
+    type: "boolean",
+    default: false
   }
 };
 
@@ -19,12 +24,12 @@ registerBlockType("kili-blocks/row-section", {
     html: false,
     reusable: false
   },
+  attributes,
   keywords: [__("Row", "kili-blocks"), __("Kili", "kili-blocks")],
   edit,
   save: ({ attributes }) => {
-    console.log(attributes);
     return (
-      <div className={`content_inside_row_section`}>
+      <div className={`flexgrid`}>
         <InnerBlocks.Content />
       </div>
     );

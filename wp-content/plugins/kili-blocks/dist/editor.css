@@ -54,5 +54,52 @@
 .kili-section__placeholder-image {
   max-width: 100%; }
 
+.kili-columns > .kili-section__row > .editor-inner-blocks > .editor-block-list__layout {
+  display: flex;
+  justify-content: space-between; }
+  .kili-columns > .kili-section__row > .editor-inner-blocks > .editor-block-list__layout > [data-type="kili-blocks/k-column"] {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+
+.column:nth-child(odd) {
+  background-color: red; }
+
+.medium-col-1 {
+  width: 100%; }
+
+.medium-col-2 {
+  width: 50%; }
+
+.medium-col-3 {
+  width: 33.33333%; }
+
+.medium-col-4 {
+  width: 25%; }
+
+.medium-col-5 {
+  width: 20%; }
+
+.medium-col-6 {
+  width: 16.66667%; }
+
+.medium-col-7 {
+  width: 14.28571%; }
+
+.medium-col-8 {
+  width: 12.5%; }
+
+.medium-col-9 {
+  width: 11.11111%; }
+
+.medium-col-10 {
+  width: 10%; }
+
+.medium-col-11 {
+  width: 9.09091%; }
+
+.medium-col-12 {
+  width: 8.33333%; }
+
 
 /*# sourceMappingURL=editor.css.map*/

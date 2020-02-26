@@ -104,7 +104,7 @@ registerBlockType("kili-blocks/k-section", {
             <PanelRow>{url && <img src={url} alt={alt} />}</PanelRow>
           </PanelBody>
         </InspectorControls>
-        <InnerBlocks />
+        <InnerBlocks template={[["kili-blocks/row-section"]]} />
       </>
     );
   },
@@ -112,7 +112,9 @@ registerBlockType("kili-blocks/k-section", {
     console.log("kili-section-save", attributes, className);
     return (
       <section>
-        <InnerBlocks.Content />
+        <div className="container">
+          <InnerBlocks.Content />
+        </div>
       </section>
     );
   }
