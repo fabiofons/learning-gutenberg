@@ -62,7 +62,6 @@ const Grid = ({ settings }) => {
 class RowSectionEdit extends Component {
   constructor(props) {
     super(props);
-    console.log("object", props);
     this.state = {
       isCreated: props.attributes.isCreated,
       size: 2,
@@ -111,7 +110,7 @@ class RowSectionEdit extends Component {
                 onChangeValue={onChangeValue}
                 settings={this.state.settings}
               />
-              <Button onClick={toggleCreate}>Click</Button>
+              <Button onClick={toggleCreate}>Create Grid</Button>
             </>
           )}
         </div>

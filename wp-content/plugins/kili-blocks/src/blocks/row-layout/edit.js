@@ -188,22 +188,6 @@ class RowLayoutEdit extends Component {
                 )}
               </PanelRow>
               {bgImg && <img src={bgImg} />}
-              {/* <Tooltip
-                  text={__(
-                    "Some Lazyloads only support this type of background images.",
-                    "kili-core"
-                    )}
-                    >
-                    <ToggleControl
-                    label={__("Force Background Image inline?", "kili-core")}
-                    checked={
-                      undefined !== backgroundInline ? backgroundInline : false
-                    }
-                    onChange={value =>
-                      setAttributes({ backgroundInline: value })
-                    }
-                    />
-                  </Tooltip> */}
               {bgImg && (
                 <Fragment>
                   <SelectControl

@@ -104,5 +104,20 @@
     .wp-block-kili-blocks-row-layout .wp-block-columns .wp-block-column {
       padding: 10px; }
 
+.has-text-align-center {
+  text-align: center; }
+
+.has-text-align-right {
+  text-align: end; }
+
+.has-text-align-left {
+  text-align: start; }
+
+.justify-content--center {
+  justify-content: center; }
+
+.justify-content--right {
+  justify-content: flex-end; }
+
 
 /*# sourceMappingURL=style.css.map*/

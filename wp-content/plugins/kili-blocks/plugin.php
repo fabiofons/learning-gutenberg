@@ -70,6 +70,7 @@ function kili_blocks_register() {
   kili_blocks_register_block_type('k-section');
   kili_blocks_register_block_type('row-section');
   kili_blocks_register_block_type('section');
+  kili_blocks_register_block_type('k-column');
 }
 
 add_action('init', 'kili_blocks_register');

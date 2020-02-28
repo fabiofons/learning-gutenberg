@@ -99,3 +99,25 @@ $maxWidth: 1200px;
     }
   }
 }
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: end;
+}
+
+.has-text-align-left {
+  text-align: start;
+}
+
+.justify-content--center {
+
+  justify-content: center;
+}
+
+.justify-content--right {
+
+  justify-content: flex-end;
+}

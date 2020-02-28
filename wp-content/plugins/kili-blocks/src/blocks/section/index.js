@@ -13,11 +13,15 @@ const attributes = {
   isCreated: {
     type: "boolean",
     default: false
+  },
+  currentTab: {
+    type: "string",
+    default: "desk"
   }
 };
 
 registerBlockType("kili-blocks/row-section", {
-  title: __("Row Section", "kili-bloks"),
+  title: __("kili-Columns", "kili-bloks"),
   parent: ["kili-blocks/k-section"],
   category: "kili-blocks",
   supports: {

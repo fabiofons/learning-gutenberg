@@ -16,7 +16,8 @@ import {
   Button,
   Dashicon,
   PanelRow,
-  PanelBody
+  PanelBody,
+  ToggleControl
 } from "@wordpress/components";
 
 /**
@@ -24,7 +25,7 @@ import {
  */
 
 registerBlockType("kili-blocks/k-section", {
-  title: __("Kili Section", "kili-blocks"),
+  title: __("Kili-Row", "kili-blocks"),
   description: __(
     "Add section where you can create diferents sections for the main page",
     "kili-blocks"
@@ -38,6 +39,10 @@ registerBlockType("kili-blocks/k-section", {
     align: ["full", "wide"]
   },
   attributes: {
+    fullWidth: {
+      type: "boolean",
+      default: false
+    },
     id: {
       type: "string",
       default: ""
@@ -52,7 +57,7 @@ registerBlockType("kili-blocks/k-section", {
     }
   },
   edit: ({ attributes, setAttributes }) => {
-    const { id, url, alt } = attributes;
+    const { id, url, alt, fullWidth } = attributes;
     const onSelectImage = ({ id, url, alt }) => {
       setAttributes({ id, url, alt });
     };
@@ -66,6 +71,17 @@ registerBlockType("kili-blocks/k-section", {
     return (
       <>
         <InspectorControls>
+          <PanelBody title={__("Row Settings", "kili-blocks")}>
+            <ToggleControl
+              label="Background Full-Width"
+              onChange={value =>
+                setAttributes({
+                  fullWidth: value
+                })
+              }
+              checked={fullWidth}
+            />
+          </PanelBody>
           <PanelBody title={__("Background Settings", "kili-blocks")}>
             <PanelRow>
               <MediaUploadCheck>
@@ -110,9 +126,10 @@ registerBlockType("kili-blocks/k-section", {
   },
   save: ({ attributes, className }) => {
     console.log("kili-section-save", attributes, className);
+    const { fullWidth } = attributes;
     return (
       <section>
-        <div className="container">
+        <div className={!fullWidth ? "container" : ""}>
           <InnerBlocks.Content />
         </div>
       </section>

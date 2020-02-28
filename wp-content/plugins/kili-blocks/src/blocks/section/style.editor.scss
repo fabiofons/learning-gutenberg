@@ -1,6 +1,9 @@
 .kili-columns {
   >.kili-section__row {
+    width: 100%;
+
     >.editor-inner-blocks>.editor-block-list__layout {
+      // background-color: #aaa;
       display: flex;
       justify-content: space-between;
 
@@ -8,6 +11,14 @@
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+      }
+
+      >.block-list-appender {
+        display: none;
+      }
+
+      .block-list-appender {
+        margin: 10px
       }
     }
   }
@@ -18,7 +29,7 @@
 }
 
 @for $i from 1 through 12 {
-  &.medium-col-#{$i} {
+  &.--col-#{$i} {
     width: (100% / $i);
   }
 }

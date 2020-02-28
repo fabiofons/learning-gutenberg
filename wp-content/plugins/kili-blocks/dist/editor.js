@@ -51098,6 +51098,381 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./src/blocks/column/edit.js":
+/*!***********************************!*\
+  !*** ./src/blocks/column/edit.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "./node_modules/@wordpress/element/build-module/index.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/column/edit.js";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var ColumnEdit =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ColumnEdit, _Component);
+
+  function ColumnEdit(props) {
+    _classCallCheck(this, ColumnEdit);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ColumnEdit).call(this, props));
+  }
+
+  _createClass(ColumnEdit, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          attributes = _this$props.attributes,
+          setAttributes = _this$props.setAttributes;
+      var columns = attributes.columns,
+          align = attributes.align,
+          topPaddingD = attributes.topPaddingD,
+          rightPaddingD = attributes.rightPaddingD,
+          bottomPaddingD = attributes.bottomPaddingD,
+          leftPaddingD = attributes.leftPaddingD,
+          currentTab = attributes.currentTab;
+
+      var onTabSelect = function onTabSelect(tabName) {
+        setAttributes({
+          currentTab: tabName
+        });
+      };
+
+      var deskControls = wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Row Settings", "kili-blocks"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }, wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, "Hola mundo"))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Setting Margin Column"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Desktop Padding (px)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-up",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 44
+          },
+          __self: this
+        }),
+        value: topPaddingD,
+        className: "kt-icon-rangecontrol kt-top-padding",
+        onChange: function onChange(value) {
+          setAttributes({
+            topPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-right",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56
+          },
+          __self: this
+        }),
+        value: rightPaddingD,
+        className: "kt-icon-rangecontrol kt-right-padding",
+        onChange: function onChange(value) {
+          setAttributes({
+            rightPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-down",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 68
+          },
+          __self: this
+        }),
+        value: bottomPaddingD,
+        className: "kt-icon-rangecontrol kt-bottom-padding",
+        onChange: function onChange(value) {
+          setAttributes({
+            bottomPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-left",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 80
+          },
+          __self: this
+        }),
+        value: leftPaddingD,
+        className: "kt-icon-rangecontrol kt-left-padding",
+        onChange: function onChange(value) {
+          setAttributes({
+            leftPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      })));
+      var mobileControls = wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Tablet Padding/Margin"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: this
+      }, wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Tablet Padding (px)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-up",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99
+          },
+          __self: this
+        }),
+        value: topPaddingD,
+        className: "",
+        onChange: function onChange(value) {
+          setAttributes({
+            topPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }));
+      var tabletControls = wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Mobile Padding/Margin"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 114
+        },
+        __self: this
+      }, wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115
+        },
+        __self: this
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Mobile Padding (px)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-up",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117
+          },
+          __self: this
+        }),
+        value: topPaddingD,
+        className: "",
+        onChange: function onChange(value) {
+          setAttributes({
+            topPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116
+        },
+        __self: this
+      }));
+      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["TabPanel"], {
+        className: "kt-inspect-tabs",
+        activeClass: "active-tab",
+        initialTabName: currentTab,
+        onSelect: onTabSelect,
+        tabs: [{
+          name: "desk",
+          title: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+            icon: "desktop",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 141
+            },
+            __self: this
+          }),
+          className: ""
+        }, {
+          name: "tablet",
+          title: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+            icon: "tablet",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 146
+            },
+            __self: this
+          }),
+          className: ""
+        }, {
+          name: "mobile",
+          title: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+            icon: "smartphone",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 151
+            },
+            __self: this
+          }),
+          className: ""
+        }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }, function (tab) {
+        var tabout;
+
+        if (tab.name) {
+          if ("mobile" === tab.name) {
+            tabout = mobileControls;
+          } else if ("tablet" === tab.name) {
+            tabout = tabletControls;
+          } else {
+            tabout = deskControls;
+          }
+        }
+
+        return wp.element.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 167
+          },
+          __self: this
+        }, tabout);
+      })), wp.element.createElement("div", {
+        style: {
+          paddingTop: "".concat(topPaddingD, "px"),
+          paddingBottom: "".concat(bottomPaddingD, "px"),
+          paddingLeft: "".concat(leftPaddingD, "px"),
+          paddingRight: "".concat(rightPaddingD, "px")
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 172
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return ColumnEdit;
+}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ColumnEdit);
+
+/***/ }),
+
 /***/ "./src/blocks/column/index.js":
 /*!************************************!*\
   !*** ./src/blocks/column/index.js ***!
@@ -51113,60 +51488,154 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/column/edit.js");
 var _jsxFileName = "/Users/fabio/projects/gutenbergtest/htdocs/wp-content/plugins/kili-blocks/src/blocks/column/index.js";
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kili-blocks/k-column", {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Kili Column", "kili-blocks"),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Kili-Column", "kili-blocks"),
   parent: ["kili-blocks/k-section"],
   category: "kili-blocks",
   attributes: {
     columns: {
       type: "string",
       default: ""
+    },
+    align: {
+      type: "string",
+      default: ""
+    },
+    topPaddingD: {
+      type: "number",
+      default: 0
+    },
+    leftPaddingD: {
+      type: "number",
+      default: 0
+    },
+    rightPaddingD: {
+      type: "number",
+      default: 0
+    },
+    bottomPaddingD: {
+      type: "number",
+      default: 0
+    },
+    topPaddingT: {
+      type: "number",
+      default: 0
+    },
+    leftPaddingT: {
+      type: "number",
+      default: 0
+    },
+    rightPaddingT: {
+      type: "number",
+      default: 0
+    },
+    bottomPaddingT: {
+      type: "number",
+      default: 0
+    },
+    topPaddingM: {
+      type: "number",
+      default: 0
+    },
+    leftPaddingM: {
+      type: "number",
+      default: 0
+    },
+    rightPaddingM: {
+      type: "number",
+      default: 0
+    },
+    bottomPaddingM: {
+      type: "number",
+      default: 0
     }
   },
-  // supports: {
-  //   html: false,
-  //   reusable: false
-  // }
+  supports: _defineProperty({
+    align: true
+  }, "align", ["left", "center", "right"]),
   icon: "calendar",
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Column", "kili-blocks"), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Kili", "kili-blocks")],
-  edit: function edit(props) {
-    console.log("props column", props);
-    return wp.element.createElement("div", {
-      className: "kili-column-edit-space",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }));
-  },
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
   save: function save(_ref) {
     var attributes = _ref.attributes;
     var columns = attributes.columns;
+
+    var createClass = function createClass(att) {
+      var align = att.align,
+          topPaddingD = att.topPaddingD,
+          bottomPaddingD = att.bottomPaddingD,
+          rightPaddingD = att.rightPaddingD,
+          leftPaddingD = att.leftPaddingD;
+      var classes = "";
+
+      if (topPaddingD) {
+        classes += "padding-top__".concat(topPaddingD, " ");
+      }
+
+      if (bottomPaddingD) {
+        classes += "padding-bottom__".concat(bottomPaddingD, " ");
+      }
+
+      if (leftPaddingD) {
+        classes += "padding-left__".concat(leftPaddingD, " ");
+      }
+
+      if (rightPaddingD) {
+        classes += "padding-right__".concat(rightPaddingD, " ");
+      }
+
+      switch (align) {
+        case "left":
+          classes += "justify-content--left ";
+          break;
+
+        case "center":
+          classes += "justify-content--center ";
+          break;
+
+        case "right":
+          classes += "justify-content--right ";
+          break;
+
+        default:
+          "";
+          break;
+      }
+
+      return classes;
+    };
+
+    var className = createClass(attributes);
     return wp.element.createElement("div", {
-      className: "flexgrid__item --col-".concat(columns),
+      className: "flexgrid__item medium--col-".concat(columns),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 119
+      },
+      __self: this
+    }, wp.element.createElement("div", {
+      className: "kili-column-inner ".concat(className),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 120
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 121
       },
       __self: this
-    }));
+    })));
   }
 });
 
@@ -51717,7 +52186,7 @@ function (_Component) {
       }), bgImg && wp.element.createElement(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 192
         },
         __self: this
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
@@ -51741,7 +52210,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 193
         },
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
@@ -51783,7 +52252,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 224
+          lineNumber: 208
         },
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
@@ -51810,7 +52279,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 256
         },
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
@@ -51834,7 +52303,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 278
         },
         __self: this
       }))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["PanelColorSettings"], {
@@ -51855,13 +52324,13 @@ function (_Component) {
         }],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 312
+          lineNumber: 296
         },
         __self: this
       }))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 330
+          lineNumber: 314
         },
         __self: this
       }));
@@ -52738,7 +53207,6 @@ function (_Component) {
     _classCallCheck(this, RowSectionEdit);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RowSectionEdit).call(this, props));
-    console.log("object", props);
     _this.state = {
       isCreated: props.attributes.isCreated,
       size: 2,
@@ -52800,7 +53268,7 @@ function (_Component) {
         className: "select-menu",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 101
         },
         __self: this
       }, !this.state.isCreated && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(MySelectControl, {
@@ -52810,7 +53278,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 104
         },
         __self: this
       }), wp.element.createElement(ColumnsSettings, {
@@ -52819,28 +53287,28 @@ function (_Component) {
         settings: this.state.settings,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 108
         },
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
         onClick: toggleCreate,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 113
         },
         __self: this
-      }, "Click"))), wp.element.createElement("div", {
+      }, "Create Grid"))), wp.element.createElement("div", {
         className: "kili-columns",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 117
         },
         __self: this
       }, this.state.isCreated && wp.element.createElement(Grid, {
         settings: this.state.settings,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 118
         },
         __self: this
       })));
@@ -52888,10 +53356,14 @@ var attributes = {
   isCreated: {
     type: "boolean",
     default: false
+  },
+  currentTab: {
+    type: "string",
+    default: "desk"
   }
 };
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kili-blocks/row-section", {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Row Section", "kili-bloks"),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("kili-Columns", "kili-bloks"),
   parent: ["kili-blocks/k-section"],
   category: "kili-blocks",
   supports: {
@@ -52907,13 +53379,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       className: "flexgrid",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 36
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 37
       },
       __self: this
     }));
@@ -52956,7 +53428,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  */
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kili-blocks/k-section", {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Kili Section", "kili-blocks"),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Kili-Row", "kili-blocks"),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Add section where you can create diferents sections for the main page", "kili-blocks"),
   category: "kili-blocks",
   icon: "excerpt-view",
@@ -52966,6 +53438,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
     align: true
   }, "align", ["full", "wide"]),
   attributes: {
+    fullWidth: {
+      type: "boolean",
+      default: false
+    },
     id: {
       type: "string",
       default: ""
@@ -52984,7 +53460,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
         setAttributes = _ref.setAttributes;
     var id = attributes.id,
         url = attributes.url,
-        alt = attributes.alt;
+        alt = attributes.alt,
+        fullWidth = attributes.fullWidth;
 
     var onSelectImage = function onSelectImage(_ref2) {
       var id = _ref2.id,
@@ -53008,26 +53485,46 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
     return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 73
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
+      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Row Settings", "kili-blocks"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
+      },
+      __self: this
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ToggleControl"], {
+      label: "Background Full-Width",
+      onChange: function onChange(value) {
+        return setAttributes({
+          fullWidth: value
+        });
+      },
+      checked: fullWidth,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 75
+      },
+      __self: this
+    })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
       title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Background Settings", "kili-blocks"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 85
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelRow"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 86
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUploadCheck"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 87
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["MediaUpload"], {
@@ -53045,21 +53542,21 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
           icon: "format-image",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 94
           },
           __self: this
         });
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 88
       },
       __self: this
     })), id && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Tooltip"], {
       text: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Remove Image", "kili-core"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 109
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -53069,20 +53566,20 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 110
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Dashicon"], {
       icon: "no-alt",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 114
       },
       __self: this
     }))))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelRow"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 120
       },
       __self: this
     }, url && wp.element.createElement("img", {
@@ -53090,14 +53587,14 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       alt: alt,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 120
       },
       __self: this
     })))), wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
       template: [["kili-blocks/row-section"]],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 123
       },
       __self: this
     }));
@@ -53106,23 +53603,24 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
     var attributes = _ref4.attributes,
         className = _ref4.className;
     console.log("kili-section-save", attributes, className);
+    var fullWidth = attributes.fullWidth;
     return wp.element.createElement("section", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 131
       },
       __self: this
     }, wp.element.createElement("div", {
-      className: "container",
+      className: !fullWidth ? "container" : "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 132
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 133
       },
       __self: this
     })));
