@@ -69,7 +69,7 @@ registerBlockType("kili-blocks/k-column", {
     align: true,
     align: ["left", "center", "right"]
   },
-  icon: "calendar",
+  icon: "columns",
   keywords: [__("Column", "kili-blocks"), __("Kili", "kili-blocks")],
   edit,
   save: ({ attributes }) => {
@@ -83,6 +83,7 @@ registerBlockType("kili-blocks/k-column", {
         leftPaddingD
       } = att;
       let classes = "";
+
       if (topPaddingD) {
         classes += `padding-top__${topPaddingD} `;
       }
@@ -113,10 +114,19 @@ registerBlockType("kili-blocks/k-column", {
       return classes;
     };
 
-    const className = createClass(attributes);
+    const createBasis = col => {
+      let value = "";
+      if (col) {
+        const fbasis = (Number(col) / 12) * 100;
+        value += `flex-basis__${fbasis} `;
+      }
+      return value;
+    };
 
+    const className = createClass(attributes);
+    const basis = createBasis(columns);
     return (
-      <div className={`flexgrid__item medium--col-${columns}`}>
+      <div className={`flexgrid__item ${basis}`}>
         <div className={`kili-column-inner ${className}`}>
           <InnerBlocks.Content />
         </div>

@@ -51171,18 +51171,18 @@ function (_Component) {
         });
       };
 
-      var deskControls = wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelRow"], {
+      var deskControls = wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Row Settings", "kili-blocks"),
+        initialOpen: false,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
         },
         __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Row Settings", "kili-blocks"),
-        initialOpen: false,
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelRow"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 37
         },
         __self: this
       }, wp.element.createElement("h2", {
@@ -51191,7 +51191,7 @@ function (_Component) {
           lineNumber: 38
         },
         __self: this
-      }, "Hola mundo"))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+      }, "Columns Size: ", columns))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
         title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Setting Margin Column"),
         initialOpen: false,
         __source: {
@@ -51445,6 +51445,7 @@ function (_Component) {
           __self: this
         }, tabout);
       })), wp.element.createElement("div", {
+        id: "column create",
         style: {
           paddingTop: "".concat(topPaddingD, "px"),
           paddingBottom: "".concat(bottomPaddingD, "px"),
@@ -51459,7 +51460,7 @@ function (_Component) {
       }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 181
         },
         __self: this
       })));
@@ -51562,7 +51563,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
   supports: _defineProperty({
     align: true
   }, "align", ["left", "center", "right"]),
-  icon: "calendar",
+  icon: "columns",
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Column", "kili-blocks"), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])("Kili", "kili-blocks")],
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
   save: function save(_ref) {
@@ -51614,25 +51615,37 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       return classes;
     };
 
+    var createBasis = function createBasis(col) {
+      var value = "";
+
+      if (col) {
+        var fbasis = Number(col) / 12 * 100;
+        value += "flex-basis__".concat(fbasis, " ");
+      }
+
+      return value;
+    };
+
     var className = createClass(attributes);
+    var basis = createBasis(columns);
     return wp.element.createElement("div", {
-      className: "flexgrid__item medium--col-".concat(columns),
+      className: "flexgrid__item ".concat(basis),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 129
       },
       __self: this
     }, wp.element.createElement("div", {
       className: "kili-column-inner ".concat(className),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 130
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 131
       },
       __self: this
     })));
@@ -53271,44 +53284,57 @@ function (_Component) {
           lineNumber: 101
         },
         __self: this
-      }, !this.state.isCreated && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(MySelectControl, {
+      }, !this.state.isCreated && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("div", {
+        className: "flexgrid",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104
+        },
+        __self: this
+      }, wp.element.createElement(MySelectControl, {
         size: this.state.size,
         onChangeColumns: function onChangeColumns(v) {
           return _onChangeColumns(Number(v));
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 105
         },
         __self: this
-      }), wp.element.createElement(ColumnsSettings, {
+      }), wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }, "Available column: 12")), wp.element.createElement(ColumnsSettings, {
         size: this.state.size,
         onChangeValue: onChangeValue,
         settings: this.state.settings,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 111
         },
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["Button"], {
         onClick: toggleCreate,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 116
         },
         __self: this
       }, "Create Grid"))), wp.element.createElement("div", {
         className: "kili-columns",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 120
         },
         __self: this
       }, this.state.isCreated && wp.element.createElement(Grid, {
         settings: this.state.settings,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 121
         },
         __self: this
       })));
@@ -53366,6 +53392,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("kili-Columns", "kili-bloks"),
   parent: ["kili-blocks/k-section"],
   category: "kili-blocks",
+  icon: "grid-view",
   supports: {
     html: false,
     reusable: false
@@ -53379,13 +53406,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       className: "flexgrid",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 37
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 38
       },
       __self: this
     }));
@@ -53431,7 +53458,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Kili-Row", "kili-blocks"),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Add section where you can create diferents sections for the main page", "kili-blocks"),
   category: "kili-blocks",
-  icon: "excerpt-view",
+  icon: "text",
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Section", "kili-blocks")],
   supports: _defineProperty({
     html: false,

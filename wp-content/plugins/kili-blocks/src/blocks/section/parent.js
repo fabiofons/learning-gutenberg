@@ -31,7 +31,7 @@ registerBlockType("kili-blocks/k-section", {
     "kili-blocks"
   ),
   category: "kili-blocks",
-  icon: "excerpt-view",
+  icon: "text",
   keywords: [__("Section", "kili-blocks")],
   supports: {
     html: false,

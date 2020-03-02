@@ -30,14 +30,14 @@ class ColumnEdit extends Component {
     };
     const deskControls = (
       <>
-        <PanelRow>
-          <PanelBody
-            title={__("Row Settings", "kili-blocks")}
-            initialOpen={false}
-          >
-            <h2>Hola mundo</h2>
-          </PanelBody>
-        </PanelRow>
+        <PanelBody
+          title={__("Row Settings", "kili-blocks")}
+          initialOpen={false}
+        >
+          <PanelRow>
+            <h2>Columns Size: {columns}</h2>
+          </PanelRow>
+        </PanelBody>
         <PanelBody title={__("Setting Margin Column")} initialOpen={false}>
           <h2>{__("Desktop Padding (px)")}</h2>
           <RangeControl
@@ -170,6 +170,7 @@ class ColumnEdit extends Component {
         </InspectorControls>
 
         <div
+          id="column create"
           style={{
             paddingTop: `${topPaddingD}px`,
             paddingBottom: `${bottomPaddingD}px`,

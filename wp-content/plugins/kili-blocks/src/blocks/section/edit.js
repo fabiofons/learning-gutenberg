@@ -101,10 +101,13 @@ class RowSectionEdit extends Component {
         <div className="select-menu">
           {!this.state.isCreated && (
             <>
-              <MySelectControl
-                size={this.state.size}
-                onChangeColumns={v => onChangeColumns(Number(v))}
-              />
+              <div className="flexgrid">
+                <MySelectControl
+                  size={this.state.size}
+                  onChangeColumns={v => onChangeColumns(Number(v))}
+                />
+                <h2>Available column: 12</h2>
+              </div>
               <ColumnsSettings
                 size={this.state.size}
                 onChangeValue={onChangeValue}

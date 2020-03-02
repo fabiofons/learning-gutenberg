@@ -24,6 +24,7 @@ registerBlockType("kili-blocks/row-section", {
   title: __("kili-Columns", "kili-bloks"),
   parent: ["kili-blocks/k-section"],
   category: "kili-blocks",
+  icon: "grid-view",
   supports: {
     html: false,
     reusable: false
