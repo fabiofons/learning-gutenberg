@@ -235,6 +235,6 @@ if ( ! class_exists( 'payixKili' ) ) {
 // Start the main class.
 $payix_kili_class = new payixKili();
 
-foreach(parse_blocks(get_post(5)->post_content) as $key => $value){
-	// var_dump($value["blockName"]);
-}
+// foreach(parse_blocks(get_post(5)->post_content) as $key => $value){
+// 	// var_dump($value["blockName"]);
+// }
