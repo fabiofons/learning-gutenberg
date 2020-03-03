@@ -1,6 +1,7 @@
 import { InnerBlocks } from "@wordpress/block-editor";
-import { Component } from "@wordpress/element";
+import { Component, useState, useEffect } from "@wordpress/element";
 import { SelectControl, Button, TextControl } from "@wordpress/components";
+import { withSelect } from "@wordpress/data";
 
 const ColumnsSettings = props => {
   const { onChangeValue, settings } = props;
@@ -44,7 +45,7 @@ const MySelectControl = ({ size, onChangeColumns }) => {
   );
 };
 
-const Grid = ({ settings }) => {
+const Grid = ({ settings, clientId }) => {
   const newTemplate = columns => {
     return columns.map((col, index) => {
       return ["kili-blocks/k-column", { columns: `${col}` }];
@@ -52,77 +53,88 @@ const Grid = ({ settings }) => {
   };
   return (
     <>
-      <div className="kili-section__row">
+      <div className={`kili-section__row kili-section__row-${clientId}`}>
         <InnerBlocks template={newTemplate(settings)} />
       </div>
     </>
   );
 };
 
-class RowSectionEdit extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isCreated: props.attributes.isCreated,
-      size: 2,
-      settings: [6, 6]
-    };
-  }
 
-  render() {
-    const { attributes, setAttributes } = this.props;
-    const { isCreated } = attributes;
-    const fillArray = (value, len) => {
-      if (len == 0) return [];
-      var a = [value];
-      while (a.length * 2 <= len) a = a.concat(a);
-      if (a.length < len) a = a.concat(a.slice(0, len - a.length));
-      return a;
-    };
+const RowSectionEdit = ({ currentBlock, attributes, setAttributes, clientId, ...rest}) => {
+  const [isCreated, setIsCreated] = useState(attributes.isCreated)
+  const [size, setSize] = useState(2);
+  const [settings, setSettings] = useState([6, 6]);
+  const [columnsStyle, setColumnsStyle] = useState('');
 
-    const toggleCreate = () => {
-      this.setState({ isCreated: !this.state.isCreated });
-      setAttributes({ isCreated: !this.state.isCreated });
-    };
-    const onChangeColumns = value => {
-      this.setState({
-        size: Number(value),
-        settings: fillArray(12 / Number(value), Number(value))
-      });
-    };
-    const onChangeValue = (newValue, index) => {
-      const newSettings = [...this.state.settings];
-      newSettings[index] = newValue;
-      this.setState({ settings: newSettings });
-    };
-    return (
-      <>
-        {console.log("state", this.state)}
-        <div className="select-menu">
-          {!this.state.isCreated && (
-            <>
-              <div className="flexgrid">
-                <MySelectControl
-                  size={this.state.size}
-                  onChangeColumns={v => onChangeColumns(Number(v))}
-                />
-                <h2>Available column: 12</h2>
-              </div>
-              <ColumnsSettings
-                size={this.state.size}
-                onChangeValue={onChangeValue}
-                settings={this.state.settings}
+  useEffect(() => {
+    let newColumnsStyle = '';
+    currentBlock.innerBlocks.map((innerBlock, index) => {
+      const numberOfColumns = innerBlock.attributes.columns;
+      newColumnsStyle += `.kili-columns > .kili-section__row-${clientId} > .editor-inner-blocks > .editor-block-list__layout > [data-type="kili-blocks/k-column"]:nth-child(${index + 1}) {
+        flex-basis: ${(numberOfColumns / 12)*100}%;
+        margin-left: 0;
+        margin-right: 0;
+      }`
+    });    
+    setColumnsStyle(newColumnsStyle);
+  }, [currentBlock])
+
+  const fillArray = (value, len) => {
+    if (len == 0) return [];
+    var a = [value];
+    while (a.length * 2 <= len) a = a.concat(a);
+    if (a.length < len) a = a.concat(a.slice(0, len - a.length));
+    return a;
+  };
+
+  const toggleCreate = () => {
+    setIsCreated(!isCreated);
+    setAttributes({ isCreated: !isCreated });
+  };
+  const onChangeColumns = value => {
+    setSize(value);
+    setSettings(fillArray(12 / Number(value), Number(value)));
+  };
+  const onChangeValue = (newValue, index) => {
+    const newSettings = [...settings];
+    newSettings[index] = newValue;
+    setSettings(newSettings);
+  };
+  return (
+    <>
+      <div className="select-menu">
+        {!isCreated && (
+          <>
+            <div className="flexgrid">
+              <MySelectControl
+                size={size}
+                onChangeColumns={v => onChangeColumns(Number(v))}
               />
-              <Button onClick={toggleCreate}>Create Grid</Button>
-            </>
-          )}
-        </div>
-        <div className="kili-columns">
-          {this.state.isCreated && <Grid settings={this.state.settings} />}
-        </div>
-      </>
-    );
-  }
+              <h2>Available column: 12</h2>
+            </div>
+            <ColumnsSettings
+              size={size}
+              onChangeValue={onChangeValue}
+              settings={settings}
+            />
+            <Button onClick={toggleCreate}>Create Grid</Button>
+          </>
+        )}
+      </div>
+      <div className="kili-columns">
+        {isCreated && <Grid settings={settings} clientId={clientId} />}
+      </div>
+      <style>
+        {columnsStyle}
+      </style>
+    </>
+  ); 
 }
 
-export default RowSectionEdit;
+export default withSelect( (select, ownProps) => {
+
+  return ({
+    currentBlock: select('core/block-editor').getBlock(ownProps.clientId),
+  })
+})(RowSectionEdit);
