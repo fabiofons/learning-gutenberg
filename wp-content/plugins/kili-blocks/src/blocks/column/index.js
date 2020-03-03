@@ -12,6 +12,14 @@ registerBlockType("kili-blocks/k-column", {
       type: "string",
       default: ""
     },
+    numberColT: {
+      type: "number",
+      default: 12
+    },
+    numberColM: {
+      type: "number",
+      default: 12
+    },
     align: {
       type: "string",
       default: ""
@@ -73,7 +81,7 @@ registerBlockType("kili-blocks/k-column", {
   keywords: [__("Column", "kili-blocks"), __("Kili", "kili-blocks")],
   edit,
   save: ({ attributes }) => {
-    const { columns } = attributes;
+    const { columns, numberColM, numberColT } = attributes;
     const createClass = att => {
       const {
         align,
@@ -98,13 +106,13 @@ registerBlockType("kili-blocks/k-column", {
       }
       switch (align) {
         case "left":
-          classes += "justify-content--left ";
+          classes += "justify-content__left ";
           break;
         case "center":
-          classes += "justify-content--center ";
+          classes += "justify-content__center ";
           break;
         case "right":
-          classes += "justify-content--right ";
+          classes += "justify-content__right ";
           break;
         default:
           "";
@@ -114,17 +122,25 @@ registerBlockType("kili-blocks/k-column", {
       return classes;
     };
 
-    const createBasis = col => {
+    const createBasis = (D, T, M) => {
       let value = "";
-      if (col) {
-        const fbasis = (Number(col) / 12) * 100;
-        value += `flex-basis__${fbasis} `;
+      if (D) {
+        const fbasis = (Number(D) / 12) * 100;
+        value += `medium--flex-basis__${fbasis} `;
+      }
+      if (T) {
+        const fbasis = (Number(T) / 12) * 100;
+        value += `small--flex-basis__${fbasis} `;
+      }
+      if (M) {
+        const fbasis = (Number(M) / 12) * 100;
+        value += `xsmall--flex-basis__${fbasis} `;
       }
       return value;
     };
 
     const className = createClass(attributes);
-    const basis = createBasis(columns);
+    const basis = createBasis(columns, numberColT, numberColM);
     return (
       <div className={`flexgrid__item ${basis}`}>
         <div className={`kili-column-inner ${className}`}>

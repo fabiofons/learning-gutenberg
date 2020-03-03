@@ -17,8 +17,10 @@ class ColumnEdit extends Component {
   render() {
     const { attributes, setAttributes } = this.props;
     const {
-      columns,
       align,
+      columns,
+      numberColT,
+      numberColM,
       topPaddingD,
       rightPaddingD,
       bottomPaddingD,
@@ -34,16 +36,26 @@ class ColumnEdit extends Component {
           title={__("Row Settings", "kili-blocks")}
           initialOpen={false}
         >
-          <PanelRow>
-            <h2>Columns Size: {columns}</h2>
-          </PanelRow>
+          <h2>{__("Column Desktop Width (columns)")}</h2>
+          <RangeControl
+            label={"Width"}
+            value={columns}
+            className="range-control"
+            onChange={value => {
+              setAttributes({
+                columns: value
+              });
+            }}
+            min={1}
+            max={12}
+          />
         </PanelBody>
-        <PanelBody title={__("Setting Margin Column")} initialOpen={false}>
+        <PanelBody title={__("Setting Padding Column")} initialOpen={false}>
           <h2>{__("Desktop Padding (px)")}</h2>
           <RangeControl
-            label={<Icon icon="arrow-up" />}
+            label={`Padding-top ${(<Icon icon="arrow-up" />)}`}
             value={topPaddingD}
-            className="kt-icon-rangecontrol kt-top-padding"
+            className="range-control"
             onChange={value => {
               setAttributes({
                 topPaddingD: value
@@ -53,9 +65,9 @@ class ColumnEdit extends Component {
             max={500}
           />
           <RangeControl
-            label={<Icon icon="arrow-right" />}
+            label={`Padding-right ${(<Icon icon="arrow-right" />)}`}
             value={rightPaddingD}
-            className="kt-icon-rangecontrol kt-right-padding"
+            className="range-control"
             onChange={value => {
               setAttributes({
                 rightPaddingD: value
@@ -67,7 +79,7 @@ class ColumnEdit extends Component {
           <RangeControl
             label={<Icon icon="arrow-down" />}
             value={bottomPaddingD}
-            className="kt-icon-rangecontrol kt-bottom-padding"
+            className="range-control"
             onChange={value => {
               setAttributes({
                 bottomPaddingD: value
@@ -79,7 +91,7 @@ class ColumnEdit extends Component {
           <RangeControl
             label={<Icon icon="arrow-left" />}
             value={leftPaddingD}
-            className="kt-icon-rangecontrol kt-left-padding"
+            className="range-control"
             onChange={value => {
               setAttributes({
                 leftPaddingD: value
@@ -93,39 +105,59 @@ class ColumnEdit extends Component {
     );
 
     const mobileControls = (
-      <PanelBody title={__("Tablet Padding/Margin")} initialOpen={false}>
-        <h2>{__("Tablet Padding (px)")}</h2>
-        <RangeControl
-          label={<Icon icon="arrow-up" />}
-          value={topPaddingD}
-          className=""
-          onChange={value => {
-            setAttributes({
-              topPaddingD: value
-            });
-          }}
-          min={0}
-          max={500}
-        />
-      </PanelBody>
+      <>
+        <PanelBody
+          title={__("Row Settings", "kili-blocks")}
+          initialOpen={false}
+        >
+          <PanelRow>
+            <h2>Columns Size: {numberColM}</h2>
+          </PanelRow>
+        </PanelBody>
+        <PanelBody title={__("Tablet Padding/Margin")} initialOpen={false}>
+          <h2>{__("Tablet Padding (px)")}</h2>
+          <RangeControl
+            label={<Icon icon="arrow-up" />}
+            value={topPaddingD}
+            className=""
+            onChange={value => {
+              setAttributes({
+                topPaddingD: value
+              });
+            }}
+            min={0}
+            max={500}
+          />
+        </PanelBody>
+      </>
     );
 
     const tabletControls = (
-      <PanelBody title={__("Mobile Padding/Margin")} initialOpen={false}>
-        <h2>{__("Mobile Padding (px)")}</h2>
-        <RangeControl
-          label={<Icon icon="arrow-up" />}
-          value={topPaddingD}
-          className=""
-          onChange={value => {
-            setAttributes({
-              topPaddingD: value
-            });
-          }}
-          min={0}
-          max={500}
-        />
-      </PanelBody>
+      <>
+        <PanelBody
+          title={__("Row Settings", "kili-blocks")}
+          initialOpen={false}
+        >
+          <PanelRow>
+            <h2>Columns Size: {numberColT}</h2>
+          </PanelRow>
+        </PanelBody>
+        <PanelBody title={__("Mobile Padding/Margin")} initialOpen={false}>
+          <h2>{__("Mobile Padding (px)")}</h2>
+          <RangeControl
+            label={<Icon icon="arrow-up" />}
+            value={topPaddingD}
+            className=""
+            onChange={value => {
+              setAttributes({
+                topPaddingD: value
+              });
+            }}
+            min={0}
+            max={500}
+          />
+        </PanelBody>
+      </>
     );
     return (
       <>

@@ -51157,8 +51157,10 @@ function (_Component) {
       var _this$props = this.props,
           attributes = _this$props.attributes,
           setAttributes = _this$props.setAttributes;
-      var columns = attributes.columns,
-          align = attributes.align,
+      var align = attributes.align,
+          columns = attributes.columns,
+          numberColT = attributes.numberColT,
+          numberColM = attributes.numberColM,
           topPaddingD = attributes.topPaddingD,
           rightPaddingD = attributes.rightPaddingD,
           bottomPaddingD = attributes.bottomPaddingD,
@@ -51176,72 +51178,59 @@ function (_Component) {
         initialOpen: false,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelRow"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }, wp.element.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
-      }, "Columns Size: ", columns))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Setting Margin Column"),
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Column Desktop Width (columns)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: "Width",
+        value: columns,
+        className: "range-control",
+        onChange: function onChange(value) {
+          setAttributes({
+            columns: value
+          });
+        },
+        min: 1,
+        max: 12,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Setting Padding Column"),
         initialOpen: false,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 53
         },
         __self: this
       }, wp.element.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 54
         },
         __self: this
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Desktop Padding (px)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
-        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+        label: "Padding-top ".concat(wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
           icon: "arrow-up",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 44
-          },
-          __self: this
-        }),
-        value: topPaddingD,
-        className: "kt-icon-rangecontrol kt-top-padding",
-        onChange: function onChange(value) {
-          setAttributes({
-            topPaddingD: value
-          });
-        },
-        min: 0,
-        max: 500,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        },
-        __self: this
-      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
-        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-          icon: "arrow-right",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 56
           },
           __self: this
-        }),
-        value: rightPaddingD,
-        className: "kt-icon-rangecontrol kt-right-padding",
+        })),
+        value: topPaddingD,
+        className: "range-control",
         onChange: function onChange(value) {
           setAttributes({
-            rightPaddingD: value
+            topPaddingD: value
           });
         },
         min: 0,
@@ -51252,19 +51241,19 @@ function (_Component) {
         },
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
-        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-          icon: "arrow-down",
+        label: "Padding-right ".concat(wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-right",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 68
           },
           __self: this
-        }),
-        value: bottomPaddingD,
-        className: "kt-icon-rangecontrol kt-bottom-padding",
+        })),
+        value: rightPaddingD,
+        className: "range-control",
         onChange: function onChange(value) {
           setAttributes({
-            bottomPaddingD: value
+            rightPaddingD: value
           });
         },
         min: 0,
@@ -51276,18 +51265,18 @@ function (_Component) {
         __self: this
       }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
         label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-          icon: "arrow-left",
+          icon: "arrow-down",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 80
           },
           __self: this
         }),
-        value: leftPaddingD,
-        className: "kt-icon-rangecontrol kt-left-padding",
+        value: bottomPaddingD,
+        className: "range-control",
         onChange: function onChange(value) {
           setAttributes({
-            leftPaddingD: value
+            bottomPaddingD: value
           });
         },
         min: 0,
@@ -51297,19 +51286,62 @@ function (_Component) {
           lineNumber: 79
         },
         __self: this
+      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
+        label: wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+          icon: "arrow-left",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 92
+          },
+          __self: this
+        }),
+        value: leftPaddingD,
+        className: "range-control",
+        onChange: function onChange(value) {
+          setAttributes({
+            leftPaddingD: value
+          });
+        },
+        min: 0,
+        max: 500,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
+        },
+        __self: this
       })));
-      var mobileControls = wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Tablet Padding/Margin"),
+      var mobileControls = wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Row Settings", "kili-blocks"),
         initialOpen: false,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 109
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113
         },
         __self: this
       }, wp.element.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 114
+        },
+        __self: this
+      }, "Columns Size: ", numberColM))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Tablet Padding/Margin"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }, wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118
         },
         __self: this
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Tablet Padding (px)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
@@ -51317,7 +51349,7 @@ function (_Component) {
           icon: "arrow-up",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 120
           },
           __self: this
         }),
@@ -51332,22 +51364,42 @@ function (_Component) {
         max: 500,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 119
         },
         __self: this
-      }));
-      var tabletControls = wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Mobile Padding/Margin"),
+      })));
+      var tabletControls = wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Row Settings", "kili-blocks"),
         initialOpen: false,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 137
+        },
+        __self: this
+      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelRow"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
         },
         __self: this
       }, wp.element.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 142
+        },
+        __self: this
+      }, "Columns Size: ", numberColT))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Mobile Padding/Margin"),
+        initialOpen: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }, wp.element.createElement("h2", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 146
         },
         __self: this
       }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__["__"])("Mobile Padding (px)")), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["RangeControl"], {
@@ -51355,7 +51407,7 @@ function (_Component) {
           icon: "arrow-up",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 148
           },
           __self: this
         }),
@@ -51370,14 +51422,14 @@ function (_Component) {
         max: 500,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 147
         },
         __self: this
-      }));
+      })));
       return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 164
         },
         __self: this
       }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["TabPanel"], {
@@ -51391,7 +51443,7 @@ function (_Component) {
             icon: "desktop",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 141
+              lineNumber: 173
             },
             __self: this
           }),
@@ -51402,7 +51454,7 @@ function (_Component) {
             icon: "tablet",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 146
+              lineNumber: 178
             },
             __self: this
           }),
@@ -51413,7 +51465,7 @@ function (_Component) {
             icon: "smartphone",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 151
+              lineNumber: 183
             },
             __self: this
           }),
@@ -51421,7 +51473,7 @@ function (_Component) {
         }],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 165
         },
         __self: this
       }, function (tab) {
@@ -51440,7 +51492,7 @@ function (_Component) {
         return wp.element.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 167
+            lineNumber: 199
           },
           __self: this
         }, tabout);
@@ -51454,13 +51506,13 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 204
         },
         __self: this
       }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 213
         },
         __self: this
       })));
@@ -51506,6 +51558,14 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
     columns: {
       type: "string",
       default: ""
+    },
+    numberColT: {
+      type: "number",
+      default: 12
+    },
+    numberColM: {
+      type: "number",
+      default: 12
     },
     align: {
       type: "string",
@@ -51568,7 +51628,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
   save: function save(_ref) {
     var attributes = _ref.attributes;
-    var columns = attributes.columns;
+    var columns = attributes.columns,
+        numberColM = attributes.numberColM,
+        numberColT = attributes.numberColT;
 
     var createClass = function createClass(att) {
       var align = att.align,
@@ -51596,15 +51658,15 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
 
       switch (align) {
         case "left":
-          classes += "justify-content--left ";
+          classes += "justify-content__left ";
           break;
 
         case "center":
-          classes += "justify-content--center ";
+          classes += "justify-content__center ";
           break;
 
         case "right":
-          classes += "justify-content--right ";
+          classes += "justify-content__right ";
           break;
 
         default:
@@ -51615,37 +51677,49 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       return classes;
     };
 
-    var createBasis = function createBasis(col) {
+    var createBasis = function createBasis(D, T, M) {
       var value = "";
 
-      if (col) {
-        var fbasis = Number(col) / 12 * 100;
-        value += "flex-basis__".concat(fbasis, " ");
+      if (D) {
+        var fbasis = Number(D) / 12 * 100;
+        value += "medium--flex-basis__".concat(fbasis, " ");
+      }
+
+      if (T) {
+        var _fbasis = Number(T) / 12 * 100;
+
+        value += "small--flex-basis__".concat(_fbasis, " ");
+      }
+
+      if (M) {
+        var _fbasis2 = Number(M) / 12 * 100;
+
+        value += "xsmall--flex-basis__".concat(_fbasis2, " ");
       }
 
       return value;
     };
 
     var className = createClass(attributes);
-    var basis = createBasis(columns);
+    var basis = createBasis(columns, numberColT, numberColM);
     return wp.element.createElement("div", {
       className: "flexgrid__item ".concat(basis),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 145
       },
       __self: this
     }, wp.element.createElement("div", {
       className: "kili-column-inner ".concat(className),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 146
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 147
       },
       __self: this
     })));
@@ -53383,6 +53457,13 @@ var attributes = {
     type: "boolean",
     default: false
   },
+  numberColM: {
+    type: "number",
+    default: 1
+  },
+  colWidthD: {
+    type: "array"
+  },
   currentTab: {
     type: "string",
     default: "desk"
@@ -53406,13 +53487,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("kil
       className: "flexgrid",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 44
       },
       __self: this
     }, wp.element.createElement(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 45
       },
       __self: this
     }));
